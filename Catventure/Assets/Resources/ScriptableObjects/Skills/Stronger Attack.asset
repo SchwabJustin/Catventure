@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3181b6c46c493a4d808b84bade7672e, type: 3}
+  m_Name: Stronger Attack
+  m_EditorClassIdentifier: 
+  skilltreeType: 0
+  skillImg: {fileID: 0}
+  level: 2
+  skillNeeded: {fileID: 11400000, guid: 80c5a0c1495dc7f45a270d073e27b706, type: 2}
+  skillPointsNeeded: 1
+  attackBonus: 1
+  defenseBonus: 0
+  magicBonus: 0
+  description: 
