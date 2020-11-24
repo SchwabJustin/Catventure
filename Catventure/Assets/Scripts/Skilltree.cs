@@ -21,6 +21,7 @@ public class Skilltree : MonoBehaviour
     Camera cam;
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject.transform.root);
         player = GameObject.FindGameObjectWithTag("Player");
         cam = Camera.main;
         allSkills = Resources.LoadAll<SkillSO>("ScriptableObjects/Skills").ToList();
@@ -37,6 +38,8 @@ public class Skilltree : MonoBehaviour
         GenerateSkilltree(fireTree, fireSkills);
         GenerateSkilltree(iceTree, iceSkills);
         GenerateSkilltree(earthTree, earthSkills);
+
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     void GenerateSkilltree(GameObject skilltree, List<SkillSO> skills)

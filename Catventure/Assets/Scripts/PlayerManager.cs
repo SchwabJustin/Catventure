@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Homebrew;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
+    [Foldout("PlayerStats", true)] 
+    public int playerHealth = 3;
+    public int playerAttackDmg = 1;
+    public int playerMagicDmg = 1;
+
+    [Foldout("SkillStuff", true)]
     public int currentSkillPoints;
     public List<SkillSO> learnedSkills;
 
@@ -54,13 +61,11 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
