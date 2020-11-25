@@ -12,4 +12,13 @@ public class MovingPlatform : MonoBehaviour
     {
         transform.position = Vector3.Lerp(pos1.position, pos2.position, (Mathf.Sin(speed * Time.time) + 1.0f) / 2.0f);
     }
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        collider.gameObject.transform.SetParent(transform);
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        collider.gameObject.transform.SetParent(null);
+    }
 }
