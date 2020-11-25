@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 880, y: 492}
   m_MaxSize: {x: 16005, y: 14042}
   vertical: 0
-  controlID: 81
+  controlID: 165
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 82
+  controlID: 90
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 83
+  controlID: 91
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -212,8 +212,8 @@ MonoBehaviour:
     y: 0
     width: 701
     height: 803
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -420,9 +420,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 96440000
-      m_LastClickedID: 17558
-      m_ExpandedIDs: 3ea1ffffcaceffff56ecffff32f2ffff48fbfffff4ffffff424400000a4500002a450000
+      m_SelectedIDs: 46fbffff
+      m_LastClickedID: -1210
+      m_ExpandedIDs: c8f8ffff26fbffff46fbffff5afbffff3c44000086440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -482,9 +482,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.0031847358, y: 4.1690564, z: -2.468099}
+    m_Target: {x: 12.85936, y: 10.952494, z: 1562.0195}
     speed: 2
-    m_Value: {x: 0.0031847358, y: 4.1690564, z: -2.468099}
+    m_Value: {x: 12.85936, y: 10.952494, z: 1562.0195}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -534,9 +534,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.046406
+    m_Target: 17.760868
     speed: 2
-    m_Value: 14.046406
+    m_Value: 17.760868
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -554,7 +554,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.17387137, y: 0.74369293, z: -0.21208963, w: -0.6096813}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -626,20 +626,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/LevelElements
+    - Assets/Scripts/LevelElements/Collectibles
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/LevelElements
+  - Assets/Scripts/LevelElements/Collectibles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\justi\Desktop\Projekte\Catventure\Catventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0e730000
-    m_LastClickedID: 29454
-    m_ExpandedIDs: 00000000704600007246000080460000864600008a46000000ca9a3b
+    m_SelectedIDs: 46740000
+    m_LastClickedID: 29766
+    m_ExpandedIDs: 000000001a4700001c4700001e4700002047000036470000404700005647000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -667,7 +667,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007046000072460000
+    m_ExpandedIDs: 000000001a4700001c4700001e47000020470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -695,7 +695,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000a49b00009c9b0000ca9b0000aa9b00006c9b0000949b0000b49b0000d89b0000709b0000729b00008c9b0000829b0000909b0000a89b0000929b00009e9b00008e9b0000c09b0000ae9b0000a69b0000849b00000e7d0000c89b00006e9b0000749b000020880000308800001288000024880000
+    m_ExpandedInstanceIDs: c6230000a49b00009c9b0000ca9b0000aa9b00006c9b0000949b0000b49b0000d89b0000709b0000729b00008c9b0000829b0000909b0000a89b0000929b00009e9b00008e9b0000c09b0000ae9b0000a69b0000849b00000e7d0000c89b00006e9b0000749b000020880000308800001288000024880000cc550000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
