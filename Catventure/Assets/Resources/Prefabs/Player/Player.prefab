@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 9
   walkAcceleration: 75
-  airAcceleration: 30
+  airAcceleration: 20
   groundDeceleration: 70
   jumpHeight: 3.5
 --- !u!114 &477751451061903241
@@ -145,6 +145,7 @@ MonoBehaviour:
   maxPlayerHealth: 3
   playerAttackDmg: 1
   playerMagicDmg: 1
+  invulnerableTime: 1
   currentSkillPoints: 0
   learnedSkills: []
 --- !u!50 &477751451061903246

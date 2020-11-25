@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Homebrew;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-    [Foldout("PlayerStats", true)] 
+    [Foldout("PlayerStats", true)]
     [Tooltip("Current Health of the Player")]
     public int currentPlayerHealth = 3;
     [Tooltip("Maximal Health of the Player")]
@@ -16,11 +17,35 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Damage the Player deals with Magic")]
     public int playerMagicDmg = 1;
 
+    [Tooltip("Time the Player stays invulnerable after taking a hit")]
+    public float invulnerableTime = 0.5F;
     [Foldout("SkillStuff", true)]
     [Tooltip("Current Skill Points the player has")]
     public int currentSkillPoints;
     [Tooltip("Current Skills the Player has learned")]
     public List<SkillSO> learnedSkills;
+
+    private bool invulnerable;
+
+
+    public void GotDamaged(int damage)
+    {
+        StartCoroutine(DamageDealt(damage));
+    }
+
+    public IEnumerator DamageDealt(int damage)
+    {
+        if (!invulnerable)
+        {
+            currentPlayerHealth -= damage;
+            invulnerable = true;
+        }
+        yield return new WaitForSeconds(invulnerableTime);
+        if (invulnerable)
+        {
+            invulnerable = false;
+        }
+    }
 
     public void LearnSkill(SkillSO skillToLearn, Button skillBtn)
     {
