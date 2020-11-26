@@ -15,7 +15,7 @@ MonoBehaviour:
   skilltreeType: 1
   skillImg: {fileID: 0}
   level: 1
-  skillsNeeded: []
+  skillNeeded: {fileID: 0}
   skillPointsNeeded: 1
   attackBonus: 0
   defenseBonus: 0
