@@ -144,11 +144,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayerHealth: 3
   maxPlayerHealth: 3
+  currentCookies: 0
   playerAttackDmg: 1
   playerMagicDmg: 1
   invulnerableTime: 1
-  currentSkillPoints: 0
+  currentSkillPoints: 4
   learnedSkills: []
+  cookieCounter: {fileID: 0}
 --- !u!50 &477751451061903246
 Rigidbody2D:
   serializedVersion: 4
@@ -181,13 +183,14 @@ GameObject:
   - component: {fileID: 6993013004321662509}
   - component: {fileID: 4366818026043965052}
   - component: {fileID: 4175148041669092568}
+  - component: {fileID: 477751451635777324}
   m_Layer: 0
-  m_Name: AttackArea
+  m_Name: MeleeAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6993013004321662509
 Transform:
   m_ObjectHideFlags: 0
@@ -278,3 +281,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &477751451635777324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437543911908074704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4e80df13bf3da419af1c094421527b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDuration: 0.2
+  meleeAttackCooldown: 1
