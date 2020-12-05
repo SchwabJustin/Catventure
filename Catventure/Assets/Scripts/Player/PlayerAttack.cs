@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -10,8 +9,8 @@ public class PlayerAttack : MonoBehaviour
 
     private bool attackReady = true;
     private SpriteRenderer spriteRend;
-    
-    void Start()
+
+    private void Start()
     {
         attackCollider = GetComponent<BoxCollider2D>();
         spriteRend = GetComponent<SpriteRenderer>();
@@ -19,7 +18,8 @@ public class PlayerAttack : MonoBehaviour
         attackCollider.isTrigger = true;
         attackCollider.enabled = false;
     }
-    void Update()
+
+    private void Update()
     {
         if (attackReady && Input.GetMouseButtonDown(0))
         {
@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
         attackReady = true;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Enemy"))
         {

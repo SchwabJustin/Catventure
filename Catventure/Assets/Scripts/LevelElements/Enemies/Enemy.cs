@@ -1,13 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     public int currentHealth = 1;
-
     public int maxHealth = 1;
-    private bool invulnerable;
+    public int armor = 0;
+    private bool _invulnerable;
     public float invulnerableTime = 0.2F;
 
     public void GotDamaged(int damage)
@@ -21,15 +20,16 @@ public class Enemy : MonoBehaviour
     }
     public IEnumerator DamageDealt(int damage)
     {
-        if (!invulnerable)
+        damage -= armor;
+        if (!_invulnerable && damage < 0)
         {
             currentHealth -= damage;
-            invulnerable = true;
+            _invulnerable = true;
         }
         yield return new WaitForSeconds(invulnerableTime);
-        if (invulnerable)
+        if (_invulnerable)
         {
-            invulnerable = false;
+            _invulnerable = false;
         }
     }
 }

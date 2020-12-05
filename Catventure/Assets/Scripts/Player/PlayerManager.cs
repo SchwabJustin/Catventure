@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 public class PlayerManager : MonoBehaviour
 {
-    [Foldout("PlayerStats", true)]
+    [Foldout("Fight", true)]
     [Tooltip("Current Health of the Player")]
     public int currentPlayerHealth = 3;
     [Tooltip("Maximal Health of the Player")]
@@ -18,24 +18,43 @@ public class PlayerManager : MonoBehaviour
     public int playerAttackDmg = 1;
     [Tooltip("Damage the Player deals with Magic")]
     public int playerMagicDmg = 1;
-
     [Tooltip("Time the Player stays invulnerable after taking a hit")]
     public float invulnerableTime = 0.5F;
-    [Foldout("SkillStuff", true)]
+    private bool invulnerable;
+
+    [Foldout("SkillTree", true)]
     [Tooltip("Current Skill Points the player has")]
     public int currentSkillPoints;
     [Tooltip("Current Skills the Player has learned")]
     public List<SkillSO> learnedSkills;
 
+    [Foldout("Shopping", true)]
 
-    private bool invulnerable;
     public TMP_Text cookieCounter;
+
+    private GameObject headsParent;
+    public string currentHeadName = "StandardHead";
+    public List<String> unlockedHeads;
+    public List<GameObject> heads;
 
 
     void Awake()
     {
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = "Cookies: " + currentCookies;
+
+        if (!unlockedHeads.Contains("StandardHead"))
+        {
+            unlockedHeads.Add("StandardHeads");
+        }
+        headsParent = transform.Find("Heads").gameObject;
+        for (int i = 0; headsParent.transform.childCount > i; i++)
+        {
+            heads.Add(headsParent.transform.GetChild(i).gameObject);
+            heads[i].SetActive(false);
+        }
+
+        heads.Find(go => go.name == currentHeadName).SetActive(true);
     }
 
     public void GotDamaged(int damage)
