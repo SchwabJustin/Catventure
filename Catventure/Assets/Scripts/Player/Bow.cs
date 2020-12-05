@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Bow : MonoBehaviour
@@ -18,24 +20,48 @@ public class Bow : MonoBehaviour
     private Vector2 direction;
     private bool shot;
     private bool shooting;
-
+    private PlayerMovement playerMovement;
+    private GameObject parentPoint;
+    public Vector2 mousePosition;
     private void Start()
     {
+        parentPoint = new GameObject();
+        parentPoint.name = "ParentPoint";
+        playerMovement = transform.parent.gameObject.GetComponent<PlayerMovement>();
         points = new GameObject[numberOfPoints];
         for (int i = 0; i < numberOfPoints; i++)
         {
             points[i] = Instantiate(markerPoint, shotPoint.position, Quaternion.identity);
+            points[i].transform.SetParent(parentPoint.transform);
+        }
+        foreach (GameObject point in points)
+        {
+            point.GetComponent<SpriteRenderer>().forceRenderingOff = true;
         }
     }
 
     private void Update()
     {
         Vector2 bowPosition = transform.position;
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = mousePosition - bowPosition;
         transform.right = direction;
+        if (mousePosition.x >= transform.position.x)
+        {
+            transform.parent.localScale = Vector3.one;
+            transform.localScale = Vector3.one;
+        }
+        if (mousePosition.x < transform.position.x)
+        {
+            transform.parent.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1, -1, 1);
+        }
         if (Input.GetMouseButtonDown(0) && !shot)
         {
+            foreach (GameObject point in points)
+            {
+                point.GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            }
             shooting = true;
             StartCoroutine(IncreaseLaunchForce());
         }
@@ -44,6 +70,10 @@ public class Bow : MonoBehaviour
             shot = true;
             Shoot();
             launchForce = 1;
+            foreach (GameObject point in points)
+            {
+                point.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+            }
         }
         for (int i = 0; i < numberOfPoints; i++)
         {
@@ -70,6 +100,7 @@ public class Bow : MonoBehaviour
     void Shoot()
     {
         GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
         StartCoroutine(AfterShot());
     }
@@ -83,7 +114,7 @@ public class Bow : MonoBehaviour
 
     Vector2 PointPosition(float t)
     {
-        Vector2 position = (Vector2) shotPoint.position + (direction.normalized * launchForce * t) +
+        Vector2 position = (Vector2)shotPoint.position + (direction.normalized * launchForce * t) +
                            0.5f * Physics2D.gravity * (t * t);
         return position;
     }

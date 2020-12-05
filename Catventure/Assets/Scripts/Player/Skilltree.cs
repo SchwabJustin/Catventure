@@ -4,7 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine.UI;
 
-public enum SkillTreeType { Fire, Ice, Earth };
+public enum SkillTreeType { Sword, Magic, Bow };
 
 public class Skilltree : MonoBehaviour
 {
@@ -12,12 +12,12 @@ public class Skilltree : MonoBehaviour
     [Tooltip("Prefab for the SkilltreeButton")]
     public GameObject skillTreeButtonPrefab;
     private List<SkillSO> allSkills;
-    private List<SkillSO> fireSkills;
-    private List<SkillSO> iceSkills;
-    private List<SkillSO> earthSkills;
-    private GameObject fireTree;
-    private GameObject iceTree;
-    private GameObject earthTree;
+    private List<SkillSO> swordSkills;
+    private List<SkillSO> magicSkills;
+    private List<SkillSO> bowSkills;
+    private GameObject swordTree;
+    private GameObject magicTree;
+    private GameObject bowTree;
     private TMP_Text currentSkillPointsUI;
     void Start()
     {
@@ -27,19 +27,19 @@ public class Skilltree : MonoBehaviour
         currentSkillPointsUI = transform.Find("CurrentSkillPointsUI").GetComponent<TMP_Text>();
         currentSkillPointsUI.text = "Skillpoints \n " + playerManager.currentSkillPoints;
         allSkills = Resources.LoadAll<SkillSO>("ScriptableObjects/Skills").ToList();
-        fireSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Fire).ToList();
-        fireSkills = fireSkills.OrderBy(s => s.level).ToList();
-        iceSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Ice).ToList();
-        iceSkills = iceSkills.OrderBy(s => s.level).ToList();
-        earthSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Earth).ToList();
-        earthSkills = earthSkills.OrderBy(s => s.level).ToList();
+        swordSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Sword).ToList();
+        swordSkills = swordSkills.OrderBy(s => s.level).ToList();
+        magicSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Magic).ToList();
+        magicSkills = magicSkills.OrderBy(s => s.level).ToList();
+        bowSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Bow).ToList();
+        bowSkills = bowSkills.OrderBy(s => s.level).ToList();
 
-        fireTree = gameObject.transform.Find("FireTree").gameObject;
-        iceTree = gameObject.transform.Find("IceTree").gameObject;
-        earthTree = gameObject.transform.Find("EarthTree").gameObject;
-        GenerateSkilltree(fireTree, fireSkills);
-        GenerateSkilltree(iceTree, iceSkills);
-        GenerateSkilltree(earthTree, earthSkills);
+        swordTree = gameObject.transform.Find("SwordTree").gameObject;
+        magicTree = gameObject.transform.Find("MagicTree").gameObject;
+        bowTree = gameObject.transform.Find("BowTree").gameObject;
+        GenerateSkilltree(swordTree, swordSkills);
+        GenerateSkilltree(magicTree, magicSkills);
+        GenerateSkilltree(bowTree, bowSkills);
     }
 
     void GenerateSkilltree(GameObject skilltree, List<SkillSO> skills)

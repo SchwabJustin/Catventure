@@ -34,7 +34,6 @@ public class PlayerManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Hi");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = "Cookies: " + currentCookies;
     }

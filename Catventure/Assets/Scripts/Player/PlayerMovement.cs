@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 velocity;
 
     private bool grounded;
-    private bool faceRight = true;
 
     private void Awake()
     {
@@ -34,17 +33,17 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
 
-        if (moveInput > 0 && !faceRight)
-        {
-            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y,transform.localScale.z);
-            faceRight = true;
-        }
+        //if (moveInput > 0 && !faceRight)
+        //{
+        //    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y,transform.localScale.z);
+        //    faceRight = true;
+        //}
 
-        if (moveInput < 0 && faceRight)
-        {
-            transform.localScale = new Vector3(transform.localScale.x * - 1, transform.localScale.y, transform.localScale.z);
-            faceRight = false;
-        }
+        //if (moveInput < 0 && faceRight)
+        //{
+        //    transform.localScale = new Vector3(transform.localScale.x * - 1, transform.localScale.y, transform.localScale.z);
+        //    faceRight = false;
+        //}
 
         if (grounded)
         {
