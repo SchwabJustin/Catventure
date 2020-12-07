@@ -75,9 +75,10 @@ GameObject:
   - component: {fileID: 667928895397659612}
   - component: {fileID: 667928895397659613}
   - component: {fileID: 667928895397659603}
+  - component: {fileID: 228895593}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,8 +187,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {fileID: 667928895667505150}
   pos2: {fileID: 667928895223411992}
-  speed: 1
+  speed: 1.5
   damage: 1
+--- !u!114 &228895593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667928895397659615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618afa2bea900a242b652c1b90a10b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 2
+  maxHealth: 1
+  armor: 0
+  invulnerableTime: 0
+  cookiePrefab: {fileID: 2336050196890234474, guid: c6a33a48ff52b02488e90167cd98a301,
+    type: 3}
 --- !u!1 &667928895667505151
 GameObject:
   m_ObjectHideFlags: 0

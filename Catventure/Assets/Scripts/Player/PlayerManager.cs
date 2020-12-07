@@ -12,12 +12,8 @@ public class PlayerManager : MonoBehaviour
     public int currentPlayerHealth = 3;
     [Tooltip("Maximal Health of the Player")]
     public int maxPlayerHealth = 3;
-    [Tooltip("Current number of Cookies the Player has collected")]
-    public int currentCookies;
     [Tooltip("Damage the Player deals with Attacks")]
     public int playerAttackDmg = 1;
-    [Tooltip("Damage the Player deals with Magic")]
-    public int playerMagicDmg = 1;
     [Tooltip("Time the Player stays invulnerable after taking a hit")]
     public float invulnerableTime = 0.5F;
     private bool invulnerable;
@@ -36,10 +32,14 @@ public class PlayerManager : MonoBehaviour
     public string currentHeadName = "StandardHead";
     public List<String> unlockedHeads;
     public List<GameObject> heads;
+    [Tooltip("Current number of Cookies the Player has collected")]
+    public int currentCookies;
 
+    private GameObject shopContent;
 
     void Awake()
     {
+        shopContent = GameObject.Find("ShopContent");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = "Cookies: " + currentCookies;
 
@@ -131,5 +131,35 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Learned Skill " + skillToLearn.name);
         }
     }
+    public void buyHead(EquipmentSO equipmentToBuy)
+    {
+        Debug.Log("Trying to buy " + equipmentToBuy);
+        if (unlockedHeads.Contains(equipmentToBuy.name))
+        {
+            heads.Find(go => go.name == currentHeadName).SetActive(false);
+            shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.white;
+            currentHeadName = equipmentToBuy.name;
+            heads.Find(go => go.name == currentHeadName).SetActive(true);
+            shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.green;
+        }
 
+
+        else if (equipmentToBuy.cookieCost > currentCookies)
+        {
+            Debug.Log("You don't have enough Cookies.");
+        }
+        else
+        {
+            currentCookies -= equipmentToBuy.cookieCost;
+            unlockedHeads.Add(equipmentToBuy.name);
+            GameObject currentEquipmentUI = shopContent.transform.Find(equipmentToBuy.name).gameObject;
+            currentEquipmentUI.transform.Find("CookiePrice").gameObject.SetActive(false);
+            Debug.Log("Bought Head" + equipmentToBuy.name);
+            heads.Find(go => go.name == currentHeadName).SetActive(false);
+            shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.white;
+            currentHeadName = equipmentToBuy.name;
+            heads.Find(go => go.name == currentHeadName).SetActive(true);
+            shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.green;
+        }
+    }
 }

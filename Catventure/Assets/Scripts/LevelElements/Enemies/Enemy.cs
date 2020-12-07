@@ -8,20 +8,23 @@ public class Enemy : MonoBehaviour
     public int armor = 0;
     private bool _invulnerable;
     public float invulnerableTime = 0.2F;
-
+    public GameObject cookiePrefab;
     public void GotDamaged(int damage)
     {
-        Debug.Log("Got Hit");
+        Debug.Log("Got Hit with " + damage);
         StartCoroutine(DamageDealt(damage));
         if (currentHealth <= 0)
         {
+            Vector3 currentPosition = transform.position;
+            GameObject cookie = Instantiate(cookiePrefab);
+            cookie.transform.position = transform.position;
             Destroy(this.gameObject);
         }
     }
     public IEnumerator DamageDealt(int damage)
     {
         damage -= armor;
-        if (!_invulnerable && damage < 0)
+        if (!_invulnerable && damage > 0)
         {
             currentHealth -= damage;
             _invulnerable = true;
