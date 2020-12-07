@@ -48,13 +48,13 @@ public class Bow : MonoBehaviour
         transform.right = direction;
         if (mousePosition.x >= transform.position.x)
         {
-            transform.parent.localScale = Vector3.one;
-            transform.localScale = Vector3.one;
+            transform.parent.localScale = new Vector3(Math.Abs(transform.parent.localScale.x), Math.Abs(transform.parent.localScale.y), Math.Abs(transform.parent.localScale.z)); ;
+            transform.localScale = new Vector3(Math.Abs(transform.localScale.x), Math.Abs(transform.localScale.y), Math.Abs(transform.localScale.z));
         }
         if (mousePosition.x < transform.position.x)
         {
-            transform.parent.localScale = new Vector3(-1, 1, 1);
-            transform.localScale = new Vector3(-1, -1, 1);
+            transform.parent.localScale = new Vector3(-1 * Math.Abs(transform.parent.localScale.x), Math.Abs(transform.parent.localScale.y), Math.Abs(transform.parent.localScale.z));
+            transform.localScale = new Vector3(-1 * Math.Abs(transform.localScale.x), -1 * Math.Abs(transform.localScale.y), Math.Abs(transform.localScale.z));
         }
         if (Input.GetMouseButtonDown(0) && !shot)
         {

@@ -160,6 +160,7 @@ public class PlayerManager : MonoBehaviour
             currentHeadName = equipmentToBuy.name;
             heads.Find(go => go.name == currentHeadName).SetActive(true);
             shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.green;
+            cookieCounter.text = "Cookies: " + currentCookies;
         }
     }
 }
