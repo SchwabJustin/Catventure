@@ -3,12 +3,17 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 /[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
+/[Uu]serSettings/
+[Tt]emp/
+[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
-#/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+# Windows
+Thumbs.db
+Thumbs.db.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -58,7 +63,6 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
-*.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -80,5 +84,14 @@ crashlytics-build.properties
 /Catventure/Library/ShaderCache/
 /Catventure/Temp/
 /Catventure/Library/StateCache/
-/Catventure/Library/ScriptAssemblies/Assembly-CSharp.dll
+/Catventure/Library/ScriptAssemblies/
+/Catventure/Library/ShaderCache/EditorEncounteredVariants
+/Catventure/Library/shadercompiler-UnityShaderCompiler.exe0.log
+/Catventure/Library/shadercompiler-UnityShaderCompiler.exe1.log
+/Catventure/Library/shadercompiler-UnityShaderCompiler.exe2.log
+/Catventure/Library/shadercompiler-UnityShaderCompiler.exe3.log
+/Catventure/Library/shadercompiler-UnityShaderCompiler.exe4.log
+/Catventure/Library/shadercompiler-UnityShaderCompiler.exe5.log
+/Catventure/Library/shadercompiler-UnityShaderCompiler.exe6.log
 /Catventure/Library/SourceAssetDB
+/Catventure/Library/SourceAssetDB-lock

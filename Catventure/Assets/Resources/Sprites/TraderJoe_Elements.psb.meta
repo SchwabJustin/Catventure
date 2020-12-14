@@ -1,0 +1,321 @@
+fileFormatVersion: 2
+guid: 90d7261a731ac694dbc9e42fd6766e92
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: "Eingef\xFCgte Ebene"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 354
+      width: 256
+      height: 245
+    spriteID: 2defcb46f1d09ee449308ca065971f02
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -157, y: 226}
+  - name: "Eingef\xFCgte Ebene #1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 268
+      y: 354
+      width: 57
+      height: 121
+    spriteID: 478849a44731ff541a9311bc87fb89db
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 65, y: 279}
+  - name: "Eingef\xFCgte Ebene #5"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 607
+      width: 84
+      height: 407
+    spriteID: b916fdaceb720b242aa73db0959a3a0f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -406, y: 606}
+  - name: TraderJoe_Elements.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 386
+      height: 342
+    spriteID: adecc09c9ce1549489b1e6f314f5e4c1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: -43}
+  - name: "Eingef\xFCgte Ebene #4"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 333
+      y: 354
+      width: 80
+      height: 83
+    spriteID: 13664f2a95bcb63488fd7ac69f492494
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 43, y: 354}
+  - name: "Eingef\xFCgte Ebene #3"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 421
+      y: 354
+      width: 72
+      height: 81
+    spriteID: ac4e2360b25edaa428c1e8246fb68fe5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 212, y: 354}
+  - name: "Eingef\xFCgte Ebene #2"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 333
+      y: 445
+      width: 122
+      height: 54
+    spriteID: 854e0999700f5454daa5caf429745963
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 16, y: 329}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 512
+  importedTextureHeight: 1024
+  documentSize: {x: 494, y: 408}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 512
+  textureActualHeight: 1024
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: "Eingef\xFCgte Ebene"
+    spriteName: "Eingef\xFCgte Ebene"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2defcb46f1d09ee449308ca065971f02
+    layerID: 0
+    mosaicPosition: {x: 4, y: 354}
+  - name: "Eingef\xFCgte Ebene #1"
+    spriteName: "Eingef\xFCgte Ebene #1"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 478849a44731ff541a9311bc87fb89db
+    layerID: 785658667
+    mosaicPosition: {x: 268, y: 354}
+  - name: "Eingef\xFCgte Ebene #5"
+    spriteName: "Eingef\xFCgte Ebene #5"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b916fdaceb720b242aa73db0959a3a0f
+    layerID: 785658663
+    mosaicPosition: {x: 4, y: 607}
+  - name: TraderJoe_Elements.png
+    spriteName: TraderJoe_Elements.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: adecc09c9ce1549489b1e6f314f5e4c1
+    layerID: 2039369677
+    mosaicPosition: {x: 4, y: 4}
+  - name: "Eingef\xFCgte Ebene #4"
+    spriteName: "Eingef\xFCgte Ebene #4"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 13664f2a95bcb63488fd7ac69f492494
+    layerID: 785658664
+    mosaicPosition: {x: 333, y: 354}
+  - name: "Eingef\xFCgte Ebene #3"
+    spriteName: "Eingef\xFCgte Ebene #3"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ac4e2360b25edaa428c1e8246fb68fe5
+    layerID: 785658665
+    mosaicPosition: {x: 421, y: 354}
+  - name: "Eingef\xFCgte Ebene #2"
+    spriteName: "Eingef\xFCgte Ebene #2"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 854e0999700f5454daa5caf429745963
+    layerID: 785658666
+    mosaicPosition: {x: 333, y: 445}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: TraderJoe_Elements Texture
+  prefabAssetName: TraderJoe_Elements Prefab
+  spriteLibAssetName: TraderJoe_Elements Sprite Lib
+  secondarySpriteTextures: []

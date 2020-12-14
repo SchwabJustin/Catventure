@@ -1,0 +1,1244 @@
+fileFormatVersion: 2
+guid: c120395be89cb5146bac43ec7811be78
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1689387893166968617
+    second: Waffen_Vektor_0
+  - first:
+      213: -8035474983494054961
+    second: Waffen_Vektor_1
+  - first:
+      213: -2549721706501392178
+    second: Waffen_Vektor_2
+  - first:
+      213: 8680868428139234785
+    second: Waffen_Vektor_3
+  - first:
+      213: -1096173563420506977
+    second: Waffen_Vektor_4
+  - first:
+      213: 5513326316383483956
+    second: Waffen_Vektor_5
+  - first:
+      213: 2855373147963712227
+    second: Waffen_Vektor_6
+  - first:
+      213: 6956422751183716258
+    second: Waffen_Vektor_7
+  - first:
+      213: 5412760512071118719
+    second: Waffen_Vektor_8
+  - first:
+      213: -6686825419385818132
+    second: Waffen_Vektor_9
+  - first:
+      213: -2199738770026399109
+    second: Waffen_Vektor_10
+  - first:
+      213: 8939031669896530896
+    second: Waffen_Vektor_11
+  - first:
+      213: -1036046267612269144
+    second: Waffen_Vektor_12
+  - first:
+      213: 2822286857524705441
+    second: Waffen_Vektor_13
+  - first:
+      213: 2359696560239737442
+    second: Waffen_Vektor_14
+  - first:
+      213: -1732853616909613291
+    second: Waffen_Vektor_15
+  - first:
+      213: -520367758546798171
+    second: Waffen_Vektor_16
+  - first:
+      213: -4421470646537852630
+    second: Waffen_Vektor_17
+  - first:
+      213: 4411678654343110617
+    second: Waffen_Vektor_18
+  - first:
+      213: -2835422818495747502
+    second: Waffen_Vektor_19
+  - first:
+      213: 2814769675501319768
+    second: Waffen_Vektor_20
+  - first:
+      213: 8369793121447584448
+    second: Waffen_Vektor_21
+  - first:
+      213: 165848776763547399
+    second: Waffen_Vektor_22
+  - first:
+      213: -5034468602908676035
+    second: Waffen_Vektor_23
+  - first:
+      213: 6142370935100319773
+    second: Waffen_Vektor_24
+  - first:
+      213: 384093169192728086
+    second: Waffen_Vektor_25
+  - first:
+      213: 6170065091011923342
+    second: Waffen_Vektor_26
+  - first:
+      213: 3982017104956040693
+    second: Waffen_Vektor_27
+  - first:
+      213: 1542612929617295300
+    second: Waffen_Vektor_28
+  - first:
+      213: -3718374226183916678
+    second: Waffen_Vektor_29
+  - first:
+      213: 6460504818657383409
+    second: Waffen_Vektor_30
+  - first:
+      213: -1137647474420323364
+    second: Waffen_Vektor_31
+  - first:
+      213: 3721122862119676390
+    second: Waffen_Vektor_32
+  - first:
+      213: 7776717635166933813
+    second: Waffen_Vektor_33
+  - first:
+      213: 5734964807182735409
+    second: Waffen_Vektor_34
+  - first:
+      213: -2664490690423389437
+    second: Waffen_Vektor_35
+  - first:
+      213: -4829898060945216358
+    second: Waffen_Vektor_36
+  - first:
+      213: 3976923140392500671
+    second: Waffen_Vektor_37
+  - first:
+      213: -3173338900600143581
+    second: Waffen_Vektor_38
+  - first:
+      213: -2733457370716715992
+    second: Waffen_Vektor_39
+  - first:
+      213: 2391462956071403177
+    second: Waffen_Vektor_40
+  - first:
+      213: -636155571071649755
+    second: Waffen_Vektor_41
+  - first:
+      213: -8798354898074101903
+    second: Waffen_Vektor_42
+  - first:
+      213: 4086763238384172120
+    second: Waffen_Vektor_43
+  - first:
+      213: 8381278331028280452
+    second: Waffen_Vektor_44
+  - first:
+      213: 3452278705256566089
+    second: Waffen_Vektor_45
+  - first:
+      213: 9217587035941570554
+    second: Waffen_Vektor_46
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 350
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Waffen_Vektor_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1311
+        width: 16
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0ffe379a61e88e0800000000000000
+      internalID: -1689387893166968617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_1
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1320
+        width: 86
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb8c4783124c7090800000000000000
+      internalID: -8035474983494054961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_2
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1314
+        width: 86
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8b1efed919d9cd0800000000000000
+      internalID: -2549721706501392178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_3
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1320
+        width: 108
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5842997d3a87870800000000000000
+      internalID: 8680868428139234785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_4
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1320
+        width: 22
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94852ca3fb99c0f0800000000000000
+      internalID: -1096173563420506977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_5
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1334
+        width: 72
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438b9dae215438c40800000000000000
+      internalID: 5513326316383483956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_6
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1309
+        width: 87
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2e099efb250a720800000000000000
+      internalID: 2855373147963712227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_7
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1320
+        width: 32
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af30cfa2ad2a8060800000000000000
+      internalID: 6956422751183716258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_8
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1324
+        width: 65
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fa248f10dfd1b40800000000000000
+      internalID: 5412760512071118719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_9
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 1324
+        width: 85
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3b47a95bf9333a0800000000000000
+      internalID: -6686825419385818132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_10
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 1325
+        width: 77
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7afbed4e35f871e0800000000000000
+      internalID: -2199738770026399109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_11
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 1334
+        width: 141
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db462851f1dd0c70800000000000000
+      internalID: 8939031669896530896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_12
+      rect:
+        serializedVersion: 2
+        x: 2503
+        y: 1314
+        width: 44
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5f918a8693f91f0800000000000000
+      internalID: -1036046267612269144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_13
+      rect:
+        serializedVersion: 2
+        x: 2691
+        y: 1317
+        width: 36
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8730d91f6ca2720800000000000000
+      internalID: 2822286857524705441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_14
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 730
+        width: 141
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26afcc2f4835fb020800000000000000
+      internalID: 2359696560239737442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_15
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 722
+        width: 120
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5170a5401daa3f7e0800000000000000
+      internalID: -1732853616909613291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_16
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 724
+        width: 136
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a97047d74847c8f0800000000000000
+      internalID: -520367758546798171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_17
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 730
+        width: 91
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a296b487fd7c3a2c0800000000000000
+      internalID: -4421470646537852630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_18
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 735
+        width: 23
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df5b4fac5e693d30800000000000000
+      internalID: 4411678654343110617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_19
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 727
+        width: 64
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a268328fd86a8d0800000000000000
+      internalID: -2835422818495747502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_20
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 740
+        width: 229
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8563cc84b12101720800000000000000
+      internalID: 2814769675501319768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_21
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 727
+        width: 82
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c22467bf7a772470800000000000000
+      internalID: 8369793121447584448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_22
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 716
+        width: 120
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f9c6175963d4200800000000000000
+      internalID: 165848776763547399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_23
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 732
+        width: 130
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3075caba79f12ab0800000000000000
+      internalID: -5034468602908676035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_24
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 706
+        width: 148
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18a65162d51e3550800000000000000
+      internalID: 6142370935100319773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_25
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 719
+        width: 72
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616f26ec3b2945500800000000000000
+      internalID: 384093169192728086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_26
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 690
+        width: 149
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dcdc6828970a550800000000000000
+      internalID: 6170065091011923342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_27
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 716
+        width: 50
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f52f669577f24730800000000000000
+      internalID: 3982017104956040693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_28
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 193
+        width: 101
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c773cf4946786510800000000000000
+      internalID: 1542612929617295300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_29
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 190
+        width: 160
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73f652975ea56cc0800000000000000
+      internalID: -3718374226183916678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_30
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 137
+        width: 147
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3d5c147e258a950800000000000000
+      internalID: 6460504818657383409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_31
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 267
+        width: 168
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb6e8746a34630f0800000000000000
+      internalID: -1137647474420323364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_32
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 199
+        width: 134
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e96a3a178514a330800000000000000
+      internalID: 3721122862119676390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_33
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 155
+        width: 94
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53314a28c737ceb60800000000000000
+      internalID: 7776717635166933813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_34
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 109
+        width: 119
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1385e736b10b69f40800000000000000
+      internalID: 5734964807182735409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_35
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 510
+        width: 95
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3038af985d3d50bd0800000000000000
+      internalID: -2664490690423389437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_36
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 442
+        width: 94
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c2300bd41c8fcb0800000000000000
+      internalID: -4829898060945216358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_37
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 145
+        width: 196
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd302a868ed03730800000000000000
+      internalID: 3976923140392500671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_38
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 140
+        width: 175
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321cccd351906f3d0800000000000000
+      internalID: -3173338900600143581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_39
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 67
+        width: 74
+        height: 543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824c1c9f00fc01ad0800000000000000
+      internalID: -2733457370716715992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_40
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 126
+        width: 93
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae342653ee203120800000000000000
+      internalID: 2391462956071403177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_41
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 122
+        width: 138
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528736ce0ebeb27f0800000000000000
+      internalID: -636155571071649755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_42
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 115
+        width: 91
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177997cf5d6f5e580800000000000000
+      internalID: -8798354898074101903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_43
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 385
+        width: 96
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c7301438917b830800000000000000
+      internalID: 4086763238384172120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_44
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 193
+        width: 94
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4849e947c38405470800000000000000
+      internalID: 8381278331028280452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_45
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 250
+        width: 96
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d86740135f8ef20800000000000000
+      internalID: 3452278705256566089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waffen_Vektor_46
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 125
+        width: 95
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af70b8382927bef70800000000000000
+      internalID: 9217587035941570554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
