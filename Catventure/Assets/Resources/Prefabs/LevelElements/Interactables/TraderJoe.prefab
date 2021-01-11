@@ -78,7 +78,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1751079687
@@ -539,6 +539,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533623a4791df70498ea1befbbc13cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openShopKey: 102
+  shopItemPrefab: {fileID: 6627827793519027136, guid: 6d529e4de1c147e4f882cdb3b0c9d0b2,
+    type: 3}
+  allEquipmentsSO: []
+  allEquipmentsGO: []
+  equipmentsOnSale: []
+  currentEquipment: {fileID: 0}
 --- !u!1 &1645405010252062360
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +626,7 @@ SpriteRenderer:
   m_Size: {x: 1.0575342, y: 0.9369863}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2235555155891514577
@@ -723,7 +730,7 @@ SpriteRenderer:
   m_Size: {x: 0.7013699, y: 0.6712329}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4884802211966278607
@@ -950,7 +957,7 @@ SpriteRenderer:
   m_Size: {x: 0.33424658, y: 0.14794521}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3826119967850095287
@@ -1085,7 +1092,7 @@ SpriteRenderer:
   m_Size: {x: 0.23013699, y: 1.1150684}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1495768997152720881
@@ -1189,7 +1196,7 @@ SpriteRenderer:
   m_Size: {x: 0.21917808, y: 0.22739726}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8041810804915293733
@@ -1354,7 +1361,7 @@ SpriteRenderer:
   m_Size: {x: 0.19726028, y: 0.22191781}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1692085432683592126
@@ -1457,7 +1464,7 @@ SpriteRenderer:
   m_Size: {x: 0.15616438, y: 0.33150685}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4806467264083744229

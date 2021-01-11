@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &618589335
@@ -1235,7 +1235,7 @@ GameObject:
   - component: {fileID: 5201039846955473613}
   - component: {fileID: 5201039846955473610}
   - component: {fileID: 5201039846955473611}
-  - component: {fileID: 5201039846955473609}
+  - component: {fileID: 319916939133327135}
   m_Layer: 5
   m_Name: Skilltrees
   m_TagString: Untagged
@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5201039846955473609
+--- !u!114 &319916939133327135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5201039846955473614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db1fa958e32ce849ab7bda26fb3047c, type: 3}
+  m_Script: {fileID: 11500000, guid: 801c64e2181baf7469670a98a5c0d90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skillTreeButtonPrefab: {fileID: 8833461906372110753, guid: 7f5c8e3220ce6bb4a871170b8c521257,

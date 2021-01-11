@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 354
       width: 256
       height: 245
-    spriteID: 015cf34091fd55d46b9ff4a3f04e330f
+    spriteID: 72bf614034679ca40bb2b0f1bab65a67
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -120,7 +120,7 @@ ScriptedImporter:
       y: 354
       width: 57
       height: 121
-    spriteID: 965add31f52576d4facd06d720c02de4
+    spriteID: d6340818b13c8984488fd51151929fbe
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -142,7 +142,7 @@ ScriptedImporter:
       y: 607
       width: 84
       height: 407
-    spriteID: ed06759e598b8f9418beb6f70f623be8
+    spriteID: ef227fbdc835d804e80af66eea627781
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -164,7 +164,7 @@ ScriptedImporter:
       y: 4
       width: 386
       height: 342
-    spriteID: fde7caa0e7dc3b340b30c316469e9796
+    spriteID: e633e48b7e02fc14691c98665ee42057
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -186,7 +186,7 @@ ScriptedImporter:
       y: 354
       width: 80
       height: 83
-    spriteID: 49b68ad1488b3cd45b7cc9c9a5684d0e
+    spriteID: d97a6b0e40b406d4d863132020a06c12
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -208,7 +208,7 @@ ScriptedImporter:
       y: 354
       width: 72
       height: 81
-    spriteID: 5d8ff0bb6fb2a7d479db336634d1d9ed
+    spriteID: a0066293626fe194197ac2692a4cf337
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -230,7 +230,7 @@ ScriptedImporter:
       y: 445
       width: 122
       height: 54
-    spriteID: ca8ba1fdf4aa61c4780efa8dfd9a0681
+    spriteID: 5449ecdfef927e74180e9dc3f2fa0981
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -264,49 +264,49 @@ ScriptedImporter:
     spriteName: Trader_Head
     isGroup: 0
     parentIndex: -1
-    spriteID: 015cf34091fd55d46b9ff4a3f04e330f
+    spriteID: 72bf614034679ca40bb2b0f1bab65a67
     layerID: 0
     mosaicPosition: {x: 4, y: 354}
   - name: Trader_LeftArm
     spriteName: Trader_LeftArm
     isGroup: 0
     parentIndex: -1
-    spriteID: 965add31f52576d4facd06d720c02de4
+    spriteID: d6340818b13c8984488fd51151929fbe
     layerID: -29674772
     mosaicPosition: {x: 268, y: 354}
   - name: Trader_Staff
     spriteName: Trader_Staff
     isGroup: 0
     parentIndex: -1
-    spriteID: ed06759e598b8f9418beb6f70f623be8
+    spriteID: ef227fbdc835d804e80af66eea627781
     layerID: 1916019905
     mosaicPosition: {x: 4, y: 607}
   - name: Trader_Body
     spriteName: Trader_Body
     isGroup: 0
     parentIndex: -1
-    spriteID: fde7caa0e7dc3b340b30c316469e9796
+    spriteID: e633e48b7e02fc14691c98665ee42057
     layerID: -1585101377
     mosaicPosition: {x: 4, y: 4}
   - name: Trader_LeftLeg
     spriteName: Trader_LeftLeg
     isGroup: 0
     parentIndex: -1
-    spriteID: 49b68ad1488b3cd45b7cc9c9a5684d0e
+    spriteID: d97a6b0e40b406d4d863132020a06c12
     layerID: 427312158
     mosaicPosition: {x: 333, y: 354}
   - name: Trader_RightLeg
     spriteName: Trader_RightLeg
     isGroup: 0
     parentIndex: -1
-    spriteID: 5d8ff0bb6fb2a7d479db336634d1d9ed
+    spriteID: a0066293626fe194197ac2692a4cf337
     layerID: -2023815175
     mosaicPosition: {x: 421, y: 354}
   - name: Trader_RightArm
     spriteName: Trader_RightArm
     isGroup: 0
     parentIndex: -1
-    spriteID: ca8ba1fdf4aa61c4780efa8dfd9a0681
+    spriteID: 5449ecdfef927e74180e9dc3f2fa0981
     layerID: 1155407041
     mosaicPosition: {x: 333, y: 445}
   characterData:

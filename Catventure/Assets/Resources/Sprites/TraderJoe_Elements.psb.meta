@@ -42,7 +42,7 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 354
       width: 256
       height: 245
-    spriteID: 2defcb46f1d09ee449308ca065971f02
+    spriteID: 2770521d28220ad428b0f03c55d5354f
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -120,7 +120,7 @@ ScriptedImporter:
       y: 354
       width: 57
       height: 121
-    spriteID: 478849a44731ff541a9311bc87fb89db
+    spriteID: fb940b8644b8bb24ebd85046a35d8d3c
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -142,7 +142,7 @@ ScriptedImporter:
       y: 607
       width: 84
       height: 407
-    spriteID: b916fdaceb720b242aa73db0959a3a0f
+    spriteID: 2898ee0e2c612bf4c91278f57fc3def6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -164,7 +164,7 @@ ScriptedImporter:
       y: 4
       width: 386
       height: 342
-    spriteID: adecc09c9ce1549489b1e6f314f5e4c1
+    spriteID: d143c62848991f046b7c302b291902ac
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -186,7 +186,7 @@ ScriptedImporter:
       y: 354
       width: 80
       height: 83
-    spriteID: 13664f2a95bcb63488fd7ac69f492494
+    spriteID: 738211764faacc74988d7ee06df352a1
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -208,7 +208,7 @@ ScriptedImporter:
       y: 354
       width: 72
       height: 81
-    spriteID: ac4e2360b25edaa428c1e8246fb68fe5
+    spriteID: a8579a3577ebc35469a7cbada0de42e4
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -230,7 +230,7 @@ ScriptedImporter:
       y: 445
       width: 122
       height: 54
-    spriteID: 854e0999700f5454daa5caf429745963
+    spriteID: 62d21d400b457f64e931a5cef42fe5b2
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -264,49 +264,49 @@ ScriptedImporter:
     spriteName: "Eingef\xFCgte Ebene"
     isGroup: 0
     parentIndex: -1
-    spriteID: 2defcb46f1d09ee449308ca065971f02
+    spriteID: 2770521d28220ad428b0f03c55d5354f
     layerID: 0
     mosaicPosition: {x: 4, y: 354}
   - name: "Eingef\xFCgte Ebene #1"
     spriteName: "Eingef\xFCgte Ebene #1"
     isGroup: 0
     parentIndex: -1
-    spriteID: 478849a44731ff541a9311bc87fb89db
+    spriteID: fb940b8644b8bb24ebd85046a35d8d3c
     layerID: 785658667
     mosaicPosition: {x: 268, y: 354}
   - name: "Eingef\xFCgte Ebene #5"
     spriteName: "Eingef\xFCgte Ebene #5"
     isGroup: 0
     parentIndex: -1
-    spriteID: b916fdaceb720b242aa73db0959a3a0f
+    spriteID: 2898ee0e2c612bf4c91278f57fc3def6
     layerID: 785658663
     mosaicPosition: {x: 4, y: 607}
   - name: TraderJoe_Elements.png
     spriteName: TraderJoe_Elements.png
     isGroup: 0
     parentIndex: -1
-    spriteID: adecc09c9ce1549489b1e6f314f5e4c1
+    spriteID: d143c62848991f046b7c302b291902ac
     layerID: 2039369677
     mosaicPosition: {x: 4, y: 4}
   - name: "Eingef\xFCgte Ebene #4"
     spriteName: "Eingef\xFCgte Ebene #4"
     isGroup: 0
     parentIndex: -1
-    spriteID: 13664f2a95bcb63488fd7ac69f492494
+    spriteID: 738211764faacc74988d7ee06df352a1
     layerID: 785658664
     mosaicPosition: {x: 333, y: 354}
   - name: "Eingef\xFCgte Ebene #3"
     spriteName: "Eingef\xFCgte Ebene #3"
     isGroup: 0
     parentIndex: -1
-    spriteID: ac4e2360b25edaa428c1e8246fb68fe5
+    spriteID: a8579a3577ebc35469a7cbada0de42e4
     layerID: 785658665
     mosaicPosition: {x: 421, y: 354}
   - name: "Eingef\xFCgte Ebene #2"
     spriteName: "Eingef\xFCgte Ebene #2"
     isGroup: 0
     parentIndex: -1
-    spriteID: 854e0999700f5454daa5caf429745963
+    spriteID: 62d21d400b457f64e931a5cef42fe5b2
     layerID: 785658666
     mosaicPosition: {x: 333, y: 445}
   characterData:

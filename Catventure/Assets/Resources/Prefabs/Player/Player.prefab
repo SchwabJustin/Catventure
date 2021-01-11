@@ -642,9 +642,9 @@ GameObject:
   - component: {fileID: 477751451061903242}
   - component: {fileID: 477751451061903285}
   - component: {fileID: 477751451061903240}
-  - component: {fileID: 477751451061903243}
   - component: {fileID: 477751451061903241}
   - component: {fileID: 477751451061903246}
+  - component: {fileID: 1168939942}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -748,23 +748,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6842594, y: 0.9901366}
   m_EdgeRadius: 0
---- !u!114 &477751451061903243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477751451061903284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409faf4a16ed1f04ca787e3261debb68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  walkAcceleration: 75
-  airAcceleration: 20
-  groundDeceleration: 70
-  jumpHeight: 2.5
 --- !u!114 &477751451061903241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +792,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1168939942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477751451061903284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ace5e2518d5fb468f0f5255b9a20e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 9
+  walkAcceleration: 75
+  airAcceleration: 30
+  groundDeceleration: 70
+  jumpHeight: 2.5
 --- !u!1 &848544259803217752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,7 +1779,7 @@ SpriteRenderer:
   m_Size: {x: 0.21978022, y: 0.23076923}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &477751451635777324

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Trader : MonoBehaviour
 {
-    public KeyCode openShopKey;
+    public KeyCode openShopKey = KeyCode.F;
     public GameObject shopItemPrefab;
     public List<EquipmentSO> allEquipmentsSO;
     public List<GameObject> allEquipmentsGO;
