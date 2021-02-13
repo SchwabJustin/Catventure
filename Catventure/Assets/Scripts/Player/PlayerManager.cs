@@ -80,7 +80,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Cookie"))
         {
-            currentCookies++;
+            currentCookies += col.gameObject.GetComponent<Cookie>().cookieAmount;
             Destroy(col.gameObject);
             cookieCounter.text = "Cookies: " + currentCookies;
         }
