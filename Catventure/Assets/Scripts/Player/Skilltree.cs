@@ -11,10 +11,10 @@ public class Skilltree : MonoBehaviour
     private PlayerManager playerManager;
     [Tooltip("Prefab for the SkilltreeButton")]
     public GameObject skillTreeButtonPrefab;
-    private List<SkillSO> allSkills;
-    private List<SkillSO> swordSkills;
-    private List<SkillSO> magicSkills;
-    private List<SkillSO> bowSkills;
+    public List<SkillSO> allSkills;
+    public List<SkillSO> swordSkills;
+    public List<SkillSO> magicSkills;
+    public List<SkillSO> bowSkills;
     private GameObject swordTree;
     private GameObject magicTree;
     private GameObject bowTree;
