@@ -17,6 +17,8 @@ public class SkillSO : ScriptableObject
     [Tooltip("Number of skillpoints needed to learn this skill.")]
     public int skillPointsNeeded;
     [Tooltip("How much the physical attack of the player gets buffed. This value adds up on other skills.")]
+    public bool doubleSkillable;
+    [Tooltip("You can level up this skill 2 times.")]
     public int attackBonus;
     [Tooltip("How much the defense of the player gets buffed. This value adds up on other skills.")]
     public int defenseBonus;

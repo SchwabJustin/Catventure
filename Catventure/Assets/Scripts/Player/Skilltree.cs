@@ -26,7 +26,7 @@ public class Skilltree : MonoBehaviour
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
         currentSkillPointsUI = transform.Find("CurrentSkillPointsUI").GetComponent<TMP_Text>();
         currentSkillPointsUI.text = "Skillpoints \n " + playerManager.currentSkillPoints;
-        allSkills = Resources.LoadAll<SkillSO>("ScriptableObjects/Skills").ToList();
+        allSkills = Resources.LoadAll<SkillSO>("Prefabs/ScriptableObjects/Skills").ToList();
         swordSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Sword).ToList();
         swordSkills = swordSkills.OrderBy(s => s.level).ToList();
         magicSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Magic).ToList();
@@ -34,16 +34,17 @@ public class Skilltree : MonoBehaviour
         bowSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Bow).ToList();
         bowSkills = bowSkills.OrderBy(s => s.level).ToList();
 
-        swordTree = gameObject.transform.Find("SwordTree").gameObject;
-        magicTree = gameObject.transform.Find("MagicTree").gameObject;
+        // swordTree = gameObject.transform.Find("SwordTree").gameObject;
+        // magicTree = gameObject.transform.Find("MagicTree").gameObject;
         bowTree = gameObject.transform.Find("BowTree").gameObject;
-        GenerateSkilltree(swordTree, swordSkills);
-        GenerateSkilltree(magicTree, magicSkills);
+        // GenerateSkilltree(swordTree, swordSkills);
+        // GenerateSkilltree(magicTree, magicSkills);
         GenerateSkilltree(bowTree, bowSkills);
     }
 
     void GenerateSkilltree(GameObject skilltree, List<SkillSO> skills)
     {
+        Debug.Log(skilltree.name);
         float xPosition = 5;
         int previousLevel = 0;
         foreach (SkillSO skill in skills)
@@ -53,7 +54,9 @@ public class Skilltree : MonoBehaviour
             RectTransform currentTransform = currentSkill.GetComponent<RectTransform>();
             currentSkill.transform.SetParent(skilltree.transform.Find(skill.level.ToString()));
             currentSkill.name = skill.name;
-            currentSkill.GetComponentInChildren<TMP_Text>().text = skill.name;
+            currentSkill.GetComponent<Image>().sprite = skill.skillImg;
+            currentSkill.GetComponentInChildren<TMP_Text>().text = skill.description;
+            currentSkill.transform.Find("DescriptionWindow").gameObject.SetActive(false);
             currentSkill.transform.localScale = Vector3.one;
             currentSkill.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
             if (previousLevel == skill.level)

@@ -22,7 +22,8 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Current Skill Points the player has")]
     public int currentSkillPoints;
     [Tooltip("Current Skills the Player has learned")]
-    public List<SkillSO> learnedSkills;
+    public List<SkillSO> learnedSkills = new List<SkillSO>();
+    List<SkillSO> multiSkillableSkills = new List<SkillSO>();
 
     [Foldout("Shopping", true)]
 
@@ -93,27 +94,10 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("You already learned this skill");
         }
-        else if (skillToLearn.skillNeeded)
-        {
-            if (!learnedSkills.Contains(skillToLearn.skillNeeded))
-            {
-                Debug.Log("You need to learn " + skillToLearn.skillNeeded.name + " to learn this skill.");
-            }
 
-            else if (skillToLearn.skillPointsNeeded > currentSkillPoints)
-            {
-                Debug.Log("You don't have enough skill points.");
-            }
-            else
-            {
-                currentSkillPoints -= skillToLearn.skillPointsNeeded;
-                learnedSkills.Add(skillToLearn);
-                if (skillBtn)
-                {
-                    skillBtn.interactable = false;
-                }
-                Debug.Log("Learned Skill " + skillToLearn.name);
-            }
+        else if (!learnedSkills.Contains(skillToLearn.skillNeeded) && skillToLearn.skillNeeded)
+        {
+            Debug.Log("You need to learn " + skillToLearn.skillNeeded.name + " to learn this skill.");
         }
 
         else if (skillToLearn.skillPointsNeeded > currentSkillPoints)
@@ -123,14 +107,40 @@ public class PlayerManager : MonoBehaviour
         else
         {
             currentSkillPoints -= skillToLearn.skillPointsNeeded;
-            learnedSkills.Add(skillToLearn);
-            if (skillBtn)
+            if (!skillToLearn.doubleSkillable)
             {
-                skillBtn.interactable = false;
+                Debug.Log("Learned Skill");
+                learnedSkills.Add(skillToLearn);
+                if (skillBtn)
+                {
+                    skillBtn.interactable = false;
+                }
+            }
+            else if (multiSkillableSkills.Contains(skillToLearn))
+            {
+                Debug.Log("Learned Skill");
+                learnedSkills.Add(skillToLearn);
+                if (skillBtn)
+                {
+                    skillBtn.interactable = false;
+                }
+            }
+            else
+            {
+                multiSkillableSkills.Add(skillToLearn);
+                Debug.Log("Added Skill to multilearnSKills");
             }
             Debug.Log("Learned Skill " + skillToLearn.name);
+            if (skillToLearn.name == "Präziser Schuss")
+            {
+                Debug.Log("Learned Präziser Schuss");
+                GetComponentInChildren<Bow>().learnedSkill = true;
+            }
         }
+
     }
+
+
     public void buyHead(EquipmentSO equipmentToBuy)
     {
         Debug.Log("Trying to buy " + equipmentToBuy);

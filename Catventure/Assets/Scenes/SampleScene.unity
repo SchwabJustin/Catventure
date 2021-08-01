@@ -1805,7 +1805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446272228230773898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 4.06, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1446272228236166466}
@@ -1904,7 +1904,7 @@ Transform:
   m_GameObject: {fileID: 1446272229004413516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1359668532}
   m_Father: {fileID: 1446272228236166466}
@@ -2025,8 +2025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589cf1a3f8a996e44952555759a3770c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1446272228735618669}
-  pos2: {fileID: 1446272228230773899}
+  endPos: {fileID: 1446272228230773899}
   speed: 1
   damage: 1
   playerSighted: 0
@@ -2036,6 +2035,8 @@ MonoBehaviour:
   shootForce: 4
   cooldownTime: 2
   cooldown: 0
+  distance: 1
+  distFromStart: 0
 --- !u!1001 &1457509855831625418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2818,6 +2819,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagicTree
       objectReference: {fileID: 0}
+    - target: {fileID: 5201039846024966435, guid: 1981126896e2e694eba808f94019ae34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5201039846598764109, guid: 1981126896e2e694eba808f94019ae34,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2992,6 +2998,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SwordTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201039848004523595, guid: 1981126896e2e694eba808f94019ae34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5201039848054457076, guid: 1981126896e2e694eba808f94019ae34,
         type: 3}
