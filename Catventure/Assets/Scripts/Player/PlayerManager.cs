@@ -95,9 +95,9 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("You already learned this skill");
         }
 
-        else if (!learnedSkills.Contains(skillToLearn.skillNeeded) && skillToLearn.skillNeeded)
+        else if (skillToLearn.skillsNeeded.Count > 0 && !ListValueInList(skillToLearn.skillsNeeded, learnedSkills))
         {
-            Debug.Log("You need to learn " + skillToLearn.skillNeeded.name + " to learn this skill.");
+            Debug.Log("You need to learn " + skillToLearn.skillsNeeded + " to learn this skill.");
         }
 
         else if (skillToLearn.skillPointsNeeded > currentSkillPoints)
@@ -140,7 +140,15 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-
+    private bool ListValueInList(List<SkillSO> ListA, List<SkillSO> ListB)
+    {
+        for (int i = 0; i < ListA.Count; i++)
+        {
+            if (ListA.Contains(ListB[i]))
+                return true;
+        }
+        return false;
+    }
     public void buyHead(EquipmentSO equipmentToBuy)
     {
         Debug.Log("Trying to buy " + equipmentToBuy);
