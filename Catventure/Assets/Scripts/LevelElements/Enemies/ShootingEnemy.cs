@@ -5,10 +5,8 @@ using UnityEngine;
 public class ShootingEnemy : MonoBehaviour
 {
     [Tooltip("First Position the Enemy moves to.")]
-    public Transform pos1;
+    public Transform endPos;
     [Tooltip("Second Position the Enemy moves to.")]
-    public Transform pos2;
-    [Tooltip("Speed of the Platform")]
     public float speed = 1.0f;
     [Tooltip("Damage the Enemy deals")]
     public int damage = 1;
@@ -24,20 +22,46 @@ public class ShootingEnemy : MonoBehaviour
     public float cooldownTime;
     [Tooltip("True if Enemy can shoot")]
     public bool cooldown;
+    bool isGoingLeft = false;
+
+    protected Vector3 velocity;
+    private Transform _transform;
+    public float distance = 1f;
+    public float distFromStart;
+    Vector3 _originalPosition;
+
+    public void Start()
+    {
+        _originalPosition = gameObject.transform.position;
+        distance = Vector2.Distance(_originalPosition, endPos.position);
+        _transform = GetComponent<Transform>();
+        velocity = new Vector3(speed, 0, 0);
+        _transform.Translate(velocity.x * Time.deltaTime, 0, 0);
+    }
     void Update()
     {
-        if (!playerSighted)
+        distFromStart = transform.position.x - _originalPosition.x;
+
+        if (isGoingLeft)
         {
-            transform.position = Vector3.Lerp(pos1.position, pos2.position, (Mathf.Sin(speed * Time.time) + 1.0f) / 2.0f);
+            if (distFromStart >= distance)
+                SwitchDirection();
+
+            _transform.Translate(velocity.x * Time.deltaTime, 0, 0);
         }
-        if (transform.position == pos1.position)
+        else
         {
-            transform.localScale = Vector3.one;
+            if (distFromStart <= 0)
+                SwitchDirection();
+
+            _transform.Translate(-velocity.x * Time.deltaTime, 0, 0);
         }
-        if (transform.position == pos2.position)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+    }
+
+    void SwitchDirection()
+    {
+        isGoingLeft = !isGoingLeft;
+        _transform.localScale = new Vector3(_transform.localScale.x * -1, 1, 1);
     }
 
     void OnTriggerStay2D(Collider2D col)

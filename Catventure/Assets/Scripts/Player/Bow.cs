@@ -23,6 +23,7 @@ public class Bow : MonoBehaviour
     private PlayerMovement playerMovement;
     private GameObject parentPoint;
     public Vector2 mousePosition;
+    public bool learnedSkill;
     private void Start()
     {
         parentPoint = new GameObject();
@@ -56,7 +57,7 @@ public class Bow : MonoBehaviour
             transform.parent.localScale = new Vector3(-1 * Math.Abs(transform.parent.localScale.x), Math.Abs(transform.parent.localScale.y), Math.Abs(transform.parent.localScale.z));
             transform.localScale = new Vector3(-1 * Math.Abs(transform.localScale.x), -1 * Math.Abs(transform.localScale.y), Math.Abs(transform.localScale.z));
         }
-        if (Input.GetMouseButtonDown(0) && !shot)
+        if (Input.GetMouseButtonDown(0) && !shot && learnedSkill)
         {
             foreach (GameObject point in points)
             {

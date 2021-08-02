@@ -26,7 +26,7 @@ public class Skilltree : MonoBehaviour
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
         currentSkillPointsUI = transform.Find("CurrentSkillPointsUI").GetComponent<TMP_Text>();
         currentSkillPointsUI.text = "Skillpoints \n " + playerManager.currentSkillPoints;
-        allSkills = Resources.LoadAll<SkillSO>("ScriptableObjects/Skills").ToList();
+        allSkills = Resources.LoadAll<SkillSO>("Prefabs/ScriptableObjects/Skills").ToList();
         swordSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Sword).ToList();
         swordSkills = swordSkills.OrderBy(s => s.level).ToList();
         magicSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Magic).ToList();
@@ -34,49 +34,58 @@ public class Skilltree : MonoBehaviour
         bowSkills = allSkills.Where(s => s.skilltreeType == SkillTreeType.Bow).ToList();
         bowSkills = bowSkills.OrderBy(s => s.level).ToList();
 
-        swordTree = gameObject.transform.Find("SwordTree").gameObject;
-        magicTree = gameObject.transform.Find("MagicTree").gameObject;
+        // swordTree = gameObject.transform.Find("SwordTree").gameObject;
+        // magicTree = gameObject.transform.Find("MagicTree").gameObject;
         bowTree = gameObject.transform.Find("BowTree").gameObject;
-        GenerateSkilltree(swordTree, swordSkills);
-        GenerateSkilltree(magicTree, magicSkills);
-        GenerateSkilltree(bowTree, bowSkills);
+        // GenerateSkilltree(swordTree, swordSkills);
+        // GenerateSkilltree(magicTree, magicSkills);
+        //GenerateSkilltree(bowTree, bowSkills);
     }
 
-    void GenerateSkilltree(GameObject skilltree, List<SkillSO> skills)
-    {
-        float xPosition = 5;
-        int previousLevel = 0;
-        foreach (SkillSO skill in skills)
-        {
-            GameObject currentSkill = Instantiate(skillTreeButtonPrefab);
-            currentSkill.GetComponent<Button>().onClick.AddListener(delegate { playerManager.LearnSkill(skill, currentSkill.GetComponent<Button>()); });
-            RectTransform currentTransform = currentSkill.GetComponent<RectTransform>();
-            currentSkill.transform.SetParent(skilltree.transform.Find(skill.level.ToString()));
-            currentSkill.name = skill.name;
-            currentSkill.GetComponentInChildren<TMP_Text>().text = skill.name;
-            currentSkill.transform.localScale = Vector3.one;
-            currentSkill.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
-            if (previousLevel == skill.level)
-            {
-                xPosition += 155;
-            }
-            else
-            {
-                xPosition = 5;
-            }
-            currentSkill.GetComponent<RectTransform>().anchoredPosition = new Vector2(xPosition, currentTransform.anchoredPosition.y);
-            if (skill.skillNeeded)
-            {
-                LineRenderer lineRend = currentSkill.GetComponent<LineRenderer>();
-                Vector3 lineRendPosition = currentSkill.transform.position + new Vector3(0.7F, -0.7F, 0);
-                lineRend.SetPosition(0, lineRendPosition);
-                lineRendPosition = skilltree.transform.Find(skill.skillNeeded.level.ToString()).Find(skill.skillNeeded.name).position +
-                                   new Vector3(0.7F, 0.7F, 0);
-                lineRend.SetPosition(1, lineRendPosition);
-            }
-            previousLevel = skill.level;
-        }
-    }
+    // void GenerateSkilltree(GameObject skilltree, List<SkillSO> skills)
+    // {
+    //     Debug.Log(skilltree.name);
+    //     float xPosition = 5;
+    //     int previousLevel = 0;
+    //     foreach (SkillSO skill in skills)
+    //     {
+    //         GameObject currentSkill = Instantiate(skillTreeButtonPrefab);
+    //         currentSkill.GetComponent<Button>().onClick.AddListener(delegate { playerManager.LearnSkill(skill, currentSkill.GetComponent<Button>()); });
+    //         RectTransform currentTransform = currentSkill.GetComponent<RectTransform>();
+    //         currentSkill.transform.SetParent(skilltree.transform.Find(skill.level.ToString()));
+    //         currentSkill.name = skill.name;
+    //         currentSkill.GetComponent<Image>().sprite = skill.skillImg;
+    //         currentSkill.GetComponentInChildren<TMP_Text>().text = skill.description;
+    //         currentSkill.transform.Find("DescriptionWindow").gameObject.SetActive(false);
+    //         currentSkill.transform.localScale = Vector3.one;
+    //         currentSkill.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
+    //         if (previousLevel == skill.level)
+    //         {
+    //             xPosition += 155;
+    //         }
+    //         else
+    //         {
+    //             xPosition = 5;
+    //         }
+    //         currentSkill.GetComponent<RectTransform>().anchoredPosition = new Vector2(xPosition, currentTransform.anchoredPosition.y);
+    //         if (skill.skillsNeeded.Count > 0)
+    //         {
+    //             int i = 0;
+    //             foreach (SkillSO skillNeeded in skill.skillsNeeded)
+    //             {
+    //                 LineRenderer lineRend = currentSkill.GetComponent<LineRenderer>();
+    //                 Vector3 lineRendPosition = currentSkill.transform.position + new Vector3(0.7F, -0.7F, 0);
+    //                 lineRend.SetPosition(i, lineRendPosition);
+    //                 i++;
+    //                 lineRendPosition = skilltree.transform.Find(skillNeeded.level.ToString()).Find(skillNeeded.name).position +
+    //                                    new Vector3(0.7F, 0.7F, 0);
+    //                 lineRend.SetPosition(i, lineRendPosition);
+    //                 i++;
+    //             }
+    //         }
+    //         previousLevel = skill.level;
+    //     }
+    // }
 
     void Update()
     {

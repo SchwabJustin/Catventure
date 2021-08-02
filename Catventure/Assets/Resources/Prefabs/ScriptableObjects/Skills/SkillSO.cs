@@ -12,11 +12,13 @@ public class SkillSO : ScriptableObject
     public Sprite skillImg;
     [Tooltip("Level that is needed to learn this skill."), Range(1, 5)]
     public int level;
-    [Tooltip("Skill the player has to learn before he can learn this skill.")]
-    public SkillSO skillNeeded;
+    [Tooltip("Skills the player has to learn before he can learn this skill.")]
+    public List<SkillSO> skillsNeeded = new List<SkillSO>();
     [Tooltip("Number of skillpoints needed to learn this skill.")]
     public int skillPointsNeeded;
     [Tooltip("How much the physical attack of the player gets buffed. This value adds up on other skills.")]
+    public bool doubleSkillable;
+    [Tooltip("You can level up this skill 2 times.")]
     public int attackBonus;
     [Tooltip("How much the defense of the player gets buffed. This value adds up on other skills.")]
     public int defenseBonus;
