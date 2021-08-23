@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: -8769144312404392362
     second: Boden_2
+  - first:
+      213: 3209171825143950708
+    second: Boden_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,7 +107,7 @@ TextureImporter:
         width: 1337
         height: 707
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 480, y: 15, z: 520, w: 241}
       outline: []
       physicsShape: []
@@ -121,12 +124,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 1449
+        y: 1448
         width: 1396
         height: 677
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 501, y: 11, z: 559, w: 173}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -146,7 +149,7 @@ TextureImporter:
         width: 1451
         height: 679
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,6 +157,27 @@ TextureImporter:
       bones: []
       spriteID: 656cff275bdbd4680800000000000000
       internalID: -8769144312404392362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boden_3
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 2036
+        width: 10
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47da5e4a5c4498c20800000000000000
+      internalID: 3209171825143950708
       vertices: []
       indices: 
       edges: []

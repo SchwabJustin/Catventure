@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 2f04676b0051fcb4095ea2f7ce12d902
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4390149651380291051
+    second: lvl2_props_0
+  - first:
+      213: -4146265488935609105
+    second: lvl2_props_1
+  - first:
+      213: 6848852984933483191
+    second: lvl2_props_2
+  - first:
+      213: -762434152681686213
+    second: lvl2_props_3
+  - first:
+      213: -1125386641740032624
+    second: lvl2_props_4
+  - first:
+      213: -8264356396111005803
+    second: lvl2_props_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +89,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lvl2_props_0
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2979
+        width: 937
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a3caee62e0313c0800000000000000
+      internalID: -4390149651380291051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2_props_1
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 2665
+        width: 1322
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec188371818576c0800000000000000
+      internalID: -4146265488935609105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2_props_2
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1652
+        width: 362
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b285d5c0830c0f50800000000000000
+      internalID: 6848852984933483191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2_props_3
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1491
+        width: 747
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b38cc7d2a4b65f0800000000000000
+      internalID: -762434152681686213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2_props_4
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 173
+        width: 1182
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0959d18dfc2d160f0800000000000000
+      internalID: -1125386641740032624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2_props_5
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 452
+        width: 585
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5977398e4ab1f4d80800000000000000
+      internalID: -8264356396111005803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
