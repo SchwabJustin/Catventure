@@ -30,11 +30,13 @@ public class DisappearingPlattform : MonoBehaviour
     IEnumerator Disappear()
     {
         disappearing = true;
-        Debug.Log("Disappear");
-        yield return new WaitForSeconds(timeTillDisappear);
+        yield return new WaitForSeconds(timeTillDisappear - 0.5f);
+        GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 0.5F);
+        yield return new WaitForSeconds(0.5f);
         boxCol.enabled = false;
         spriteRend.enabled = false;
         yield return new WaitForSeconds(timeTillAppear);
+        GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.5F);
         boxCol.enabled = true;
         spriteRend.enabled = true;
         disappearing = false;
