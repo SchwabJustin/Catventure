@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: d95fc9e4872d21b4bb713aa0792793f2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2817151230903940774
+    second: Blocks_lvl3_0
+  - first:
+      213: -7573991663796739750
+    second: Blocks_lvl3_1
+  - first:
+      213: -7866948873657654877
+    second: Blocks_lvl3_2
+  - first:
+      213: 584458669600736626
+    second: Blocks_lvl3_3
+  - first:
+      213: 2874983023306850444
+    second: Blocks_lvl3_4
+  - first:
+      213: -1737261397107015412
+    second: Blocks_lvl3_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +89,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Blocks_lvl3_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 645
+        width: 367
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 18, y: 20, z: 14, w: 15}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a598a63a1e777e8d0800000000000000
+      internalID: -2817151230903940774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blocks_lvl3_1
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 645
+        width: 367
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 18, y: 13, z: 16, w: 13}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5120a3e5b6c3e690800000000000000
+      internalID: -7573991663796739750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blocks_lvl3_2
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 645
+        width: 367
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 17, z: 13, w: 12}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1e9772eabf2d290800000000000000
+      internalID: -7866948873657654877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blocks_lvl3_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 90
+        width: 367
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 19, z: 13, w: 13}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275037b301a6c1800800000000000000
+      internalID: 584458669600736626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blocks_lvl3_4
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 90
+        width: 381
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 20, z: 17, w: 14}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80cb7fc3ddf5e720800000000000000
+      internalID: 2874983023306850444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blocks_lvl3_5
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 106
+        width: 381
+        height: 387
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 19, z: 20, w: 13}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c010077b6f104e7e0800000000000000
+      internalID: -1737261397107015412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
