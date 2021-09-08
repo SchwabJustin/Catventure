@@ -22,12 +22,14 @@ public class Bow : MonoBehaviour
     private bool shot;
     private bool doubleShot;
     private bool shooting;
+    private bool arrowRain;
     private PlayerMovement playerMovement;
     private PlayerManager playerManager;
     private GameObject parentPoint;
     public Vector2 mousePosition;
     public int shotCooldown = 1;
     public int doubleShotCooldown = 20;
+    public int arrowRainCooldown = 30;
 
     private void Start()
     {
@@ -98,8 +100,20 @@ public class Bow : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            if (!arrowRain)
+            {
+                arrowRain = true;
+                StartCoroutine(ArrowRain());
+            }
+        }
     }
 
+    IEnumerator ArrowRain()
+    {
+        yield return new WaitForSeconds(arrowRainCooldown);
+    }
 
     IEnumerator DoubleShot()
     {
