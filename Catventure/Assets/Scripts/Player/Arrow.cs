@@ -7,6 +7,7 @@ public class Arrow : MonoBehaviour
     private Rigidbody2D rb;
     private bool hasHit;
     public GameObject player;
+    public bool doubleShotArrow;
     void Start()
     {
         BoxCollider2D playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
@@ -25,7 +26,15 @@ public class Arrow : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().playerAttackDmg);
+            if (doubleShotArrow)
+            {
+                col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().doubleShotDmg);
+
+            }
+            else
+            {
+                col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().playerAttackDmg);
+            }
         }
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;

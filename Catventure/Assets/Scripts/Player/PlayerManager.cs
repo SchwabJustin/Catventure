@@ -13,7 +13,8 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Maximal Health of the Player")]
     public int maxPlayerHealth = 3;
     [Tooltip("Damage the Player deals with Attacks")]
-    public int playerAttackDmg = 1;
+    public int playerAttackDmg = 7;
+    public int doubleShotDmg = 8;
     [Tooltip("Time the Player stays invulnerable after taking a hit")]
     public float invulnerableTime = 0.5F;
     private bool invulnerable;
@@ -23,7 +24,7 @@ public class PlayerManager : MonoBehaviour
     public int currentSkillPoints;
     [Tooltip("Current Skills the Player has learned")]
     public List<SkillSO> learnedSkills = new List<SkillSO>();
-    List<SkillSO> multiSkillableSkills = new List<SkillSO>();
+    public List<SkillSO> multiSkillableSkills = new List<SkillSO>();
 
     [Foldout("Shopping", true)]
 
@@ -128,14 +129,39 @@ public class PlayerManager : MonoBehaviour
             else
             {
                 multiSkillableSkills.Add(skillToLearn);
-                Debug.Log("Added Skill to multilearnSKills");
+                Debug.Log("Added Skill to multilearnSkills");
             }
             Debug.Log("Learned Skill " + skillToLearn.name);
-            if (skillToLearn.name == "Präziser Schuss")
+
+            switch (skillToLearn.name)
             {
-                Debug.Log("Learned Präziser Schuss");
-                GetComponentInChildren<Bow>().learnedSkill = true;
+
+                case "Präziser Schuss":
+                    if (learnedSkills.Contains(skillToLearn))
+                    {
+                        playerAttackDmg += 3;
+                    };
+                    break;
+
+                case "Überspannen":
+                    playerAttackDmg += 2;
+                    break;
+
+                case "Doppelter Treffer":
+                    if (learnedSkills.Contains(skillToLearn))
+                    {
+                        doubleShotDmg += 3;
+                    };
+                    break;
+
+                case "Adlerauge":
+                    doubleShotDmg += 3;
+                    break;
+
+                default:
+                    break;
             }
+
         }
 
     }

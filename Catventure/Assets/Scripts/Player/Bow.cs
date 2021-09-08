@@ -2,6 +2,7 @@
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
+using System.Linq;
 
 public class Bow : MonoBehaviour
 {
@@ -19,16 +20,21 @@ public class Bow : MonoBehaviour
     public float spaceBetweenPoints;
     private Vector2 direction;
     private bool shot;
+    private bool doubleShot;
     private bool shooting;
     private PlayerMovement playerMovement;
+    private PlayerManager playerManager;
     private GameObject parentPoint;
     public Vector2 mousePosition;
-    public bool learnedSkill;
+    public int shotCooldown = 1;
+    public int doubleShotCooldown = 20;
+
     private void Start()
     {
         parentPoint = new GameObject();
         parentPoint.name = "ParentPoint";
         playerMovement = transform.parent.gameObject.GetComponent<PlayerMovement>();
+        playerManager = transform.parent.gameObject.GetComponent<PlayerManager>();
         points = new GameObject[numberOfPoints];
         for (int i = 0; i < numberOfPoints; i++)
         {
@@ -57,14 +63,17 @@ public class Bow : MonoBehaviour
             transform.parent.localScale = new Vector3(-1 * Math.Abs(transform.parent.localScale.x), Math.Abs(transform.parent.localScale.y), Math.Abs(transform.parent.localScale.z));
             transform.localScale = new Vector3(-1 * Math.Abs(transform.localScale.x), -1 * Math.Abs(transform.localScale.y), Math.Abs(transform.localScale.z));
         }
-        if (Input.GetMouseButtonDown(0) && !shot && learnedSkill)
+        if (Input.GetMouseButtonDown(0) && !shot)
         {
-            foreach (GameObject point in points)
+            if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Präziser Schuss") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Präziser Schuss"))
             {
-                point.GetComponent<SpriteRenderer>().forceRenderingOff = false;
+                foreach (GameObject point in points)
+                {
+                    point.GetComponent<SpriteRenderer>().forceRenderingOff = false;
+                }
+                shooting = true;
+                StartCoroutine(IncreaseLaunchForce());
             }
-            shooting = true;
-            StartCoroutine(IncreaseLaunchForce());
         }
         if (Input.GetMouseButtonUp(0) && !shot && shooting)
         {
@@ -80,6 +89,36 @@ public class Bow : MonoBehaviour
         {
             points[i].transform.position = PointPosition(i * spaceBetweenPoints);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (!doubleShot)
+            {
+                doubleShot = true;
+                StartCoroutine(DoubleShot());
+            }
+        }
+
+    }
+
+
+    IEnumerator DoubleShot()
+    {
+        if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Doppelter Treffer") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Doppelter Treffer"))
+        {
+            GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+            newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+            newArrow.GetComponent<Arrow>().doubleShotArrow = true;
+            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+            yield return new WaitForSeconds(0.2F);
+            newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+            newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+
+            yield return new WaitForSeconds(doubleShotCooldown);
+            doubleShot = false;
+        }
+
+        Debug.Log("DoubleShot");
     }
 
     private IEnumerator IncreaseLaunchForce()
@@ -103,12 +142,12 @@ public class Bow : MonoBehaviour
         GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
         newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
-        StartCoroutine(AfterShot());
+        StartCoroutine(ShotCooldown());
     }
 
-    private IEnumerator AfterShot()
+    private IEnumerator ShotCooldown()
     {
-        yield return new WaitForSeconds(cooldown);
+        yield return new WaitForSeconds(shotCooldown);
         shot = false;
         shooting = false;
     }

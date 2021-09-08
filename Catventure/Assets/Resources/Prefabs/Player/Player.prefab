@@ -109,6 +109,8 @@ MonoBehaviour:
   numberOfPoints: 30
   spaceBetweenPoints: 0.025
   mousePosition: {x: 0, y: 0}
+  shotCooldown: 1
+  doubleShotCooldown: 20
 --- !u!1 &350191286
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,10 +764,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayerHealth: 3
   maxPlayerHealth: 3
-  playerAttackDmg: 1
+  playerAttackDmg: 7
   invulnerableTime: 1
   currentSkillPoints: 4
   learnedSkills: []
+  multiSkillableSkills: []
   cookieCounter: {fileID: 0}
   currentHeadName: StandardHead
   unlockedHeads: []
