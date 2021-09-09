@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
     public int currentHealth = 1;
     public int maxHealth = 1;
     public int armor = 0;
+    public float speed = 1;
+    public float slowDown = 0.5F;
     private bool _invulnerable;
     public float invulnerableTime = 0.2F;
     public GameObject cookiePrefab;
@@ -34,5 +36,17 @@ public class Enemy : MonoBehaviour
         {
             _invulnerable = false;
         }
+    }
+
+    public void SlowDown(int duration)
+    {
+        StartCoroutine(SlowDownTimer(duration));
+    }
+
+    IEnumerator SlowDownTimer(int duration)
+    {
+        speed -= slowDown;
+        yield return new WaitForSeconds(duration);
+        speed += slowDown;
     }
 }

@@ -1553,6 +1553,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 188932580, guid: 6ec24220f552c0b4684314b49d23010d, type: 3}
+      propertyPath: arrowRainGo
+      value: 
+      objectReference: {fileID: 6000065039254617532, guid: 4d11a63482e15af4ca1bce27a3916c87,
+        type: 3}
+    - target: {fileID: 477751451061903241, guid: 6ec24220f552c0b4684314b49d23010d,
+        type: 3}
+      propertyPath: currentSkillPoints
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 477751451061903242, guid: 6ec24220f552c0b4684314b49d23010d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1622,6 +1632,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 228895593, guid: 93c21a471699ca64a83868c08e866b0e, type: 3}
+      propertyPath: currentHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 228895593, guid: 93c21a471699ca64a83868c08e866b0e, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 667928895234772177, guid: 93c21a471699ca64a83868c08e866b0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2545,6 +2563,8 @@ MonoBehaviour:
   currentHealth: 2
   maxHealth: 1
   armor: 0
+  speed: 1
+  slowDown: 0.5
   invulnerableTime: 0
   cookiePrefab: {fileID: 2336050196890234474, guid: c6a33a48ff52b02488e90167cd98a301,
     type: 3}
@@ -2782,6 +2802,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256563912}
     m_Modifications:
+    - target: {fileID: 3655529689444364304, guid: 1981126896e2e694eba808f94019ae34,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655529689444364304, guid: 1981126896e2e694eba808f94019ae34,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655529689444364304, guid: 1981126896e2e694eba808f94019ae34,
+        type: 3}
+      propertyPath: m_FillClockwise
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655529689444364304, guid: 1981126896e2e694eba808f94019ae34,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5201039846598764109, guid: 1981126896e2e694eba808f94019ae34,
         type: 3}
       propertyPath: m_LocalPosition.x

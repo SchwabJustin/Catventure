@@ -13,9 +13,15 @@ public class WalkingEnemy : MonoBehaviour
     [Tooltip("Damage the Enemy deals")]
     public int damage = 1;
 
+    Enemy enemy;
+
+    void Start()
+    {
+        enemy = GetComponent<Enemy>();
+    }
     void Update()
     {
-        transform.position = Vector3.Lerp(pos1.position, pos2.position, (Mathf.Sin(speed * Time.time) + 1.0f) / 2.0f);
+        transform.position = Vector3.Lerp(pos1.position, pos2.position, (Mathf.Sin(enemy.speed * Time.time) + 1.0f) / 2.0f);
     }
 
     void OnCollisionEnter2D(Collision2D col)

@@ -8,6 +8,7 @@ public class Arrow : MonoBehaviour
     private bool hasHit;
     public GameObject player;
     public bool doubleShotArrow;
+    public bool poisonShot;
     void Start()
     {
         BoxCollider2D playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
@@ -30,6 +31,11 @@ public class Arrow : MonoBehaviour
             {
                 col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().doubleShotDmg);
 
+            }
+            else if (poisonShot)
+            {
+                col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().poisonDmg);
+                col.gameObject.GetComponent<Enemy>().SlowDown(player.GetComponent<PlayerManager>().poisonDuration);
             }
             else
             {
