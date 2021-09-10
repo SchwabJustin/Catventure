@@ -15,6 +15,8 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Damage the Player deals with Attacks")]
     public int playerAttackDmg = 7;
     public int doubleShotDmg = 8;
+    public int poisonDmg = 7;
+    public int poisonDuration = 5;
     [Tooltip("Time the Player stays invulnerable after taking a hit")]
     public float invulnerableTime = 0.5F;
     private bool invulnerable;

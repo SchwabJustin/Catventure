@@ -29,9 +29,11 @@ public class ShootingEnemy : MonoBehaviour
     public float distance = 1f;
     public float distFromStart;
     Vector3 _originalPosition;
+    Enemy enemy;
 
     public void Start()
     {
+        enemy = GetComponent<Enemy>();
         _originalPosition = gameObject.transform.position;
         distance = Vector2.Distance(_originalPosition, endPos.position);
         _transform = GetComponent<Transform>();
@@ -47,14 +49,14 @@ public class ShootingEnemy : MonoBehaviour
             if (distFromStart >= distance)
                 SwitchDirection();
 
-            _transform.Translate(velocity.x * Time.deltaTime, 0, 0);
+            _transform.Translate(velocity.x * Time.deltaTime * enemy.speed, 0, 0);
         }
         else
         {
             if (distFromStart <= 0)
                 SwitchDirection();
 
-            _transform.Translate(-velocity.x * Time.deltaTime, 0, 0);
+            _transform.Translate(-velocity.x * Time.deltaTime * enemy.speed, 0, 0);
         }
     }
 
