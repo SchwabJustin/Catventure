@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 155
+  controlID: 117
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 81
+  controlID: 40
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 82
+  controlID: 41
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,7 +397,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 38deffffbeebffff
+      m_ExpandedIDs: 50fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 28.622652, y: 8.235518, z: -630.03107}
     speed: 2
-    m_Value: {x: 27.564085, y: 8.000359, z: -629.9077}
+    m_Value: {x: 28.622652, y: 8.235518, z: -630.03107}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 28.649296
     speed: 2
-    m_Value: 27.415594
+    m_Value: 28.649296
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -673,20 +673,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Animations
+    - Assets/Resources/Sprites/Enemies
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Animations
+  - Assets/Resources/Sprites/Enemies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\kschm\Documents\Catventure\Catventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 22720000
-    m_LastClickedID: 29218
-    m_ExpandedIDs: 00000000fe710000007200000272000006720000087200000a7200000c7200000e720000127200001472000000ca9a3b
+    scrollPos: {x: 0, y: 38}
+    m_SelectedIDs: 62450000
+    m_LastClickedID: 17762
+    m_ExpandedIDs: 00000000384500003a4500003c4500003e45000040450000424500004445000046450000484500004a45000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -714,7 +714,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe71000000720000027200000472000006720000087200000a7200000c7200000e720000107200001272000014720000
+    m_ExpandedIDs: 00000000384500003a4500003c4500003e45000040450000424500004445000046450000484500004a450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
