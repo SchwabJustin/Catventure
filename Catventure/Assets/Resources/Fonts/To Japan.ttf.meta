@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 69dcf77236be0fd44b7ea77559d7727b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: To Japan
+  fontNames:
+  - To Japan
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 63f1e63496ff60e46aa89dde67da8149, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

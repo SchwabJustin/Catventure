@@ -4845,7 +4845,7 @@ PrefabInstance:
     - target: {fileID: 432403358510681222, guid: 6f6cffdf541d2764bbf40abe1149fd9a,
         type: 3}
       propertyPath: m_Name
-      value: CookieChest Variant
+      value: CookieChest 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6cffdf541d2764bbf40abe1149fd9a, type: 3}
@@ -5210,6 +5210,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1490111371}
     m_Modifications:
+    - target: {fileID: 432403358510681220, guid: 6f6cffdf541d2764bbf40abe1149fd9a,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1001895909
+      objectReference: {fileID: 0}
+    - target: {fileID: 432403358510681220, guid: 6f6cffdf541d2764bbf40abe1149fd9a,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 432403358510681221, guid: 6f6cffdf541d2764bbf40abe1149fd9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16412,9 +16422,9 @@ Transform:
   - {fileID: 441668331}
   - {fileID: 1590572293}
   - {fileID: 2034973627}
+  - {fileID: 498826787}
   - {fileID: 386892053}
   - {fileID: 1906251173}
-  - {fileID: 498826787}
   - {fileID: 1647710006}
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -29371,7 +29381,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1201056916}
-  m_RootOrder: 35
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &644573316
 BoxCollider2D:
@@ -55447,6 +55457,7 @@ Transform:
   - {fileID: 956973142}
   - {fileID: 1462221615}
   - {fileID: 601666562}
+  - {fileID: 644573315}
   - {fileID: 749619557}
   - {fileID: 754661239}
   - {fileID: 1883506206}
@@ -55454,7 +55465,6 @@ Transform:
   - {fileID: 1655740744}
   - {fileID: 1190298674}
   - {fileID: 578070667}
-  - {fileID: 644573315}
   - {fileID: 1959183185}
   - {fileID: 696036551}
   - {fileID: 703299820}

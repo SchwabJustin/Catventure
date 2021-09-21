@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4da3f144ef5900f459c24d3d03e36222
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Toon Cats
+  fontNames:
+  - Toon Cats
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8780903ed8e68ad45adedd29e0023458, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
