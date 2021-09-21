@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public int armor = 0;
     public float speed = 1;
     public float slowDown = 0.5F;
+    bool slowed;
     private bool _invulnerable;
     public float invulnerableTime = 0.2F;
     public GameObject cookiePrefab;
@@ -40,13 +41,18 @@ public class Enemy : MonoBehaviour
 
     public void SlowDown(int duration)
     {
-        StartCoroutine(SlowDownTimer(duration));
+        if (!slowed)
+        {
+            StartCoroutine(SlowDownTimer(duration));
+        }
     }
 
     IEnumerator SlowDownTimer(int duration)
     {
         speed -= slowDown;
+        slowed = true;
         yield return new WaitForSeconds(duration);
+        slowed = false;
         speed += slowDown;
     }
 }

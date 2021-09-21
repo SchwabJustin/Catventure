@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 188932580}
   m_Layer: 0
   m_Name: Bow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,8 +109,12 @@ MonoBehaviour:
   numberOfPoints: 30
   spaceBetweenPoints: 0.025
   mousePosition: {x: 0, y: 0}
+  arrowRainGo: {fileID: 6000065039254617532, guid: 4d11a63482e15af4ca1bce27a3916c87,
+    type: 3}
   shotCooldown: 1
   doubleShotCooldown: 20
+  arrowRainCooldown: 30
+  poisonShotCooldown: 15
 --- !u!1 &350191286
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +127,7 @@ GameObject:
   - component: {fileID: 350191288}
   m_Layer: 0
   m_Name: RightFood
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +209,7 @@ GameObject:
   - component: {fileID: 443894022}
   m_Layer: 0
   m_Name: LeftFood
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,7 +455,7 @@ GameObject:
   - component: {fileID: 1457488700}
   m_Layer: 0
   m_Name: StandardHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -765,8 +769,11 @@ MonoBehaviour:
   currentPlayerHealth: 3
   maxPlayerHealth: 3
   playerAttackDmg: 7
+  doubleShotDmg: 8
+  poisonDmg: 7
+  poisonDuration: 5
   invulnerableTime: 1
-  currentSkillPoints: 4
+  currentSkillPoints: 999
   learnedSkills: []
   multiSkillableSkills: []
   cookieCounter: {fileID: 0}
@@ -823,7 +830,7 @@ GameObject:
   - component: {fileID: 6239953109531299791}
   m_Layer: 0
   m_Name: Heads
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -868,7 +875,7 @@ GameObject:
   - component: {fileID: 4490846495091962149}
   m_Layer: 0
   m_Name: BearHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -950,7 +957,7 @@ GameObject:
   - component: {fileID: 2104859143116058627}
   m_Layer: 0
   m_Name: RingHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1032,7 +1039,7 @@ GameObject:
   - component: {fileID: 1371331817693550695}
   m_Layer: 0
   m_Name: GreekHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1114,7 +1121,7 @@ GameObject:
   - component: {fileID: 4658817019863877553}
   m_Layer: 0
   m_Name: GalaxyHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1196,7 +1203,7 @@ GameObject:
   - component: {fileID: 417910563584136583}
   m_Layer: 0
   m_Name: BarbarianHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1278,7 +1285,7 @@ GameObject:
   - component: {fileID: 280456976638747978}
   m_Layer: 0
   m_Name: SamuraiHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1360,7 +1367,7 @@ GameObject:
   - component: {fileID: 4640305251785191433}
   m_Layer: 0
   m_Name: SteampunkHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1442,7 +1449,7 @@ GameObject:
   - component: {fileID: 5285096882637696815}
   m_Layer: 0
   m_Name: LinkHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1524,7 +1531,7 @@ GameObject:
   - component: {fileID: 1984634423287548123}
   m_Layer: 0
   m_Name: NinjaHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,7 +1613,7 @@ GameObject:
   - component: {fileID: 97607390856542408}
   m_Layer: 0
   m_Name: AssassinHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1811,7 +1818,7 @@ GameObject:
   - component: {fileID: 1731877698238485314}
   m_Layer: 0
   m_Name: RomeHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1893,7 +1900,7 @@ GameObject:
   - component: {fileID: 6490642016386674475}
   m_Layer: 0
   m_Name: WitchHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1975,7 +1982,7 @@ GameObject:
   - component: {fileID: 3647052694274744924}
   m_Layer: 0
   m_Name: KnightHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

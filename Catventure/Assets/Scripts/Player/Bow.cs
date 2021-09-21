@@ -102,7 +102,6 @@ public class Bow : MonoBehaviour
             {
                 StartCoroutine(PoisonShot());
             }
-            StartCoroutine(PoisonShot());
 
         }
 

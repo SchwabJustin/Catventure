@@ -25,6 +25,7 @@ public class Arrow : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log(col.gameObject.name + poisonShot + doubleShotArrow);
         if (col.gameObject.CompareTag("Enemy"))
         {
             if (doubleShotArrow)
@@ -42,8 +43,11 @@ public class Arrow : MonoBehaviour
                 col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().playerAttackDmg);
             }
         }
-        rb.velocity = Vector2.zero;
-        rb.isKinematic = true;
-        Destroy(this.gameObject);
+        if (!col.gameObject.CompareTag("Cookie") && !col.gameObject.CompareTag("Player") && !col.gameObject.CompareTag("Arrow"))
+        {
+            rb.velocity = Vector2.zero;
+            rb.isKinematic = true;
+            Destroy(this.gameObject);
+        }
     }
 }
