@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vergiften
   m_EditorClassIdentifier: 
   skilltreeType: 2
-  skillImg: {fileID: -2622211427392443622, guid: cfef51c1497ad68408dd2cb0a2ee2e9e,
+  skillImg: {fileID: 1752313724658198474, guid: cfef51c1497ad68408dd2cb0a2ee2e9e,
     type: 3}
   level: 1
   skillsNeeded: []

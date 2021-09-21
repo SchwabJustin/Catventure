@@ -22,6 +22,8 @@ public class Bow : MonoBehaviour
     private bool shot;
     private bool doubleShot;
     private bool poisonShot;
+    private bool burnShot;
+    private bool paralyzeShot;
     private bool shooting;
     private bool arrowRain;
     private PlayerMovement playerMovement;
@@ -34,6 +36,8 @@ public class Bow : MonoBehaviour
     public int doubleShotCooldown = 20;
     public int arrowRainCooldown = 30;
     public int poisonShotCooldown = 15;
+    public int burnShotCooldown = 25;
+    public int paralyzeShotCooldown = 30;
 
     private void Start()
     {
@@ -114,13 +118,33 @@ public class Bow : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.W) && !burnShot)
         {
-            if (!arrowRain)
+            if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Verbrennen") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Verbrennen"))
+            {
+                StartCoroutine(BurnShot());
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && !arrowRain)
+        {
+            if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Pfeilregen") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Pfeilregen"))
             {
                 arrowRain = true;
                 StartCoroutine(ArrowRain());
             }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && !paralyzeShot)
+        {
+            if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Paralyse") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Paralyse"))
+            {
+                paralyzeShot = true;
+                StartCoroutine(ParalyzeShot());
+            }
+
         }
     }
 
@@ -135,6 +159,16 @@ public class Bow : MonoBehaviour
         poisonShot = false;
     }
 
+    IEnumerator BurnShot()
+    {
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+        newArrow.GetComponent<Arrow>().burnShot = true;
+        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+
+        yield return new WaitForSeconds(burnShotCooldown);
+        burnShot = false;
+    }
     IEnumerator ArrowRain()
     {
         if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Pfeilregen"))
@@ -144,6 +178,17 @@ public class Bow : MonoBehaviour
         }
         yield return new WaitForSeconds(arrowRainCooldown);
         arrowRain = false;
+    }
+
+    IEnumerator ParalyzeShot()
+    {
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+        newArrow.GetComponent<Arrow>().paralyzeShot = true;
+        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+
+        yield return new WaitForSeconds(paralyzeShotCooldown);
+        paralyzeShot = false;
     }
 
     IEnumerator DoubleShot()

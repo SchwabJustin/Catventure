@@ -9,6 +9,8 @@ public class Arrow : MonoBehaviour
     public GameObject player;
     public bool doubleShotArrow;
     public bool poisonShot;
+    public bool burnShot;
+    public bool paralyzeShot;
     void Start()
     {
         BoxCollider2D playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
@@ -37,6 +39,16 @@ public class Arrow : MonoBehaviour
             {
                 col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().poisonDmg);
                 col.gameObject.GetComponent<Enemy>().SlowDown(player.GetComponent<PlayerManager>().poisonDuration);
+            }
+            else if (burnShot)
+            {
+                col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().burnDmg);
+                col.gameObject.GetComponent<Enemy>().Burn(player.GetComponent<PlayerManager>().burnDuration);
+            }
+            else if (paralyzeShot)
+            {
+                col.gameObject.GetComponent<Enemy>().GotDamaged(player.GetComponent<PlayerManager>().paralyzeDmg);
+                col.gameObject.GetComponent<Enemy>().Paralyze(player.GetComponent<PlayerManager>().paralyzeDuration);
             }
             else
             {

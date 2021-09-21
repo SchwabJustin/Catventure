@@ -1299,7 +1299,7 @@ GameObject:
   - component: {fileID: 18685270}
   m_Layer: 0
   m_Name: Deathzone 5
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1328,7 +1328,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.3916931, y: 0.2740817}
@@ -3027,6 +3027,7 @@ GameObject:
   - component: {fileID: 34901803}
   - component: {fileID: 34901802}
   - component: {fileID: 34901801}
+  - component: {fileID: 34901804}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -3140,6 +3141,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &34901804
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34901799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.011878729, y: 1.0011868}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.32052, y: 0.2914219}
+  m_EdgeRadius: 0
 --- !u!1 &35567520
 GameObject:
   m_ObjectHideFlags: 0
@@ -5999,7 +6026,7 @@ GameObject:
   - component: {fileID: 73626366}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6028,7 +6055,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.4198761, y: 0}
@@ -11251,7 +11278,7 @@ GameObject:
   - component: {fileID: 160738657}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11280,7 +11307,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.048553467, y: 0}
@@ -13081,7 +13108,7 @@ GameObject:
   - component: {fileID: 179495760}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13110,7 +13137,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 15.923248, y: 0}
@@ -13565,7 +13592,7 @@ Transform:
   - {fileID: 677111073}
   - {fileID: 287365354}
   m_Father: {fileID: 1847999684}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183638250
 GameObject:
@@ -13741,7 +13768,7 @@ GameObject:
   - component: {fileID: 184549729}
   m_Layer: 0
   m_Name: Deathzone 5
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13770,7 +13797,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 3.397293, y: 0}
@@ -15665,7 +15692,7 @@ GameObject:
   - component: {fileID: 228492230}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15694,7 +15721,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1288147, y: 0}
@@ -20949,7 +20976,7 @@ GameObject:
   - component: {fileID: 310798574}
   m_Layer: 0
   m_Name: Deathzone 7
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20978,7 +21005,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.8784485, y: -0.04091406}
@@ -21202,6 +21229,7 @@ GameObject:
   - component: {fileID: 316192339}
   - component: {fileID: 316192338}
   - component: {fileID: 316192337}
+  - component: {fileID: 316192340}
   m_Layer: 0
   m_Name: MovingPlatform 4
   m_TagString: Untagged
@@ -21315,6 +21343,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &316192340
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316192335}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368164, y: 1.2265301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2650146, y: 0.6472359}
+  m_EdgeRadius: 0
 --- !u!1 &316339839
 GameObject:
   m_ObjectHideFlags: 0
@@ -21572,6 +21626,7 @@ GameObject:
   - component: {fileID: 320445068}
   - component: {fileID: 320445071}
   - component: {fileID: 320445070}
+  - component: {fileID: 320445072}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -21684,6 +21739,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 6.2611985, y: 2.0343835}
+  m_EdgeRadius: 0
+--- !u!61 &320445072
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320445067}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368164, y: 1.2265301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2650146, y: 0.6472359}
   m_EdgeRadius: 0
 --- !u!1 &321182269
 GameObject:
@@ -26402,7 +26483,7 @@ GameObject:
   - component: {fileID: 383433990}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26431,7 +26512,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.3616333, y: 0.41535187}
@@ -26999,7 +27080,7 @@ GameObject:
   - component: {fileID: 393901638}
   m_Layer: 0
   m_Name: Deathzones 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27028,7 +27109,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 6.5059814, y: 0}
@@ -29141,7 +29222,7 @@ GameObject:
   - component: {fileID: 418670411}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29170,7 +29251,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 19.264908, y: 0}
@@ -30330,7 +30411,7 @@ GameObject:
   - component: {fileID: 434273315}
   m_Layer: 0
   m_Name: Deathzone 3
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30359,7 +30440,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 4.543167, y: 0}
@@ -34159,7 +34240,7 @@ GameObject:
   - component: {fileID: 495012107}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34188,7 +34269,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.82728577, y: 0}
@@ -34568,6 +34649,7 @@ GameObject:
   - component: {fileID: 504504373}
   - component: {fileID: 504504372}
   - component: {fileID: 504504371}
+  - component: {fileID: 504504374}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -34699,6 +34781,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &504504374
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504504369}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368033, y: 13.098713}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.580352, y: 25.08}
+    newSize: {x: 4.580352, y: 25.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.6042433, y: 1.2766266}
+  m_EdgeRadius: 0
 --- !u!1001 &506661418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35299,7 +35407,7 @@ GameObject:
   - component: {fileID: 515057348}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35328,7 +35436,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.7114563, y: 0}
@@ -37784,7 +37892,7 @@ GameObject:
   - component: {fileID: 555170744}
   m_Layer: 0
   m_Name: Deathzone 6
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37813,7 +37921,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.8784485, y: -0.04091406}
@@ -38880,7 +38988,7 @@ GameObject:
   - component: {fileID: 578824035}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38909,7 +39017,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.6753845, y: 0.32936668}
@@ -45086,6 +45194,7 @@ GameObject:
   - component: {fileID: 682011161}
   - component: {fileID: 682011160}
   - component: {fileID: 682011159}
+  - component: {fileID: 682011162}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -45199,6 +45308,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &682011162
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682011157}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368164, y: 1.2265301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2650146, y: 0.6472359}
+  m_EdgeRadius: 0
 --- !u!1001 &682321787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46083,6 +46218,7 @@ GameObject:
   - component: {fileID: 692999438}
   - component: {fileID: 692999437}
   - component: {fileID: 692999436}
+  - component: {fileID: 692999439}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -46196,6 +46332,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &692999439
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692999434}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000034809113, y: 1.2265402}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2651777, y: 0.53654665}
+  m_EdgeRadius: 0
 --- !u!1001 &694365501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46293,7 +46455,7 @@ GameObject:
   - component: {fileID: 694426256}
   m_Layer: 0
   m_Name: Deathzone 3
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46322,7 +46484,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.3616333, y: 0.25159597}
@@ -50514,7 +50676,7 @@ GameObject:
   - component: {fileID: 757823284}
   m_Layer: 0
   m_Name: Deathzone 4
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50543,7 +50705,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 3.397293, y: 0}
@@ -51902,6 +52064,7 @@ GameObject:
   - component: {fileID: 781346890}
   - component: {fileID: 781346889}
   - component: {fileID: 781346888}
+  - component: {fileID: 781346891}
   m_Layer: 0
   m_Name: MovingPlatform 3
   m_TagString: Untagged
@@ -52015,6 +52178,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &781346891
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781346886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.025741577, y: 1.2927208}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2846375, y: 0.70690155}
+  m_EdgeRadius: 0
 --- !u!1 &782917086
 GameObject:
   m_ObjectHideFlags: 0
@@ -54299,6 +54488,7 @@ GameObject:
   - component: {fileID: 827258636}
   - component: {fileID: 827258635}
   - component: {fileID: 827258634}
+  - component: {fileID: 827258637}
   m_Layer: 0
   m_Name: MovingPlatform1
   m_TagString: Untagged
@@ -54412,6 +54602,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &827258637
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827258632}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0055413246, y: 1.2265301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.92, y: 2.23}
+    newSize: {x: 9.92, y: 2.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.996499, y: 0.6472359}
+  m_EdgeRadius: 0
 --- !u!1 &827630149
 GameObject:
   m_ObjectHideFlags: 0
@@ -66249,7 +66465,7 @@ GameObject:
   - component: {fileID: 1029750466}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66278,7 +66494,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.7041764, y: 0}
@@ -68303,7 +68519,7 @@ GameObject:
   - component: {fileID: 1052820401}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68332,7 +68548,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.107055664, y: -0.04397106}
@@ -83531,7 +83747,7 @@ GameObject:
   - component: {fileID: 1312889202}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83560,7 +83776,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 10.064133, y: 0.10803223}
@@ -85835,7 +86051,7 @@ GameObject:
   - component: {fileID: 1345044024}
   m_Layer: 0
   m_Name: Deathzones 3
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85864,7 +86080,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1656189, y: 0}
@@ -87032,7 +87248,7 @@ GameObject:
   - component: {fileID: 1364016854}
   m_Layer: 0
   m_Name: Deathzone 4
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87061,7 +87277,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 5.383545, y: 0}
@@ -89756,6 +89972,7 @@ GameObject:
   - component: {fileID: 1416030494}
   - component: {fileID: 1416030493}
   - component: {fileID: 1416030492}
+  - component: {fileID: 1416030495}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -89869,6 +90086,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1416030495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416030490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368164, y: 1.2265301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2650146, y: 0.6472359}
+  m_EdgeRadius: 0
 --- !u!1 &1416947381
 GameObject:
   m_ObjectHideFlags: 0
@@ -89911,6 +90154,7 @@ GameObject:
   - component: {fileID: 1419964098}
   - component: {fileID: 1419964101}
   - component: {fileID: 1419964100}
+  - component: {fileID: 1419964102}
   m_Layer: 0
   m_Name: MovingPlatform 2
   m_TagString: Untagged
@@ -90024,6 +90268,32 @@ MonoBehaviour:
   pos1: {fileID: 499712249}
   pos2: {fileID: 793985660}
   speed: 0.9
+--- !u!61 &1419964102
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419964097}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.025741577, y: 1.2927208}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2846375, y: 0.70690155}
+  m_EdgeRadius: 0
 --- !u!1 &1422949282
 GameObject:
   m_ObjectHideFlags: 0
@@ -92290,7 +92560,7 @@ GameObject:
   - component: {fileID: 1463358914}
   m_Layer: 0
   m_Name: Deathzone 3
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92319,7 +92589,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.7072067, y: 0.13639021}
@@ -94691,7 +94961,7 @@ GameObject:
   - component: {fileID: 1504333165}
   m_Layer: 0
   m_Name: Deathzones 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94720,7 +94990,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.15533447, y: 0}
@@ -96831,7 +97101,7 @@ GameObject:
   - component: {fileID: 1550885854}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96860,7 +97130,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 8.029449, y: 0}
@@ -96888,7 +97158,7 @@ GameObject:
   - component: {fileID: 1552105395}
   m_Layer: 0
   m_Name: Deathzone 4
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96917,7 +97187,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.6896057, y: 0}
@@ -100467,7 +100737,7 @@ GameObject:
   - component: {fileID: 1606525833}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100496,7 +100766,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 4.931161, y: 0}
@@ -101058,6 +101328,7 @@ GameObject:
   - component: {fileID: 1621503523}
   - component: {fileID: 1621503522}
   - component: {fileID: 1621503521}
+  - component: {fileID: 1621503524}
   m_Layer: 0
   m_Name: MovingPlatform 3
   m_TagString: Untagged
@@ -101189,6 +101460,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1621503524
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621503519}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368033, y: 13.098713}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.580352, y: 25.08}
+    newSize: {x: 4.580352, y: 25.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.6042433, y: 1.2766266}
+  m_EdgeRadius: 0
 --- !u!1 &1622225551
 GameObject:
   m_ObjectHideFlags: 0
@@ -106335,7 +106632,7 @@ GameObject:
   - component: {fileID: 1720471549}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106364,7 +106661,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.6753845, y: 0.32936668}
@@ -109515,7 +109812,7 @@ GameObject:
   - component: {fileID: 1779119702}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109544,7 +109841,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.7072067, y: 0.13639021}
@@ -110240,7 +110537,7 @@ GameObject:
   - component: {fileID: 1786689426}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110269,7 +110566,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.7699585, y: 0}
@@ -114010,8 +114307,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 878082009}
   - {fileID: 183581305}
+  - {fileID: 878082009}
   - {fileID: 338200167}
   - {fileID: 831978131}
   m_Father: {fileID: 0}
@@ -116929,7 +117226,7 @@ GameObject:
   - component: {fileID: 1896713543}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116958,7 +117255,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 4.002594, y: 0}
@@ -117277,7 +117574,7 @@ GameObject:
   - component: {fileID: 1899940780}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117306,7 +117603,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.90249634, y: 0}
@@ -117781,7 +118078,7 @@ GameObject:
   - component: {fileID: 1906445552}
   m_Layer: 0
   m_Name: Deathzone 2
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117810,7 +118107,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.0674133, y: -1.5743704}
@@ -120522,7 +120819,7 @@ GameObject:
   - component: {fileID: 1943175894}
   m_Layer: 0
   m_Name: Deathzone 3
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120551,7 +120848,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.6753845, y: 0.32936668}
@@ -122194,6 +122491,7 @@ GameObject:
   - component: {fileID: 1973888231}
   - component: {fileID: 1973888230}
   - component: {fileID: 1973888229}
+  - component: {fileID: 1973888232}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -122307,6 +122605,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1973888232
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973888227}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368164, y: 1.2265301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2650146, y: 0.6472359}
+  m_EdgeRadius: 0
 --- !u!1001 &1975077577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125427,7 +125751,7 @@ GameObject:
   - component: {fileID: 2022344830}
   m_Layer: 0
   m_Name: Deathzone 1
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125456,7 +125780,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.47024536, y: 0}
@@ -126544,6 +126868,7 @@ GameObject:
   - component: {fileID: 2033787048}
   - component: {fileID: 2033787047}
   - component: {fileID: 2033787046}
+  - component: {fileID: 2033787049}
   m_Layer: 0
   m_Name: MovingPlatform 1
   m_TagString: Untagged
@@ -126657,6 +126982,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2033787049
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033787044}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02368164, y: 1.2265301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.2611985, y: 2.27}
+    newSize: {x: 6.2611985, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2650146, y: 0.6472359}
+  m_EdgeRadius: 0
 --- !u!1 &2036400709
 GameObject:
   m_ObjectHideFlags: 0
@@ -128255,7 +128606,7 @@ GameObject:
   - component: {fileID: 2066463883}
   m_Layer: 0
   m_Name: Deathzone 3
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128284,7 +128635,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.1321106, y: 0}

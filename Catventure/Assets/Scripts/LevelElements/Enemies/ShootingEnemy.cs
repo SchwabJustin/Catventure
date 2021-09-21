@@ -8,8 +8,7 @@ public class ShootingEnemy : MonoBehaviour
     public Transform endPos;
     [Tooltip("Second Position the Enemy moves to.")]
     public float speed = 1.0f;
-    [Tooltip("Damage the Enemy deals")]
-    public int damage = 1;
+
     [Tooltip("True if player is sighted")]
     public bool playerSighted;
     [Tooltip("Enemy Projectile Prefab")]
@@ -80,6 +79,7 @@ public class ShootingEnemy : MonoBehaviour
         {
             cooldown = true;
             var projectile = Instantiate(enemyProjectilePrefab, shootPosition.transform);
+            projectile.GetComponent<EnemyProjectile>().damage = enemy.damage;
             projectile.GetComponent<Rigidbody2D>().AddForce(Vector2.MoveTowards(shootPosition.transform.position, playerTransform.position, 3) * shootForce);
             StartCoroutine(ResetCooldown());
         }

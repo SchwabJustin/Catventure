@@ -9,8 +9,6 @@ public class WalkingEnemy : MonoBehaviour
     [Tooltip("Second Position the Enemy moves to.")]
     public Transform pos2;
 
-    [Tooltip("Damage the Enemy deals")]
-    public int damage = 1;
 
     Enemy enemy;
 
@@ -30,7 +28,7 @@ public class WalkingEnemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<PlayerManager>().GotDamaged(damage);
+            col.gameObject.GetComponent<PlayerManager>().GotDamaged(enemy.damage);
         }
     }
 

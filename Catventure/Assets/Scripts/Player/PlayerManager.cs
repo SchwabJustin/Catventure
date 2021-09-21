@@ -13,13 +13,21 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Maximal Health of the Player")]
     public int maxPlayerHealth = 3;
     [Tooltip("Damage the Player deals with Attacks")]
+    public int currentExp;
+    public int currentLvl = 1;
     public int playerAttackDmg = 7;
     public int doubleShotDmg = 8;
     public int poisonDmg = 7;
+    public int burnDmg = 15;
+    public int paralyzeDmg = 30;
     public int poisonDuration = 5;
+    public int burnDuration = 5;
+    public int paralyzeDuration = 5;
     [Tooltip("Time the Player stays invulnerable after taking a hit")]
     public float invulnerableTime = 0.5F;
     private bool invulnerable;
+
+    public Vector3 lastCheckpointPosition;
 
     [Foldout("SkillTree", true)]
     [Tooltip("Current Skill Points the player has")]
@@ -41,8 +49,11 @@ public class PlayerManager : MonoBehaviour
 
     private GameObject shopContent;
 
+
+
     void Awake()
     {
+        lastCheckpointPosition = transform.position;
         shopContent = GameObject.Find("ShopContent");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = "Cookies: " + currentCookies;
@@ -61,9 +72,25 @@ public class PlayerManager : MonoBehaviour
         heads.Find(go => go.name == currentHeadName).SetActive(true);
     }
 
+    public void GetExp(int expAmount)
+    {
+        currentExp += expAmount;
+        if (currentExp >= (currentLvl * 100))
+        {
+            currentExp -= (currentLvl * 100);
+            currentLvl += 1;
+            currentSkillPoints += 1;
+        }
+    }
+
     public void GotDamaged(int damage)
     {
         StartCoroutine(DamageDealt(damage));
+        if (currentPlayerHealth <= 0)
+        {
+            transform.position = lastCheckpointPosition;
+            currentPlayerHealth = maxPlayerHealth;
+        }
     }
 
     public IEnumerator DamageDealt(int damage)
@@ -87,6 +114,17 @@ public class PlayerManager : MonoBehaviour
             currentCookies += col.gameObject.GetComponent<Cookie>().cookieAmount;
             Destroy(col.gameObject);
             cookieCounter.text = "Cookies: " + currentCookies;
+        }
+
+        if (col.gameObject.CompareTag("Checkpoint"))
+        {
+            lastCheckpointPosition = transform.position;
+        }
+
+        if (col.gameObject.CompareTag("Deathzone"))
+        {
+            transform.position = lastCheckpointPosition;
+            currentPlayerHealth = maxPlayerHealth;
         }
     }
 
@@ -158,6 +196,25 @@ public class PlayerManager : MonoBehaviour
 
                 case "Adlerauge":
                     doubleShotDmg += 3;
+                    break;
+
+                case "Vergiften":
+                    if (learnedSkills.Contains(skillToLearn))
+                    {
+                        poisonDmg += 3;
+                    }
+                    break;
+
+                case "Verbrennen":
+                    if (learnedSkills.Contains(skillToLearn))
+                    {
+                        burnDmg += 3;
+                    }
+                    break;
+
+                case "Alchemist":
+                    burnDmg += 3;
+                    poisonDmg += 3;
                     break;
 
                 default:
