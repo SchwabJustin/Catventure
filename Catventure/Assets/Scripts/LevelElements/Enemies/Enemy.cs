@@ -44,7 +44,11 @@ public class Enemy : MonoBehaviour
             currentHealth -= damage;
             _invulnerable = true;
         }
+        GetComponent<SpriteRenderer>().color = new Color(1, 0.4F, 0.4F, 1);
+        GetComponentInChildren<SpriteRenderer>().color = new Color(1, 0.4F, 0.4F, 1);
         yield return new WaitForSeconds(invulnerableTime);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         if (_invulnerable)
         {
             _invulnerable = false;

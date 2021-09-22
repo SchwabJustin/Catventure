@@ -17,14 +17,20 @@ public class CameraZoom : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log(zoomedIn);
+            if (!zoomedIn)
+            {
+                zoomedIn = true;
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
             if (zoomedIn)
             {
                 zoomedIn = false;
-            }
-            else
-            {
-                zoomedIn = true;
             }
         }
     }
