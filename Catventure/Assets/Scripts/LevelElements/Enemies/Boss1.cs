@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Boss1 : MonoBehaviour
 {
     public int waitTimeUntilNextJump = 5;
@@ -12,6 +12,16 @@ public class Boss1 : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
         StartCoroutine(JumpTimer());
+    }
+
+    void Update()
+    {
+        if (enemy.currentHealth <= 0)
+        {
+            enemy.playerManager.currentCookies += enemy.cookieAmount;
+            enemy.playerManager.level1Finished = true;
+            SceneManager.LoadScene("Map");
+        }
     }
 
     public static IEnumerator AnimateJump(GameObject go, float distance, float height, float time = 1.0f)

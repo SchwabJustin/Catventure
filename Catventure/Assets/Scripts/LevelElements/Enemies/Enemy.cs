@@ -17,7 +17,8 @@ public class Enemy : MonoBehaviour
     private bool _invulnerable;
     public float invulnerableTime = 0.2F;
     public GameObject cookiePrefab;
-    PlayerManager playerManager;
+    public int cookieAmount;
+    public PlayerManager playerManager;
 
     public void Start()
     {
@@ -27,13 +28,19 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Got Hit with " + damage);
         StartCoroutine(DamageDealt(damage));
+
+        //Death
         if (currentHealth <= 0)
         {
             playerManager.GetExp(expAmount);
             Vector3 currentPosition = transform.position;
-            GameObject cookie = Instantiate(cookiePrefab);
-            cookie.transform.position = transform.position;
-            Destroy(this.gameObject);
+            if (GetComponent<Boss1>() == null || GetComponent<Boss2>() == null || GetComponent<Boss3>() == null)
+            {
+                GameObject cookie = Instantiate(cookiePrefab);
+                cookie.GetComponent<Cookie>().cookieAmount = cookieAmount;
+                cookie.transform.position = transform.position;
+                Destroy(this.gameObject);
+            }
         }
     }
     public IEnumerator DamageDealt(int damage)

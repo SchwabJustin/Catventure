@@ -47817,7 +47817,10 @@ MonoBehaviour:
   speed: 1
   slowDown: 0.5
   invulnerableTime: 0.2
-  cookiePrefab: {fileID: 0}
+  cookiePrefab: {fileID: 2336050196890234474, guid: c6a33a48ff52b02488e90167cd98a301,
+    type: 3}
+  cookieAmount: 0
+  playerManager: {fileID: 0}
 --- !u!1 &943572344
 GameObject:
   m_ObjectHideFlags: 0
@@ -62944,6 +62947,18 @@ MonoBehaviour:
   airAcceleration: 30
   groundDeceleration: 70
   jumpHeight: 3.2
+--- !u!114 &1199670073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199670071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8971f16a4ac11eb4f9e7f137dddbf3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1199670078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477751451061903242, guid: 6ec24220f552c0b4684314b49d23010d,

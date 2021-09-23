@@ -49,10 +49,15 @@ public class PlayerManager : MonoBehaviour
 
     private GameObject shopContent;
 
+    [Foldout("Other", true)]
+
+    public bool level1Finished;
+    public bool level2Finished;
 
 
     void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
         lastCheckpointPosition = transform.position;
         shopContent = GameObject.Find("ShopContent");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
