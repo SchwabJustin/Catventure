@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Toon Cats
   fontNames:
   - Toon Cats
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {instanceID: 0}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
