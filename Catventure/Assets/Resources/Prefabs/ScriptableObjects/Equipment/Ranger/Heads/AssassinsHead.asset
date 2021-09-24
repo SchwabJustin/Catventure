@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: AssassinsHead
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 1493367654418689492, guid: 5b89636c0cf29424bb1b6a10e489081b,
+  equipmentSprite: {fileID: 6627789134965271961, guid: b77b919ad85687c429f6bdb1172ff76d,
     type: 3}
   cookieCost: 20
   equipmentType: 0

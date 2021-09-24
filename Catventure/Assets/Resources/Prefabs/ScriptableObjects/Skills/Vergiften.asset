@@ -22,5 +22,4 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: "Der Spieler schie\xDFt einen in Gift getr\xE4nkten Pfeil ab, der
-    einen Gegner trifft und verlangsamt.\r"
+  description: 'A poisonous arrow that '

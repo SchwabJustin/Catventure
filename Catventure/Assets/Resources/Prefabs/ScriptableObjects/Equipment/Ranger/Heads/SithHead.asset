@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: SithHead
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 1349324979966303456, guid: 5b89636c0cf29424bb1b6a10e489081b,
+  equipmentSprite: {fileID: -4856772967823117147, guid: cf3e5996638a4164d8328a15911efce7,
     type: 3}
   cookieCost: 20
   equipmentType: 0

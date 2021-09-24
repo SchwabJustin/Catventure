@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: SteampunkHead
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: -5109063666472242871, guid: 5b89636c0cf29424bb1b6a10e489081b,
+  equipmentSprite: {fileID: 3660738951483642013, guid: 36842276223f73d40813bca5ad5befeb,
     type: 3}
   cookieCost: 20
   equipmentType: 0

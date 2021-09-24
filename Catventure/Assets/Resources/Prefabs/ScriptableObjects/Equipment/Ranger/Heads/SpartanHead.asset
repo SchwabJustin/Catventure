@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: SpartanHead
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: -9155896850589290049, guid: 5b89636c0cf29424bb1b6a10e489081b,
+  equipmentSprite: {fileID: 4300384536029892132, guid: cff6d1785e10edb43bd4500a91b311b4,
     type: 3}
   cookieCost: 6
   equipmentType: 0

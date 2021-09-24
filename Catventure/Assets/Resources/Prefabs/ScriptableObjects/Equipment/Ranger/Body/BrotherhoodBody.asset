@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
+  m_Name: BrotherhoodBody
+  m_EditorClassIdentifier: 
+  equipmentSprite: {fileID: -6326916320314319866, guid: cb3d37f7f006ead4783159679bbfbf58,
+    type: 3}
+  cookieCost: 25
+  equipmentType: 1

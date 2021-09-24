@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: GaelicHead
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: -6338405122719091784, guid: 5b89636c0cf29424bb1b6a10e489081b,
+  equipmentSprite: {fileID: 4469455149524239192, guid: 67092d99e0d98c644a892f44c0bc2119,
     type: 3}
   cookieCost: 20
   equipmentType: 0

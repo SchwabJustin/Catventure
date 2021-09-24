@@ -16,11 +16,10 @@ MonoBehaviour:
   skillImg: {fileID: -1140953881901911216, guid: cfef51c1497ad68408dd2cb0a2ee2e9e,
     type: 3}
   level: 1
-  skillNeeded: {fileID: 0}
+  skillsNeeded: []
   skillPointsNeeded: 1
   doubleSkillable: 1
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: "Der Spieler schie\xDFt einen gew\xF6hnlichen Pfeil ab, der in einem
-    bestimmten Radius Gegner treffen kann. Er verursacht dabei Schaden"
+  description: A precise shot that damages your foes in a limited range.

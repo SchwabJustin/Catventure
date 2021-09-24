@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: BrotherhoodHead
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: -7225834784706996516, guid: 5b89636c0cf29424bb1b6a10e489081b,
+  equipmentSprite: {fileID: 5838304080961227785, guid: cb3d37f7f006ead4783159679bbfbf58,
     type: 3}
   cookieCost: 20
   equipmentType: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: EndorianHead
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: -2841141937193812171, guid: 5b89636c0cf29424bb1b6a10e489081b,
+  equipmentSprite: {fileID: -5848756768025898765, guid: 0369bbdcf377e21438d25d4011da9313,
     type: 3}
   cookieCost: 20
   equipmentType: 0
