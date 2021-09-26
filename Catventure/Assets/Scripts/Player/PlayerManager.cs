@@ -40,10 +40,21 @@ public class PlayerManager : MonoBehaviour
 
     public TMP_Text cookieCounter;
 
-    private GameObject headsParent;
+    private SpriteRenderer headSpriteRenderer;
+    private SpriteRenderer bodySpriteRenderer;
+    private SpriteRenderer weaponSpriteRenderer;
+    private List<SpriteRenderer> armsSpriteRenderer = new List<SpriteRenderer>();
+    private List<SpriteRenderer> legsSpriteRenderer = new List<SpriteRenderer>();
     public string currentHeadName = "StandardHead";
-    public List<String> unlockedHeads;
-    public List<GameObject> heads;
+    public string currentBodyName = "StandardBody";
+    public string currentWeaponName = "StandardWeapon";
+    public string currentArmsName = "StandardArms";
+    public string currentLegsName = "StandardLegs";
+    public List<String> unlockedHeads = new List<string>();
+    public List<String> unlockedBodies = new List<string>();
+    public List<String> unlockedWeapons = new List<string>();
+    public List<String> unlockedArms = new List<string>();
+    public List<String> unlockedLegs = new List<string>();
     [Tooltip("Current number of Cookies the Player has collected")]
     public int currentCookies;
 
@@ -63,18 +74,13 @@ public class PlayerManager : MonoBehaviour
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = "Cookies: " + currentCookies;
 
-        if (!unlockedHeads.Contains("StandardHead"))
-        {
-            unlockedHeads.Add("StandardHeads");
-        }
-        headsParent = transform.Find("Heads").gameObject;
-        for (int i = 0; headsParent.transform.childCount > i; i++)
-        {
-            heads.Add(headsParent.transform.GetChild(i).gameObject);
-            heads[i].SetActive(false);
-        }
-
-        heads.Find(go => go.name == currentHeadName).SetActive(true);
+        headSpriteRenderer = transform.Find("Head").GetComponent<SpriteRenderer>();
+        bodySpriteRenderer = GetComponent<SpriteRenderer>();
+        weaponSpriteRenderer = transform.Find("BowSprite").GetComponent<SpriteRenderer>();
+        armsSpriteRenderer.Add(transform.Find("LeftArm").GetComponent<SpriteRenderer>());
+        armsSpriteRenderer.Add(transform.Find("RightArm").GetComponent<SpriteRenderer>());
+        armsSpriteRenderer.Add(transform.Find("LeftFoot").GetComponent<SpriteRenderer>());
+        armsSpriteRenderer.Add(transform.Find("RightFoot").GetComponent<SpriteRenderer>());
     }
 
     public void GetExp(int expAmount)
@@ -244,10 +250,9 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("Trying to buy " + equipmentToBuy);
         if (unlockedHeads.Contains(equipmentToBuy.name))
         {
-            heads.Find(go => go.name == currentHeadName).SetActive(false);
+            headSpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
             shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.white;
             currentHeadName = equipmentToBuy.name;
-            heads.Find(go => go.name == currentHeadName).SetActive(true);
             shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.green;
         }
 
@@ -263,11 +268,135 @@ public class PlayerManager : MonoBehaviour
             GameObject currentEquipmentUI = shopContent.transform.Find(equipmentToBuy.name).gameObject;
             currentEquipmentUI.transform.Find("CookiePrice").gameObject.SetActive(false);
             Debug.Log("Bought Head" + equipmentToBuy.name);
-            heads.Find(go => go.name == currentHeadName).SetActive(false);
             shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.white;
             currentHeadName = equipmentToBuy.name;
-            heads.Find(go => go.name == currentHeadName).SetActive(true);
+            headSpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
             shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.green;
+            cookieCounter.text = "Cookies: " + currentCookies;
+        }
+    }
+    public void buyBody(EquipmentSO equipmentToBuy)
+    {
+        Debug.Log("Trying to buy " + equipmentToBuy);
+        if (unlockedBodies.Contains(equipmentToBuy.name))
+        {
+            bodySpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
+            shopContent.transform.Find(currentBodyName).GetComponent<Image>().color = Color.white;
+            currentBodyName = equipmentToBuy.name;
+            shopContent.transform.Find(currentBodyName).GetComponent<Image>().color = Color.green;
+        }
+
+
+        else if (equipmentToBuy.cookieCost > currentCookies)
+        {
+            Debug.Log("You don't have enough Cookies.");
+        }
+        else
+        {
+            currentCookies -= equipmentToBuy.cookieCost;
+            unlockedBodies.Add(equipmentToBuy.name);
+            GameObject currentEquipmentUI = shopContent.transform.Find(equipmentToBuy.name).gameObject;
+            currentEquipmentUI.transform.Find("CookiePrice").gameObject.SetActive(false);
+            Debug.Log("Bought Body" + equipmentToBuy.name);
+            shopContent.transform.Find(currentBodyName).GetComponent<Image>().color = Color.white;
+            currentBodyName = equipmentToBuy.name;
+            bodySpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
+            shopContent.transform.Find(currentBodyName).GetComponent<Image>().color = Color.green;
+            cookieCounter.text = "Cookies: " + currentCookies;
+        }
+    }
+    public void buyWeapon(EquipmentSO equipmentToBuy)
+    {
+        Debug.Log("Trying to buy " + equipmentToBuy);
+        if (unlockedWeapons.Contains(equipmentToBuy.name))
+        {
+            weaponSpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
+            shopContent.transform.Find(currentWeaponName).GetComponent<Image>().color = Color.white;
+            currentWeaponName = equipmentToBuy.name;
+            shopContent.transform.Find(currentWeaponName).GetComponent<Image>().color = Color.green;
+        }
+
+
+        else if (equipmentToBuy.cookieCost > currentCookies)
+        {
+            Debug.Log("You don't have enough Cookies.");
+        }
+        else
+        {
+            currentCookies -= equipmentToBuy.cookieCost;
+            unlockedWeapons.Add(equipmentToBuy.name);
+            GameObject currentEquipmentUI = shopContent.transform.Find(equipmentToBuy.name).gameObject;
+            currentEquipmentUI.transform.Find("CookiePrice").gameObject.SetActive(false);
+            Debug.Log("Bought Weapon" + equipmentToBuy.name);
+            shopContent.transform.Find(currentWeaponName).GetComponent<Image>().color = Color.white;
+            currentWeaponName = equipmentToBuy.name;
+            weaponSpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
+            shopContent.transform.Find(currentWeaponName).GetComponent<Image>().color = Color.green;
+            cookieCounter.text = "Cookies: " + currentCookies;
+        }
+    }
+
+    public void buyArms(EquipmentSO equipmentToBuy)
+    {
+        Debug.Log("Trying to buy " + equipmentToBuy);
+        if (unlockedArms.Contains(equipmentToBuy.name))
+        {
+            armsSpriteRenderer[0].sprite = equipmentToBuy.equipmentSprite;
+            armsSpriteRenderer[1].sprite = equipmentToBuy.equipmentSpriteRightArmOrLeg;
+            shopContent.transform.Find(currentArmsName).GetComponent<Image>().color = Color.white;
+            currentArmsName = equipmentToBuy.name;
+            shopContent.transform.Find(currentArmsName).GetComponent<Image>().color = Color.green;
+        }
+
+
+        else if (equipmentToBuy.cookieCost > currentCookies)
+        {
+            Debug.Log("You don't have enough Cookies.");
+        }
+        else
+        {
+            currentCookies -= equipmentToBuy.cookieCost;
+            unlockedArms.Add(equipmentToBuy.name);
+            GameObject currentEquipmentUI = shopContent.transform.Find(equipmentToBuy.name).gameObject;
+            currentEquipmentUI.transform.Find("CookiePrice").gameObject.SetActive(false);
+            Debug.Log("Bought Arms " + equipmentToBuy.name);
+            shopContent.transform.Find(currentArmsName).GetComponent<Image>().color = Color.white;
+            currentArmsName = equipmentToBuy.name;
+            armsSpriteRenderer[0].sprite = equipmentToBuy.equipmentSprite;
+            armsSpriteRenderer[1].sprite = equipmentToBuy.equipmentSpriteRightArmOrLeg;
+            shopContent.transform.Find(currentArmsName).GetComponent<Image>().color = Color.green;
+            cookieCounter.text = "Cookies: " + currentCookies;
+        }
+    }
+    public void buyLegs(EquipmentSO equipmentToBuy)
+    {
+        Debug.Log("Trying to buy " + equipmentToBuy);
+        if (unlockedLegs.Contains(equipmentToBuy.name))
+        {
+            legsSpriteRenderer[0].sprite = equipmentToBuy.equipmentSprite;
+            legsSpriteRenderer[1].sprite = equipmentToBuy.equipmentSpriteRightArmOrLeg;
+            shopContent.transform.Find(currentLegsName).GetComponent<Image>().color = Color.white;
+            currentLegsName = equipmentToBuy.name;
+            shopContent.transform.Find(currentLegsName).GetComponent<Image>().color = Color.green;
+        }
+
+
+        else if (equipmentToBuy.cookieCost > currentCookies)
+        {
+            Debug.Log("You don't have enough Cookies.");
+        }
+        else
+        {
+            currentCookies -= equipmentToBuy.cookieCost;
+            unlockedLegs.Add(equipmentToBuy.name);
+            GameObject currentEquipmentUI = shopContent.transform.Find(equipmentToBuy.name).gameObject;
+            currentEquipmentUI.transform.Find("CookiePrice").gameObject.SetActive(false);
+            Debug.Log("Bought Legs " + equipmentToBuy.name);
+            shopContent.transform.Find(currentLegsName).GetComponent<Image>().color = Color.white;
+            currentLegsName = equipmentToBuy.name;
+            legsSpriteRenderer[0].sprite = equipmentToBuy.equipmentSprite;
+            legsSpriteRenderer[1].sprite = equipmentToBuy.equipmentSpriteRightArmOrLeg;
+            shopContent.transform.Find(currentLegsName).GetComponent<Image>().color = Color.green;
             cookieCounter.text = "Cookies: " + currentCookies;
         }
     }

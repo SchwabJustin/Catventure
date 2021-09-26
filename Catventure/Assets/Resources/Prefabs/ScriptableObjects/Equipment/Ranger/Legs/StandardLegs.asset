@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: StandardLegs
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: 2672255756760555705, guid: 5a2b82976980e864fb92611360b7e000,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -6972749749871113602, guid: 5a2b82976980e864fb92611360b7e000,
+    type: 3}
   cookieCost: 0
   equipmentType: 3

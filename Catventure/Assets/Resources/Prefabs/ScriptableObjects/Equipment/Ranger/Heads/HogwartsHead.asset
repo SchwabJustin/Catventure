@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentSprite: {fileID: 3569774220143098934, guid: 495fb050d42c8e5479dd745cda7657a6,
     type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: 0}
   cookieCost: 20
   equipmentType: 0

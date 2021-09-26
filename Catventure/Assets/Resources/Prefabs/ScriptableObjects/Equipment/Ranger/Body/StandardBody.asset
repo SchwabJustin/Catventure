@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: StandardBody
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: -2192533508984978124, guid: 6b1f6fd50610dd2438fff2a67f574196,
+  equipmentSprite: {fileID: -7120005228550736916, guid: 5a2b82976980e864fb92611360b7e000,
     type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: 0}
   cookieCost: 0
   equipmentType: 1

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: BrotherhoodArms
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: 2510876117161236425, guid: cb3d37f7f006ead4783159679bbfbf58,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -6168018384804605150, guid: cb3d37f7f006ead4783159679bbfbf58,
+    type: 3}
   cookieCost: 10
   equipmentType: 2
