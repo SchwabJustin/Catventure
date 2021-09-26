@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: HylianLegs
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: -6652620302162840894, guid: bb7dfe090d58c1f4da24c94ae19bc609,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -1242771607026215761, guid: bb7dfe090d58c1f4da24c94ae19bc609,
+    type: 3}
   cookieCost: 10
   equipmentType: 3

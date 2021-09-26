@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: VikingArms
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: 2466761614236461945, guid: 14ba6925fb4f0bc43b880c374883e6f1,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -6524397425112527353, guid: 14ba6925fb4f0bc43b880c374883e6f1,
+    type: 3}
   cookieCost: 10
   equipmentType: 2

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: GaelicLegs
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: -8524819544452358314, guid: 67092d99e0d98c644a892f44c0bc2119,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -3854517137800259546, guid: 67092d99e0d98c644a892f44c0bc2119,
+    type: 3}
   cookieCost: 10
   equipmentType: 3

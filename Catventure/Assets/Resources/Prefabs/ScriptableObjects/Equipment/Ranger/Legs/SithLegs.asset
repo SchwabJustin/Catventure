@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: SithLegs
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: 4424622318957342425, guid: cf3e5996638a4164d8328a15911efce7,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: 1178667415941962525, guid: cf3e5996638a4164d8328a15911efce7,
+    type: 3}
   cookieCost: 10
   equipmentType: 3

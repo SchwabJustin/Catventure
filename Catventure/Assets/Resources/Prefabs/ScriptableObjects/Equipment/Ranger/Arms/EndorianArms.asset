@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: EndorianArms
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: -1294476514611302310, guid: 0369bbdcf377e21438d25d4011da9313,
+  equipmentSprite: {fileID: 3546190044108171790, guid: 0369bbdcf377e21438d25d4011da9313,
     type: 3}
-  equipmentSpriteRightArmOrLeg: {fileID: 3546190044108171790, guid: 0369bbdcf377e21438d25d4011da9313,
+  equipmentSpriteRightArmOrLeg: {fileID: -1294476514611302310, guid: 0369bbdcf377e21438d25d4011da9313,
     type: 3}
   cookieCost: 10
   equipmentType: 2

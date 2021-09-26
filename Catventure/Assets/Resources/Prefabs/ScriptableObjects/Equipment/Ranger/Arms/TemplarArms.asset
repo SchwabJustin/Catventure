@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: TemplarArms
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: 7122662383218750972, guid: 4d9ab04849f64c14d8bb65111dd236c2,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -5362814288588817832, guid: 4d9ab04849f64c14d8bb65111dd236c2,
+    type: 3}
   cookieCost: 10
   equipmentType: 2

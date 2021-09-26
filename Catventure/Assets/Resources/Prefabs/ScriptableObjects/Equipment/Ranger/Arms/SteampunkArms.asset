@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: SteampunkArms
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: -536499736345214775, guid: 36842276223f73d40813bca5ad5befeb,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: 4890104600518924663, guid: 36842276223f73d40813bca5ad5befeb,
+    type: 3}
   cookieCost: 10
   equipmentType: 2

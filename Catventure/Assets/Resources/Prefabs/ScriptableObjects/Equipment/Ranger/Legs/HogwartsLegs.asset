@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: HogwartsLegs
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: 6843560104589447457, guid: 495fb050d42c8e5479dd745cda7657a6,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -1274020830729292510, guid: 495fb050d42c8e5479dd745cda7657a6,
+    type: 3}
   cookieCost: 10
   equipmentType: 3

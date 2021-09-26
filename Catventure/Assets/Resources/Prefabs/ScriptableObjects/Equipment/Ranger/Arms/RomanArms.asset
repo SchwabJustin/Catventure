@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: RomanArms
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: -353331951155514502, guid: e3a8ca4f77c7917409792d66bfa49648,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: 7377685519719911222, guid: e3a8ca4f77c7917409792d66bfa49648,
+    type: 3}
   cookieCost: 10
   equipmentType: 2

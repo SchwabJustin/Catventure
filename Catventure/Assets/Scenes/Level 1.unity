@@ -39538,7 +39538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &757073336
 PrefabInstance:
@@ -49629,6 +49629,161 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 362084410}
     m_Modifications:
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.size
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: bc7de27cd0b3f124388fc6c32e9260fc,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0105fa529ebf9b141b6f0b0162ebd847,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 32edf85841fe55e409b6fe9719cf4daa,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 09738e12f4b75674482fae866c1d3640,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 188a6aaa2b74a8d478012404a7a8ceee,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 24f4893020cda77408e51c64ecd26169,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: fd445a3c6ff14184f843f100a5e02718,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d90ee15e2bc200439a40b8d17ae2fd6,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 05321e10297c84c4387c0c4aa0227afa,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 86498f6ea6509cf4ea96d529df949d77,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: c3f555879b7c65940a7f9e04d36f1035,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c167144bb0c74743a8bf1df4dd3d3d8,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[20]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43f57a57f172101489b7ebedca789ea1,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[21]
+      value: 
+      objectReference: {fileID: 11400000, guid: fdc671733ba8d454687de557b38f8325,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[22]
+      value: 
+      objectReference: {fileID: 11400000, guid: b9fe24090dc0cc04a9b6f1f9506111cf,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[23]
+      value: 
+      objectReference: {fileID: 11400000, guid: ce9d7c512ff889f49b72bd843f01ae6a,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[24]
+      value: 
+      objectReference: {fileID: 11400000, guid: ac08814cab25b5b468bbe29fe39487bd,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91906a2f9a69c5c44a3ed2f06dd1992b,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a6b7fdb8c24375c419e49ea729ccd782,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 331cedd66e7428e46906b7ea1afa8794,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: a52939bd1d7d0054f9b2bddefbb1ca61,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: d21b05d46d272e441b22c5d83aeb92fd,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: ada0cbf907340414eb4401e1899545cb,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 86867a4e1a67e71498c6ed9aaa4ed974,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 84ceb6b6efdc079449063c8b304a3ace,
+        type: 2}
     - target: {fileID: 1320661768918032337, guid: 67047338898630141bdd8012b47f25ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51099,7 +51254,7 @@ PrefabInstance:
     - target: {fileID: 477751451061903242, guid: 6ec24220f552c0b4684314b49d23010d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 477751451061903242, guid: 6ec24220f552c0b4684314b49d23010d,
         type: 3}
@@ -74775,9 +74930,74 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
         type: 3}
+      propertyPath: equipmentsOnSale.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
       propertyPath: openShopKey
       value: 102
       objectReference: {fileID: 0}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91906a2f9a69c5c44a3ed2f06dd1992b,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a6b7fdb8c24375c419e49ea729ccd782,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 331cedd66e7428e46906b7ea1afa8794,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: a52939bd1d7d0054f9b2bddefbb1ca61,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: d21b05d46d272e441b22c5d83aeb92fd,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: ce9d7c512ff889f49b72bd843f01ae6a,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43f57a57f172101489b7ebedca789ea1,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: fdc671733ba8d454687de557b38f8325,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: b9fe24090dc0cc04a9b6f1f9506111cf,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: ac08814cab25b5b468bbe29fe39487bd,
+        type: 2}
     - target: {fileID: 1320661768918032337, guid: 67047338898630141bdd8012b47f25ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -92939,6 +93159,101 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1569772684}
     m_Modifications:
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91906a2f9a69c5c44a3ed2f06dd1992b,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a6b7fdb8c24375c419e49ea729ccd782,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 331cedd66e7428e46906b7ea1afa8794,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: a52939bd1d7d0054f9b2bddefbb1ca61,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: d21b05d46d272e441b22c5d83aeb92fd,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 86867a4e1a67e71498c6ed9aaa4ed974,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: bc7de27cd0b3f124388fc6c32e9260fc,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0105fa529ebf9b141b6f0b0162ebd847,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43f57a57f172101489b7ebedca789ea1,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: fdc671733ba8d454687de557b38f8325,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: b9fe24090dc0cc04a9b6f1f9506111cf,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: ce9d7c512ff889f49b72bd843f01ae6a,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: ac08814cab25b5b468bbe29fe39487bd,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: ada0cbf907340414eb4401e1899545cb,
+        type: 2}
+    - target: {fileID: 690521430536663426, guid: 67047338898630141bdd8012b47f25ea,
+        type: 3}
+      propertyPath: equipmentsOnSale.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 84ceb6b6efdc079449063c8b304a3ace,
+        type: 2}
     - target: {fileID: 1320661768918032337, guid: 67047338898630141bdd8012b47f25ea,
         type: 3}
       propertyPath: m_LocalPosition.x

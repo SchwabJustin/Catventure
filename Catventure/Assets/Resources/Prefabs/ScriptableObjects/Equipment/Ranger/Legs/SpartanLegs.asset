@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772697f437ff0704fb4ba4c7899250ec, type: 3}
   m_Name: SpartanLegs
   m_EditorClassIdentifier: 
-  equipmentSprite: {fileID: 0}
+  equipmentSprite: {fileID: -2180059024599465835, guid: cff6d1785e10edb43bd4500a91b311b4,
+    type: 3}
+  equipmentSpriteRightArmOrLeg: {fileID: -3903634574519722125, guid: cff6d1785e10edb43bd4500a91b311b4,
+    type: 3}
   cookieCost: 10
   equipmentType: 3
