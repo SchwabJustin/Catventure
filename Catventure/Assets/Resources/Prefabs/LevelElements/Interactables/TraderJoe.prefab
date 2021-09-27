@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 690521430536663426}
   m_Layer: 0
   m_Name: TraderJoe
-  m_TagString: Untagged
+  m_TagString: Trader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,6 +553,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57f018f866057dd46a21b357d597c63c, type: 2}
   - {fileID: 11400000, guid: c85c296d8a639d5459afaa25820f84b5, type: 2}
   - {fileID: 11400000, guid: 43f57a57f172101489b7ebedca789ea1, type: 2}
+  - {fileID: 11400000, guid: a6b7fdb8c24375c419e49ea729ccd782, type: 2}
+  - {fileID: 11400000, guid: 523481c8afc03c94cb17855cf29a4eaf, type: 2}
+  - {fileID: 11400000, guid: 3ba72a44b7d8881409075935cd988c99, type: 2}
+  - {fileID: 11400000, guid: e98151d514cb48e4d9008cadb90b8bf0, type: 2}
+  shopParentObject: {fileID: 0}
   currentEquipment: {fileID: 0}
 --- !u!1 &1645405010252062360
 GameObject:

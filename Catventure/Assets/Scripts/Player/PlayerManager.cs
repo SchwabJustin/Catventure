@@ -74,13 +74,13 @@ public class PlayerManager : MonoBehaviour
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = "Cookies: " + currentCookies;
 
-        headSpriteRenderer = transform.Find("Head").GetComponent<SpriteRenderer>();
+        headSpriteRenderer = GameObject.Find("Head").GetComponent<SpriteRenderer>();
         bodySpriteRenderer = GetComponent<SpriteRenderer>();
-        weaponSpriteRenderer = transform.Find("BowSprite").GetComponent<SpriteRenderer>();
-        armsSpriteRenderer.Add(transform.Find("LeftArm").GetComponent<SpriteRenderer>());
-        armsSpriteRenderer.Add(transform.Find("RightArm").GetComponent<SpriteRenderer>());
-        armsSpriteRenderer.Add(transform.Find("LeftFoot").GetComponent<SpriteRenderer>());
-        armsSpriteRenderer.Add(transform.Find("RightFoot").GetComponent<SpriteRenderer>());
+        weaponSpriteRenderer = GameObject.Find("BowSprite").GetComponent<SpriteRenderer>();
+        armsSpriteRenderer.Add(GameObject.Find("LeftArm").GetComponent<SpriteRenderer>());
+        armsSpriteRenderer.Add(GameObject.Find("RightArm").GetComponent<SpriteRenderer>());
+        armsSpriteRenderer.Add(GameObject.Find("LeftFoot").GetComponent<SpriteRenderer>());
+        armsSpriteRenderer.Add(GameObject.Find("RightFoot").GetComponent<SpriteRenderer>());
     }
 
     public void GetExp(int expAmount)

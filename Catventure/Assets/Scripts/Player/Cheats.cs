@@ -33,6 +33,7 @@ public class Cheats : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
             playerManager.currentCookies += 100;
+            playerManager.cookieCounter.text = "Cookies: " + playerManager.currentCookies;
         }
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {

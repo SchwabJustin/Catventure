@@ -9,6 +9,7 @@ TagManager:
   - Arrow
   - Checkpoint
   - Deathzone
+  - Trader
   layers:
   - Default
   - TransparentFX

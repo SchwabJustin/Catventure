@@ -40,10 +40,12 @@ public class WalkingEnemy : MonoBehaviour
             if (newPos.gameObject.name != pos1.gameObject.name)
             {
                 newPos = pos1;
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
             }
             else
             {
                 newPos = pos2;
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
             }
         }
     }
