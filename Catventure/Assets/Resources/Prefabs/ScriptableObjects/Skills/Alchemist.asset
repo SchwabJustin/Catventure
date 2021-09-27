@@ -23,4 +23,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: 
+  description: 'Alchemist: As a master of alchemy, your attacks Burn and Paralyse
+    become more powerful.'

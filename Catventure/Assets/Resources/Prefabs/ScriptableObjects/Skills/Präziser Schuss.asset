@@ -22,4 +22,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: A precise shot that damages your foes in a limited range.
+  description: 'Precise Shot: A single precise shot that damages your foes in a limited
+    range.'

@@ -23,4 +23,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: 
+  description: 'Eagel Eyes: Your eagle eyes aide you in targeting your foes. The
+    damage of Double Shot and Rain of Arrows is increased.'

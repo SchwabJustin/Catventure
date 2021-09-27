@@ -23,4 +23,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: 
+  description: 'Paralyse: Your arrows deal devastating damage to your foes, additionally
+    paralysing them for 5 seconds when hit.'

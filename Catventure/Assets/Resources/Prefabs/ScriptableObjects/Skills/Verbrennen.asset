@@ -23,4 +23,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: 
+  description: 'Burn: You fire a burning arrow that stuns your enemies, making them
+    unable to attack you for 3 seconds when hit.'

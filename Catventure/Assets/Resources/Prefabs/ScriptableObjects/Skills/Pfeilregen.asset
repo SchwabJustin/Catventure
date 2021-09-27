@@ -22,4 +22,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: 
+  description: 'Rain of Arrows: You rapidly fire multiple arrows which deal devastating
+    damage to your foes.'

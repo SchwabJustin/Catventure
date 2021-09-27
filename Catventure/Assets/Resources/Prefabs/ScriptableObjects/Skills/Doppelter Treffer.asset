@@ -24,4 +24,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: 
+  description: 'Double Shot: As a more experienced archer you can now fire two quick
+    arrows to deal extraordinary damage to your enemies.'

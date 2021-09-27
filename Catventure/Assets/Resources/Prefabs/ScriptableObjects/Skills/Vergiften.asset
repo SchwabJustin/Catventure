@@ -22,4 +22,5 @@ MonoBehaviour:
   attackBonus: 0
   defenseBonus: 0
   magicBonus: 0
-  description: 'A poisonous arrow that '
+  description: 'Poison: You shoot a poisonous arrow which slows the movement of your
+    enemies down for 2 seconds.'
