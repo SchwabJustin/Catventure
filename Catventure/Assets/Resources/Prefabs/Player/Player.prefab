@@ -111,12 +111,12 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   arrowRainGo: {fileID: 6000065039254617532, guid: 4d11a63482e15af4ca1bce27a3916c87,
     type: 3}
-  shotCooldown: 1
-  doubleShotCooldown: 20
-  arrowRainCooldown: 30
-  poisonShotCooldown: 15
-  burnShotCooldown: 25
-  paralyzeShotCooldown: 30
+  shotCooldown: 3
+  doubleShotCooldown: 6
+  arrowRainCooldown: 15
+  poisonShotCooldown: 5
+  burnShotCooldown: 9
+  paralyzeShotCooldown: 20
 --- !u!1 &350191286
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,8 +768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832cad48a3882d54fbf53bb1382fe6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPlayerHealth: 3
-  maxPlayerHealth: 3
+  currentPlayerHealth: 30
+  maxPlayerHealth: 30
   currentExp: 0
   currentLvl: 1
   playerAttackDmg: 7
@@ -787,8 +787,15 @@ MonoBehaviour:
   multiSkillableSkills: []
   cookieCounter: {fileID: 0}
   currentHeadName: StandardHead
+  currentBodyName: StandardBody
+  currentWeaponName: StandardWeapon
+  currentArmsName: StandardArms
+  currentLegsName: StandardLegs
   unlockedHeads: []
-  heads: []
+  unlockedBodies: []
+  unlockedWeapons: []
+  unlockedArms: []
+  unlockedLegs: []
   currentCookies: 0
   level1Finished: 0
   level2Finished: 0
