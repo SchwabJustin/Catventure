@@ -1,0 +1,264 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: New Sprite Library Asset
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: Weapon
+    m_Hash: 1855955664
+    m_CategoryList:
+    - m_Name: Bow_Ranger
+      m_Hash: 1558435119
+      m_Sprite: {fileID: 1542612929617295300, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Steampunk
+      m_Hash: 390009320
+      m_Sprite: {fileID: -3718374226183916678, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Viking
+      m_Hash: 1147878624
+      m_Sprite: {fileID: 6460504818657383409, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Brotherhood
+      m_Hash: 1191626749
+      m_Sprite: {fileID: -1137647474420323364, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Sith
+      m_Hash: 1233405677
+      m_Sprite: {fileID: 3721122862119676390, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Spartan
+      m_Hash: 618930045
+      m_Sprite: {fileID: 7776717635166933813, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Assassin
+      m_Hash: -41619163
+      m_Sprite: {fileID: 5734964807182735409, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Hogwarts
+      m_Hash: 1391119357
+      m_Sprite: {fileID: -2664490690423389437, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Templar
+      m_Hash: -610977322
+      m_Sprite: {fileID: 3976923140392500671, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Hylian
+      m_Hash: 2126795867
+      m_Sprite: {fileID: -3173338900600143581, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Gaelic
+      m_Hash: 313082137
+      m_Sprite: {fileID: -2733457370716715992, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Roman
+      m_Hash: 2093280395
+      m_Sprite: {fileID: 2391462956071403177, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Endorian
+      m_Hash: -1074772648
+      m_Sprite: {fileID: -636155571071649755, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+    - m_Name: Bow_Samurai
+      m_Hash: 782299882
+      m_Sprite: {fileID: -8798354898074101903, guid: b9e2a59a65c70104f8a10a94b8f65443,
+        type: 3}
+  - m_Name: Head
+    m_Hash: 130111906
+    m_CategoryList:
+    - m_Name: Head_Ranger
+      m_Hash: 789709292
+      m_Sprite: {fileID: 2548298811287143288, guid: 5a2b82976980e864fb92611360b7e000,
+        type: 3}
+    - m_Name: Head_Steampunk
+      m_Hash: -1422329069
+      m_Sprite: {fileID: 3660738951483642013, guid: 36842276223f73d40813bca5ad5befeb,
+        type: 3}
+    - m_Name: Head_Viking
+      m_Hash: 932898851
+      m_Sprite: {fileID: -3618023265465219221, guid: 14ba6925fb4f0bc43b880c374883e6f1,
+        type: 3}
+    - m_Name: Head_Brotherhood
+      m_Hash: -258914070
+      m_Sprite: {fileID: 5838304080961227785, guid: cb3d37f7f006ead4783159679bbfbf58,
+        type: 3}
+    - m_Name: Head_Sith
+      m_Hash: -1993651182
+      m_Sprite: {fileID: -4856772967823117147, guid: cf3e5996638a4164d8328a15911efce7,
+        type: 3}
+    - m_Name: Head_Spartan
+      m_Hash: 653950371
+      m_Sprite: {fileID: 4300384536029892132, guid: cff6d1785e10edb43bd4500a91b311b4,
+        type: 3}
+    - m_Name: Head_Assassin
+      m_Hash: -1662185324
+      m_Sprite: {fileID: 6627789134965271961, guid: b77b919ad85687c429f6bdb1172ff76d,
+        type: 3}
+    - m_Name: Head_Hogwarts
+      m_Hash: 864234060
+      m_Sprite: {fileID: 3569774220143098934, guid: 495fb050d42c8e5479dd745cda7657a6,
+        type: 3}
+    - m_Name: Head_Templar
+      m_Hash: -645178616
+      m_Sprite: {fileID: -4401328323876718135, guid: 4d9ab04849f64c14d8bb65111dd236c2,
+        type: 3}
+    - m_Name: Head_Hylian
+      m_Hash: 221610136
+      m_Sprite: {fileID: -7544480197333804709, guid: bb7dfe090d58c1f4da24c94ae19bc609,
+        type: 3}
+    - m_Name: Head_Gaelic
+      m_Hash: 1633195482
+      m_Sprite: {fileID: 4469455149524239192, guid: 67092d99e0d98c644a892f44c0bc2119,
+        type: 3}
+    - m_Name: Head_Roman
+      m_Hash: 1359391756
+      m_Sprite: {fileID: 1434731138684230285, guid: e3a8ca4f77c7917409792d66bfa49648,
+        type: 3}
+    - m_Name: Head_Endorian
+      m_Hash: -560356119
+      m_Sprite: {fileID: -5848756768025898765, guid: 0369bbdcf377e21438d25d4011da9313,
+        type: 3}
+    - m_Name: Head_Samurai
+      m_Hash: 750686260
+      m_Sprite: {fileID: -6275316993731616962, guid: 19e9a0e958ca62644a3675db8225b30a,
+        type: 3}
+    - m_Name: Head_Enemy_1
+      m_Hash: 1411093246
+      m_Sprite: {fileID: 7166906848379104524, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+    - m_Name: Head_Enemy_2
+      m_Hash: -854408380
+      m_Sprite: {fileID: 7041644623841127070, guid: b2e60550a39551040a411a5949a47b5b,
+        type: 3}
+    - m_Name: Head_Enemy_3
+      m_Hash: -1172966446
+      m_Sprite: {fileID: -3383578584072983808, guid: 5368a5e72b992e646badfd10159968ec,
+        type: 3}
+    - m_Name: Head_Boss_1
+      m_Hash: -522913877
+      m_Sprite: {fileID: -7490353516690387789, guid: 691b4ae5a02d67c49b1cb928be2a9687,
+        type: 3}
+    - m_Name: Head_Boss_3
+      m_Hash: 249206407
+      m_Sprite: {fileID: -2668967046905872582, guid: 70524c37a333f804b8af9481138dec87,
+        type: 3}
+    - m_Name: Head_Catwarrior
+      m_Hash: 1812783116
+      m_Sprite: {fileID: -6612433862126318516, guid: b6659581004e9de49be970eaa8599c64,
+        type: 3}
+  - m_Name: Body
+    m_Hash: 2073732236
+    m_CategoryList:
+    - m_Name: Body_Ranger
+      m_Hash: 2008459284
+      m_Sprite: {fileID: -7120005228550736916, guid: 5a2b82976980e864fb92611360b7e000,
+        type: 3}
+    - m_Name: Body_Steampunk
+      m_Hash: -1097746062
+      m_Sprite: {fileID: -5987278443675884433, guid: 36842276223f73d40813bca5ad5befeb,
+        type: 3}
+    - m_Name: Body_Viking
+      m_Hash: 1866351067
+      m_Sprite: {fileID: -3381236173157098505, guid: 14ba6925fb4f0bc43b880c374883e6f1,
+        type: 3}
+    - m_Name: Body_Brotherhood
+      m_Hash: 346367769
+      m_Sprite: {fileID: -6326916320314319866, guid: cb3d37f7f006ead4783159679bbfbf58,
+        type: 3}
+    - m_Name: Body_Sith
+      m_Hash: 1622533286
+      m_Sprite: {fileID: 2179555748881209996, guid: cf3e5996638a4164d8328a15911efce7,
+        type: 3}
+    - m_Name: Body_Spartan
+      m_Hash: -1782275292
+      m_Sprite: {fileID: -2380582145472241363, guid: cff6d1785e10edb43bd4500a91b311b4,
+        type: 3}
+    - m_Name: Body_Assassin
+      m_Hash: -276678455
+      m_Sprite: {fileID: -5593453477653608025, guid: b77b919ad85687c429f6bdb1172ff76d,
+        type: 3}
+    - m_Name: Body_Hogwarts
+      m_Hash: 1089208849
+      m_Sprite: {fileID: 2686225523600565642, guid: 495fb050d42c8e5479dd745cda7657a6,
+        type: 3}
+    - m_Name: Body_Templar
+      m_Hash: 1790281103
+      m_Sprite: {fileID: 6531802748579896874, guid: 4d9ab04849f64c14d8bb65111dd236c2,
+        type: 3}
+    - m_Name: Body_Hylian
+      m_Hash: 1435576672
+      m_Sprite: {fileID: -8899201284841901936, guid: bb7dfe090d58c1f4da24c94ae19bc609,
+        type: 3}
+    - m_Name: Body_Gaelic
+      m_Hash: 972831778
+      m_Sprite: {fileID: 813296910238299546, guid: 67092d99e0d98c644a892f44c0bc2119,
+        type: 3}
+    - m_Name: Body_Roman
+      m_Hash: -1646049999
+      m_Sprite: {fileID: 7966821486651748277, guid: e3a8ca4f77c7917409792d66bfa49648,
+        type: 3}
+    - m_Name: Body_Endorian
+      m_Hash: -1376351052
+      m_Sprite: {fileID: -4853918565185472273, guid: 0369bbdcf377e21438d25d4011da9313,
+        type: 3}
+    - m_Name: Body_Enemy_1_melee
+      m_Hash: -810490027
+      m_Sprite: {fileID: 4109349904358160814, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+    - m_Name: Body_Enemie_1_ranged
+      m_Hash: 1743984165
+      m_Sprite: {fileID: 3256094281200250353, guid: 32dc13e7665e5784c8e9d2cf3910a199,
+        type: 3}
+    - m_Name: Body_Enemy_2_melee
+      m_Hash: -27722296
+      m_Sprite: {fileID: 1457820602173342043, guid: b2e60550a39551040a411a5949a47b5b,
+        type: 3}
+    - m_Name: Body_Enemy_2_ranged
+      m_Hash: -1559145768
+      m_Sprite: {fileID: -8003559168226670268, guid: 58abac41a6602eb4b861cf11b0375c7d,
+        type: 3}
+    - m_Name: Body_Enemy_3_melee
+      m_Hash: 1479538300
+      m_Sprite: {fileID: 6281480897107095292, guid: 5368a5e72b992e646badfd10159968ec,
+        type: 3}
+    - m_Name: Body_Enemy_3_ranged
+      m_Hash: 1874547270
+      m_Sprite: {fileID: 3622060390941412778, guid: 9da5f80a8153c294fb00bb7a2587f2da,
+        type: 3}
+    - m_Name: Body_Boss_1
+      m_Hash: -1200595373
+      m_Sprite: {fileID: 8604676202383568550, guid: 691b4ae5a02d67c49b1cb928be2a9687,
+        type: 3}
+    - m_Name: Body_Boss_3
+      m_Hash: 1451114367
+      m_Sprite: {fileID: 3977580675571979173, guid: 70524c37a333f804b8af9481138dec87,
+        type: 3}
+    - m_Name: Body_Catwarrior
+      m_Hash: 1454119040
+      m_Sprite: {fileID: 8530554472046220837, guid: b6659581004e9de49be970eaa8599c64,
+        type: 3}
+    - m_Name: Body_Samurai
+      m_Hash: -1618981197
+      m_Sprite: {fileID: -8899508187950785626, guid: 19e9a0e958ca62644a3675db8225b30a,
+        type: 3}
+  - m_Name: ArmR
+    m_Hash: 11499848
+    m_CategoryList: []
+  - m_Name: ArmL
+    m_Hash: -90160085
+    m_CategoryList: []
+  - m_Name: LegR
+    m_Hash: 289668330
+    m_CategoryList: []
+  - m_Name: LegL
+    m_Hash: -347291255
+    m_CategoryList: []
