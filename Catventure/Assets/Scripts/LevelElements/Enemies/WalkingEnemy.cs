@@ -34,7 +34,6 @@ public class WalkingEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("EnteredTrigger " + col.gameObject.name);
         if (col.transform.parent == transform.parent)
         {
             if (newPos.gameObject.name != pos1.gameObject.name)

@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Damage the Player deals with Attacks")]
     public int currentExp;
     public int currentLvl = 1;
+    public int armor = 0;
     public int playerAttackDmg = 7;
     public int doubleShotDmg = 8;
     public int poisonDmg = 7;
@@ -57,7 +58,7 @@ public class PlayerManager : MonoBehaviour
     public List<String> unlockedLegs = new List<string>();
     [Tooltip("Current number of Cookies the Player has collected")]
     public int currentCookies;
-
+    public GameObject notEnoughCookiesBanner;
     private GameObject shopContent;
 
     [Foldout("Other", true)]
@@ -69,6 +70,8 @@ public class PlayerManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        notEnoughCookiesBanner = GameObject.Find("NotEnoughCookiesBanner");
+        notEnoughCookiesBanner.SetActive(false);
         lastCheckpointPosition = transform.position;
         shopContent = GameObject.Find("ShopContent");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
@@ -108,8 +111,12 @@ public class PlayerManager : MonoBehaviour
     {
         if (!invulnerable)
         {
-            currentPlayerHealth -= damage;
-            invulnerable = true;
+            damage -= armor;
+            if (damage > 0)
+            {
+                currentPlayerHealth -= damage;
+                invulnerable = true;
+            }
         }
         yield return new WaitForSeconds(invulnerableTime);
         if (invulnerable)
@@ -247,6 +254,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void buyHead(EquipmentSO equipmentToBuy)
     {
+        notEnoughCookiesBanner.SetActive(false);
         Debug.Log("Trying to buy " + equipmentToBuy);
         if (unlockedHeads.Contains(equipmentToBuy.name))
         {
@@ -260,6 +268,8 @@ public class PlayerManager : MonoBehaviour
         else if (equipmentToBuy.cookieCost > currentCookies)
         {
             Debug.Log("You don't have enough Cookies.");
+            notEnoughCookiesBanner.SetActive(true);
+
         }
         else
         {
@@ -277,6 +287,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void buyBody(EquipmentSO equipmentToBuy)
     {
+        notEnoughCookiesBanner.SetActive(false);
         Debug.Log("Trying to buy " + equipmentToBuy);
         if (unlockedBodies.Contains(equipmentToBuy.name))
         {
@@ -290,6 +301,7 @@ public class PlayerManager : MonoBehaviour
         else if (equipmentToBuy.cookieCost > currentCookies)
         {
             Debug.Log("You don't have enough Cookies.");
+            notEnoughCookiesBanner.SetActive(true);
         }
         else
         {
@@ -307,6 +319,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void buyWeapon(EquipmentSO equipmentToBuy)
     {
+        notEnoughCookiesBanner.SetActive(false);
         Debug.Log("Trying to buy " + equipmentToBuy);
         if (unlockedWeapons.Contains(equipmentToBuy.name))
         {
@@ -320,6 +333,7 @@ public class PlayerManager : MonoBehaviour
         else if (equipmentToBuy.cookieCost > currentCookies)
         {
             Debug.Log("You don't have enough Cookies.");
+            notEnoughCookiesBanner.SetActive(true);
         }
         else
         {
@@ -338,6 +352,7 @@ public class PlayerManager : MonoBehaviour
 
     public void buyArms(EquipmentSO equipmentToBuy)
     {
+        notEnoughCookiesBanner.SetActive(false);
         Debug.Log("Trying to buy " + equipmentToBuy);
         if (unlockedArms.Contains(equipmentToBuy.name))
         {
@@ -352,6 +367,7 @@ public class PlayerManager : MonoBehaviour
         else if (equipmentToBuy.cookieCost > currentCookies)
         {
             Debug.Log("You don't have enough Cookies.");
+            notEnoughCookiesBanner.SetActive(true);
         }
         else
         {
@@ -370,6 +386,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void buyLegs(EquipmentSO equipmentToBuy)
     {
+        notEnoughCookiesBanner.SetActive(false);
         Debug.Log("Trying to buy " + equipmentToBuy);
         if (unlockedLegs.Contains(equipmentToBuy.name))
         {
@@ -384,6 +401,7 @@ public class PlayerManager : MonoBehaviour
         else if (equipmentToBuy.cookieCost > currentCookies)
         {
             Debug.Log("You don't have enough Cookies.");
+            notEnoughCookiesBanner.SetActive(true);
         }
         else
         {

@@ -16,7 +16,7 @@ public class ShootingEnemy : MonoBehaviour
     [Tooltip("Position where Projectile Spawns")]
     public GameObject shootPosition;
     [Tooltip("Time till Enemy can shoot again in Seconds")]
-    public float shootForce = 4;
+    public float shootForce = -4;
     [Tooltip("Speed of projectile")]
     public float cooldownTime;
     [Tooltip("True if Enemy can shoot")]
@@ -61,6 +61,7 @@ public class ShootingEnemy : MonoBehaviour
 
     void SwitchDirection()
     {
+        shootForce *= -1;
         isGoingLeft = !isGoingLeft;
         _transform.localScale = new Vector3(_transform.localScale.x * -1, 1, 1);
     }

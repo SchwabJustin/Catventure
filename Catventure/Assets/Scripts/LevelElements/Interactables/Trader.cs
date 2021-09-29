@@ -14,12 +14,12 @@ public class Trader : MonoBehaviour
     public List<EquipmentSO> equipmentsOnSale;
     private PlayerManager playerManager;
     public GameObject shopParentObject;
-    GameObject shopContent;
+    public GameObject shopContent;
     public GameObject currentEquipment;
-    void Start()
+    void Awake()
     {
         allEquipmentsSO = Resources.LoadAll<EquipmentSO>("Prefabs/ScriptableObjects/Equipment").ToList();
-        //shopParentObject = GameObject.Find("Shop");
+        shopParentObject = GameObject.Find("Shop");
         shopContent = GameObject.Find("ShopContent");
         playerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
         allEquipmentsSO.Sort((x, y) => x.name.CompareTo(y.name));
@@ -58,8 +58,11 @@ public class Trader : MonoBehaviour
                 allEquipmentsGO.Add(currentEquipment);
                 currentEquipment.SetActive(false);
             }
-            shopParentObject.SetActive(false);
         }
+    }
+    void Start()
+    {
+        shopParentObject.SetActive(false);
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -75,8 +78,10 @@ public class Trader : MonoBehaviour
     }
     public void GetAllShopGameObjects()
     {
-        var allTraders = GameObject.FindGameObjectsWithTag("Trader");
-        Debug.Log(allTraders.Where(x => x.GetComponent<Trader>().allEquipmentsGO.Count > 0).FirstOrDefault().gameObject.name);
-        allEquipmentsGO = allTraders.Where(x => x.GetComponent<Trader>().allEquipmentsGO.Count > 0).FirstOrDefault().GetComponent<Trader>().allEquipmentsGO;
+
+        foreach (Transform equipment in shopContent.transform)
+        {
+            allEquipmentsGO.Add(equipment.gameObject);
+        }
     }
 }
