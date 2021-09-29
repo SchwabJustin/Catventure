@@ -1050,7 +1050,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 1163, y: -541}
-  - name: <Gruppe>
+  - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -2777,8 +2777,8 @@ ScriptedImporter:
     spriteID: d649d48c28511e546b9b143916d272c5
     layerID: 8
     mosaicPosition: {x: 1495, y: 4}
-  - name: <Gruppe>
-    spriteName: <Gruppe>
+  - name: Body
+    spriteName: Body
     isGroup: 0
     parentIndex: 0
     spriteID: eec659b5be84aaf48a5094f101edc78c
