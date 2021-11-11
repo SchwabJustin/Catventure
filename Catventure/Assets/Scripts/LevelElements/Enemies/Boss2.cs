@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Boss2 : MonoBehaviour
 {
-
-    public Animator anim;
-    // Start is called before the first frame update
+    private Enemy enemy;
     void Start()
     {
+        enemy = transform.parent.GetComponent<Enemy>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
-
+        if (col.CompareTag("Player"))
+        {
+            col.gameObject.GetComponent<PlayerManager>().GotDamaged(enemy.damage);
+        }
     }
 }

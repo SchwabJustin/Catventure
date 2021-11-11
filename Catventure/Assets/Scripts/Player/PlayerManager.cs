@@ -107,7 +107,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public IEnumerator DamageDealt(int damage)
+    private IEnumerator DamageDealt(int damage)
     {
         if (!invulnerable)
         {
