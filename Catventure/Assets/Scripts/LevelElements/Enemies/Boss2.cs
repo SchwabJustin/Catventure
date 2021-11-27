@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class Boss2 : MonoBehaviour
 {
     private Enemy enemy;
@@ -8,6 +10,16 @@ public class Boss2 : MonoBehaviour
     {
         enemy = transform.parent.GetComponent<Enemy>();
 
+    }
+
+    void Update()
+    {
+        if (enemy.currentHealth <= 0)
+        {
+            enemy.playerManager.currentCookies += enemy.cookieAmount;
+            enemy.playerManager.level2Finished = true;
+            SceneManager.LoadScene("Map");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
