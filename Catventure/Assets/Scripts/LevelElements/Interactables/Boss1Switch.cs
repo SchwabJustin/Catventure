@@ -11,6 +11,7 @@ public class Boss1Switch : MonoBehaviour
     public Sprite cageWithoutRock;
     SpriteRenderer spriteRenderer;
     bool rockReady;
+
     // Start is called before the first frame update
 
     void Start()
@@ -30,7 +31,7 @@ public class Boss1Switch : MonoBehaviour
     IEnumerator RockAttack()
     {
         rockReady = false;
-        GameObject currentRock = Instantiate(rockPrefab);
+        GameObject currentRock = Instantiate(rockPrefab, cageGO.transform.position, rockPrefab.transform.rotation);
         spriteRenderer.sprite = cageWithoutRock;
         yield return new WaitForSeconds(rockCooldown);
         Destroy(currentRock);

@@ -16,7 +16,7 @@ public class Boss1 : MonoBehaviour
 
     void Update()
     {
-        if (enemy.currentHealth <= 0)
+        if (enemy.currentHealth <= 0 && GetComponent<Boss3>() == null)
         {
             enemy.playerManager.currentCookies += enemy.cookieAmount;
             enemy.playerManager.level1Finished = true;
@@ -25,7 +25,7 @@ public class Boss1 : MonoBehaviour
     }
 
     public static IEnumerator AnimateJump(GameObject go, float distance, float height, float time = 1.0f)
-    { //parabola animation
+    { 
         Vector3 basePos = go.transform.position;
         float x1 = 0;
         float x2 = distance;
@@ -49,7 +49,7 @@ public class Boss1 : MonoBehaviour
 
     IEnumerator JumpTimer()
     {
-        while (0 < 1)
+        while (true)
         {
             yield return new WaitForSeconds(waitTimeUntilNextJump);
             StartCoroutine(AnimateJump(gameObject, -10, 5));

@@ -41,6 +41,11 @@ public class Enemy : MonoBehaviour
                 cookie.transform.position = transform.position;
                 Destroy(this.gameObject);
             }
+
+            if (GetComponent<Boss3>() != null)
+            {
+                GetComponent<Boss3>().Stunned();
+            }
         }
     }
     public IEnumerator DamageDealt(int damage)
