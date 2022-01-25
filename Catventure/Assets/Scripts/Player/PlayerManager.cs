@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Homebrew;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class PlayerManager : MonoBehaviour
 {
+
     [Foldout("Fight", true)]
     [Tooltip("Current Health of the Player")]
     public int currentPlayerHealth = 3;
@@ -65,6 +69,7 @@ public class PlayerManager : MonoBehaviour
 
     public bool level1Finished;
     public bool level2Finished;
+    public string currentScene;
 
 
     void Awake()
@@ -72,7 +77,6 @@ public class PlayerManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         notEnoughCookiesBanner = GameObject.Find("NotEnoughCookiesBanner");
         notEnoughCookiesBanner.SetActive(false);
-        lastCheckpointPosition = transform.position;
         shopContent = GameObject.Find("ShopContent");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = "Cookies: " + currentCookies;
@@ -136,7 +140,9 @@ public class PlayerManager : MonoBehaviour
 
         if (col.gameObject.CompareTag("Checkpoint"))
         {
+            currentScene = SceneManager.GetActiveScene().name;
             lastCheckpointPosition = transform.position;
+            SaveGame();
         }
 
         if (col.gameObject.CompareTag("Deathzone"))
@@ -418,4 +424,107 @@ public class PlayerManager : MonoBehaviour
             cookieCounter.text = "Cookies: " + currentCookies;
         }
     }
+
+    public void SaveGame()
+    {
+        Debug.Log("Saving Game");
+        string json = JsonUtility.ToJson(this);
+        File.WriteAllText(Application.dataPath + "save.txt", json);
+    }
+
+    public void LoadGame()
+    {
+        string json = File.ReadAllText(Application.dataPath + "save.txt");
+        SaveData pm = JsonUtility.FromJson<SaveData>(json);
+
+        SceneManager.LoadScene(pm.currentScene);
+        transform.position = pm.lastCheckpointPosition;
+
+        this.armor = pm.armor;
+        this.burnDmg = pm.burnDmg;
+        this.burnDuration = pm.burnDuration;
+        this.cookieCounter = pm.cookieCounter;
+        this.currentArmsName = pm.currentArmsName;
+        this.currentBodyName = pm.currentBodyName;
+        this.currentCookies = pm.currentCookies;
+        this.currentExp = pm.currentExp;
+        this.currentHeadName = pm.currentHeadName;
+        this.currentLegsName = pm.currentLegsName;
+        this.currentLvl = pm.currentLvl;
+        this.currentPlayerHealth = pm.currentPlayerHealth;
+        this.currentSkillPoints = pm.currentSkillPoints;
+        this.currentWeaponName = pm.currentWeaponName;
+        this.doubleShotDmg = pm.doubleShotDmg;
+        this.invulnerableTime = pm.invulnerableTime;
+        this.lastCheckpointPosition = pm.lastCheckpointPosition;
+        this.learnedSkills = pm.learnedSkills;
+        this.level1Finished = pm.level1Finished;
+        this.level2Finished = pm.level2Finished;
+        this.maxPlayerHealth = pm.maxPlayerHealth;
+        this.multiSkillableSkills = pm.multiSkillableSkills;
+        this.paralyzeDmg = pm.paralyzeDmg;
+        this.paralyzeDuration = pm.paralyzeDuration;
+        this.playerAttackDmg = pm.playerAttackDmg;
+        this.poisonDmg = pm.poisonDmg;
+        this.poisonDuration = pm.poisonDuration;
+        this.unlockedArms = pm.unlockedArms;
+        this.unlockedBodies = pm.unlockedBodies;
+        this.unlockedHeads = pm.unlockedHeads;
+        this.unlockedLegs = pm.unlockedLegs;
+        this.unlockedWeapons = pm.unlockedWeapons;
+    }
+}
+
+
+public class SaveData
+{
+    public string currentScene;
+
+    public int currentPlayerHealth = 3;
+    public int maxPlayerHealth = 3;
+    public int currentExp;
+    public int currentLvl = 1;
+    public int armor = 0;
+    public int playerAttackDmg = 7;
+    public int doubleShotDmg = 8;
+    public int poisonDmg = 7;
+    public int burnDmg = 15;
+    public int paralyzeDmg = 30;
+    public int poisonDuration = 5;
+    public int burnDuration = 5;
+    public int paralyzeDuration = 5;
+    public float invulnerableTime = 0.5F;
+    private bool invulnerable;
+
+    public Vector3 lastCheckpointPosition;
+
+    public int currentSkillPoints;
+    public List<SkillSO> learnedSkills = new List<SkillSO>();
+    public List<SkillSO> multiSkillableSkills = new List<SkillSO>();
+
+
+    public TMP_Text cookieCounter;
+
+    private SpriteRenderer headSpriteRenderer;
+    private SpriteRenderer bodySpriteRenderer;
+    private SpriteRenderer weaponSpriteRenderer;
+    private List<SpriteRenderer> armsSpriteRenderer = new List<SpriteRenderer>();
+    private List<SpriteRenderer> legsSpriteRenderer = new List<SpriteRenderer>();
+    public string currentHeadName = "StandardHead";
+    public string currentBodyName = "StandardBody";
+    public string currentWeaponName = "StandardWeapon";
+    public string currentArmsName = "StandardArms";
+    public string currentLegsName = "StandardLegs";
+    public List<String> unlockedHeads = new List<string>();
+    public List<String> unlockedBodies = new List<string>();
+    public List<String> unlockedWeapons = new List<string>();
+    public List<String> unlockedArms = new List<string>();
+    public List<String> unlockedLegs = new List<string>();
+    public int currentCookies;
+    public GameObject notEnoughCookiesBanner;
+    private GameObject shopContent;
+
+
+    public bool level1Finished;
+    public bool level2Finished;
 }

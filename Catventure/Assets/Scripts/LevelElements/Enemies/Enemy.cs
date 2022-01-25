@@ -42,9 +42,14 @@ public class Enemy : MonoBehaviour
                 Destroy(this.gameObject);
             }
 
-            if (GetComponent<Boss3>() != null)
+            if (TryGetComponent(out Boss3 boss3))
             {
-                GetComponent<Boss3>().Stunned();
+                boss3.Stunned();
+            }
+
+            if (TryGetComponent(out Boss1 boss1))
+            {
+                boss1.Stunned();
             }
         }
     }

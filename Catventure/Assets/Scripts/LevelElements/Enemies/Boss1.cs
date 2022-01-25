@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Boss1 : MonoBehaviour
 {
     public int waitTimeUntilNextJump = 5;
+    public int stunDuration = 1;
 
     Enemy enemy;
     // Start is called before the first frame update
@@ -22,6 +23,11 @@ public class Boss1 : MonoBehaviour
             enemy.playerManager.level1Finished = true;
             SceneManager.LoadScene("Map");
         }
+    }
+
+    public void Stunned()
+    {
+        StartCoroutine(BossStunned());
     }
 
     public static IEnumerator AnimateJump(GameObject go, float distance, float height, float time = 1.0f)
@@ -45,6 +51,14 @@ public class Boss1 : MonoBehaviour
 
             yield return 0;
         }
+    }
+
+    IEnumerator BossStunned()
+    {
+        var oldValue = waitTimeUntilNextJump;
+        waitTimeUntilNextJump = stunDuration;
+        yield return new WaitForSeconds(waitTimeUntilNextJump);
+        waitTimeUntilNextJump = oldValue;
     }
 
     IEnumerator JumpTimer()
