@@ -5,6 +5,8 @@ using UnityEngine;
 public class Bark : MonoBehaviour
 {
     public int damage;
+    public GameObject barkGO;
+    public float barkRotationPerSecond;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -12,5 +14,11 @@ public class Bark : MonoBehaviour
         {
             col.gameObject.GetComponent<PlayerManager>().GotDamaged(damage);
         }
+    }
+
+    void Update()
+    {
+        barkGO.transform.Rotate(Vector3.forward, barkRotationPerSecond * Time.deltaTime);
+
     }
 }

@@ -715,8 +715,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1001895909
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7120005228550736916, guid: 5a2b82976980e864fb92611360b7e000,
     type: 3}
@@ -772,6 +772,7 @@ MonoBehaviour:
   maxPlayerHealth: 30
   currentExp: 0
   currentLvl: 1
+  armor: 0
   playerAttackDmg: 7
   doubleShotDmg: 8
   poisonDmg: 7
@@ -797,8 +798,10 @@ MonoBehaviour:
   unlockedArms: []
   unlockedLegs: []
   currentCookies: 0
+  notEnoughCookiesBanner: {fileID: 0}
   level1Finished: 0
   level2Finished: 0
+  currentScene: 
 --- !u!50 &477751451061903246
 Rigidbody2D:
   serializedVersion: 4

@@ -6,10 +6,10 @@ public class Boss1 : MonoBehaviour
 {
     public int waitTimeUntilNextJump = 5;
     public int stunDuration = 1;
-
+    public bool jumpAround = true;
     Enemy enemy;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         enemy = GetComponent<Enemy>();
         StartCoroutine(JumpTimer());
@@ -63,7 +63,7 @@ public class Boss1 : MonoBehaviour
 
     IEnumerator JumpTimer()
     {
-        while (true)
+        while (jumpAround)
         {
             yield return new WaitForSeconds(waitTimeUntilNextJump);
             StartCoroutine(AnimateJump(gameObject, -10, 5));
@@ -74,6 +74,8 @@ public class Boss1 : MonoBehaviour
             yield return new WaitForSeconds(waitTimeUntilNextJump);
             StartCoroutine(AnimateJump(gameObject, -10, 5));
         }
+
+        yield break;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -82,5 +84,10 @@ public class Boss1 : MonoBehaviour
         {
             col.gameObject.GetComponent<PlayerManager>().GotDamaged(enemy.damage);
         }
+    }
+
+    public void StopJumping()
+    {
+        StopAllCoroutines();
     }
 }
