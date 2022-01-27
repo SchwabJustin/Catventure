@@ -13,13 +13,13 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        GameObject player = Instantiate(playerPrefab);
+        player.GetComponent<PlayerManager>().StartLevel("Level1");
     }
 
     public void LoadGame()
     {
         GameObject player = Instantiate(playerPrefab);
         player.GetComponent<PlayerManager>().LoadGame();
-        
     }
 }

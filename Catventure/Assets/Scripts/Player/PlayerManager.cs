@@ -70,6 +70,9 @@ public class PlayerManager : MonoBehaviour
     public bool level1Finished;
     public bool level2Finished;
     public string currentScene;
+    public Vector3 Lvl1StartPosition;
+    public Vector3 Lvl2StartPosition;
+    public Vector3 Lvl3StartPosition;
 
 
     void Awake()
@@ -430,6 +433,26 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("Saving Game");
         string json = JsonUtility.ToJson(this);
         File.WriteAllText(Application.dataPath + "save.txt", json);
+    }
+
+    public void StartLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+        switch (levelName)
+        {
+            case "Level 1":
+                transform.position = Lvl1StartPosition;
+                break;
+            case "Level 2":
+                transform.position = Lvl2StartPosition;
+                break;
+            case "Level 3":
+                transform.position = Lvl3StartPosition;
+                break;
+            default:
+                Debug.LogError("Wrong Level Name");
+                break;
+        }
     }
 
     public void LoadGame()
