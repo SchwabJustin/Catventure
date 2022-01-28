@@ -109,9 +109,19 @@ public class PlayerManager : MonoBehaviour
         StartCoroutine(DamageDealt(damage));
         if (currentPlayerHealth <= 0)
         {
-            transform.position = lastCheckpointPosition;
-            currentPlayerHealth = maxPlayerHealth;
+            StartCoroutine(Death());
         }
+    }
+
+    private IEnumerator Death()
+    {
+        var anim = GetComponent<Animator>();
+        anim.SetBool("Dead", true);
+        yield return new WaitForSeconds(1);
+        transform.position = lastCheckpointPosition;
+        anim.SetBool("Dead", false);
+
+        currentPlayerHealth = maxPlayerHealth;
     }
 
     private IEnumerator DamageDealt(int damage)

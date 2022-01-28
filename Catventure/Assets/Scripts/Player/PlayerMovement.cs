@@ -24,34 +24,41 @@ public class PlayerMovement : MonoBehaviour
 
     private bool grounded;
 
+    public Animator anim;
+
     private void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
 
-        //if (moveInput > 0 && !faceRight)
-        //{
-        //    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y,transform.localScale.z);
-        //    faceRight = true;
-        //}
-
-        //if (moveInput < 0 && faceRight)
-        //{
-        //    transform.localScale = new Vector3(transform.localScale.x * - 1, transform.localScale.y, transform.localScale.z);
-        //    faceRight = false;
-        //}
-
         if (grounded)
         {
+            if (moveInput != 0)
+            {
+                anim.SetTrigger("Walk");
+            }
+            else
+            {
+                anim.ResetTrigger("Walk");
+            }
+
             velocity.y = 0;
 
             if (Input.GetButtonDown("Jump"))
             {
+                anim.SetTrigger("Jump");
+
                 velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+            }
+
+            if (Input.GetButtonUp("Jump"))
+            {
+                anim.ResetTrigger("Jump");
             }
         }
 
