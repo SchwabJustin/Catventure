@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Boss2 : MonoBehaviour
 {
     private Enemy enemy;
+    public float stunDuration;
+    public Color stunColor;
     void Start()
     {
         enemy = transform.parent.GetComponent<Enemy>();
@@ -26,7 +28,21 @@ public class Boss2 : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<PlayerManager>().GotDamaged(enemy.damage);
+            var pm = col.gameObject.GetComponent<PlayerManager>();
+            pm.GotDamaged(enemy.damage);
+            StartCoroutine(PlayerStun(pm));
         }
+    }
+
+    IEnumerator PlayerStun(PlayerManager pm)
+    {
+        var sr = pm.gameObject.GetComponent<SpriteRenderer>();
+        var movement = pm.gameObject.GetComponent<PlayerMovement>();
+        movement.enabled = false;
+        var oldColor = sr.color;
+        sr.color = stunColor;
+        yield return new WaitForSeconds(stunDuration);
+        movement.enabled = true;
+        sr.color = oldColor;
     }
 }

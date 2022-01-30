@@ -304,11 +304,11 @@ public class PlayerManager : MonoBehaviour
 
     private bool ListValueInList(List<SkillSO> skillNeeded, List<SkillSO> skillList)
     {
-        var result = true;
+        var result = false;
         foreach (var skill in skillNeeded)
         {
-            if (!skillList.Contains(skill))
-                result = false;
+            if (skillList.Contains(skill))
+                result = true;
         }
         return result;
     }
