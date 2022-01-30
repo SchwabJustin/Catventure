@@ -239,8 +239,9 @@ MonoBehaviour:
   invulnerableTime: 0
   cookiePrefab: {fileID: 2336050196890234474, guid: c6a33a48ff52b02488e90167cd98a301,
     type: 3}
-  cookieAmount: 0
+  cookieAmount: 1
   playerManager: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!50 &1405968845
 Rigidbody2D:
   serializedVersion: 4
@@ -375,6 +376,56 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: -5853689743461061615, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: 0.000085651875
+      objectReference: {fileID: 0}
+    - target: {fileID: -5853689743461061615, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.000894323
+      objectReference: {fileID: 0}
+    - target: {fileID: -3721862460396409348, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: 0.00030502677
+      objectReference: {fileID: 0}
+    - target: {fileID: -3721862460396409348, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: -3721862460396409348, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.1800001
+      objectReference: {fileID: 0}
+    - target: {fileID: -3391352609385275062, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: 0.00011373311
+      objectReference: {fileID: 0}
+    - target: {fileID: -3391352609385275062, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.00031238794
+      objectReference: {fileID: 0}
+    - target: {fileID: -3391352609385275062, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.26312497
+      objectReference: {fileID: 0}
+    - target: {fileID: -2371836652540747551, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: 0.00000090897083
+      objectReference: {fileID: 0}
+    - target: {fileID: -2371836652540747551, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.00031250715
+      objectReference: {fileID: 0}
     - target: {fileID: -1995086613487616150, guid: 3eabc8d8971a28448aa4a601b1292563,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -445,10 +496,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1713706880459192174, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: -0.00006559491
+      objectReference: {fileID: 0}
+    - target: {fileID: -1713706880459192174, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0011525005
+      objectReference: {fileID: 0}
+    - target: {fileID: -1713706880459192174, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.112285
+      objectReference: {fileID: 0}
     - target: {fileID: -167429374080175380, guid: 3eabc8d8971a28448aa4a601b1292563,
         type: 3}
       propertyPath: m_Name
       value: Melee1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081285499396677162, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: -0.0006250143
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081285499396677162, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081285499396677162, guid: 3eabc8d8971a28448aa4a601b1292563,
+        type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 0.45312494
       objectReference: {fileID: 0}
     - target: {fileID: 3883614174953554208, guid: 3eabc8d8971a28448aa4a601b1292563,
         type: 3}

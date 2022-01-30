@@ -805,14 +805,14 @@ MonoBehaviour:
   maxPlayerHealth: 30
   currentExp: 0
   currentLvl: 1
-  armor: 0
+  armor: 2
   playerAttackDmg: 7
   doubleShotDmg: 8
   poisonDmg: 7
   burnDmg: 15
   paralyzeDmg: 30
-  poisonDuration: 5
-  burnDuration: 5
+  poisonDuration: 2
+  burnDuration: 3
   paralyzeDuration: 5
   invulnerableTime: 1
   lastCheckpointPosition: {x: 0, y: 0, z: 0}
