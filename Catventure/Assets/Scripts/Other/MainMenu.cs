@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,12 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        StartCoroutine(StartGameCoroutine());
+    }
+
+    IEnumerator StartGameCoroutine()
+    {
+        yield return new WaitForSeconds(4);
         GameObject player = Instantiate(playerPrefab);
         GameObject canvas = Instantiate(canvasPrefab);
         player.GetComponent<PlayerManager>().shouldLoad = false;
@@ -20,6 +27,13 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
+        StartCoroutine(LoadGameCoroutine());
+
+
+    }
+    IEnumerator LoadGameCoroutine()
+    {
+        yield return new WaitForSeconds(4);
         GameObject player = Instantiate(playerPrefab);
         GameObject canvas = Instantiate(canvasPrefab);
         player.GetComponent<PlayerManager>().shouldLoad = true;
