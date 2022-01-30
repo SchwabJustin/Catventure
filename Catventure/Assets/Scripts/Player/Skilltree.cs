@@ -87,7 +87,7 @@ public class Skilltree : MonoBehaviour
     //     }
     // }
 
-    void Update()
+    void FixedUpdate()
     {
         currentSkillPointsUI.text = "Skillpoints \n " + playerManager.currentSkillPoints;
     }

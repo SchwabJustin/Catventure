@@ -12,7 +12,7 @@ public class Boss2 : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (enemy.currentHealth <= 0)
         {

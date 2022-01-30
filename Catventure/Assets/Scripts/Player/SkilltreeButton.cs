@@ -19,10 +19,4 @@ public class SkilltreeButton : MonoBehaviour
         gameObject.transform.Find("DescriptionWindow").gameObject.SetActive(false);
         gameObject.transform.localScale = Vector3.one;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

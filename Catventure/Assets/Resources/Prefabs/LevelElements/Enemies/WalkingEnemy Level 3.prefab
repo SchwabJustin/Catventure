@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &3950479384987761914
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655544274292935508}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c20106aa1a90a7c4cae2fd799de8bdf6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8622795676912332531
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +170,7 @@ MonoBehaviour:
     type: 3}
   cookieAmount: 0
   playerManager: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!50 &9146431724271095009
 Rigidbody2D:
   serializedVersion: 4
@@ -296,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8622795677698073085}
   m_Layer: 0
-  m_Name: WalkingEnemy 1
+  m_Name: WalkingEnemy Level 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,6 +479,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -373132069618480744, guid: 5368a5e72b992e646badfd10159968ec,
     type: 3}
+--- !u!1 &655544274292935508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9051860646076199745, guid: 5368a5e72b992e646badfd10159968ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 8396501115582035989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6994408473058246972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7667523269524801239, guid: 5368a5e72b992e646badfd10159968ec,

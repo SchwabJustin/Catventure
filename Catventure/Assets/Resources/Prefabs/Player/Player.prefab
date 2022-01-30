@@ -33,6 +33,7 @@ Transform:
   - {fileID: 1967093970}
   - {fileID: 1643561882}
   - {fileID: 763408037}
+  - {fileID: 8648074654718831279}
   m_Father: {fileID: 477751451061903242}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 368.72}
@@ -108,6 +109,7 @@ MonoBehaviour:
     type: 3}
   numberOfPoints: 30
   spaceBetweenPoints: 0.025
+  direction: {x: 0, y: 0}
   mousePosition: {x: 0, y: 0}
   arrowRainGo: {fileID: 6000065039254617532, guid: 4d11a63482e15af4ca1bce27a3916c87,
     type: 3}
@@ -639,6 +641,36 @@ Transform:
   m_Father: {fileID: 188932582}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2033460861280921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8648074654718831279}
+  m_Layer: 0
+  m_Name: ParentPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8648074654718831279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033460861280921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188932582}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477751451061903284
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +796,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477751451061903284}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 832cad48a3882d54fbf53bb1382fe6bf, type: 3}
   m_Name: 
@@ -784,10 +816,12 @@ MonoBehaviour:
   paralyzeDuration: 5
   invulnerableTime: 1
   lastCheckpointPosition: {x: 0, y: 0, z: 0}
-  currentSkillPoints: 999
+  currentSkillPoints: 1
   learnedSkills: []
   multiSkillableSkills: []
   cookieCounter: {fileID: 0}
+  armsSpriteRenderer: []
+  legsSpriteRenderer: []
   currentHeadName: StandardHead
   currentBodyName: StandardBody
   currentWeaponName: StandardWeapon
@@ -800,12 +834,14 @@ MonoBehaviour:
   unlockedLegs: []
   currentCookies: 0
   notEnoughCookiesBanner: {fileID: 0}
+  shouldLoad: 0
   level1Finished: 0
   level2Finished: 0
+  level3Finished: 0
   currentScene: 
-  Lvl1StartPosition: {x: 0, y: 3.5, z: 0}
-  Lvl2StartPosition: {x: 18, y: 0.5, z: 0}
-  Lvl3StartPosition: {x: 0, y: 3.5, z: 0}
+  Lvl1StartPosition: {x: -23, y: 0, z: 0}
+  Lvl2StartPosition: {x: 19, y: 1, z: 0}
+  Lvl3StartPosition: {x: 2, y: 4, z: 0}
 --- !u!50 &477751451061903246
 Rigidbody2D:
   serializedVersion: 4
@@ -843,7 +879,8 @@ MonoBehaviour:
   walkAcceleration: 75
   airAcceleration: 30
   groundDeceleration: 70
-  jumpHeight: 2.5
+  jumpHeight: 3.5
+  anim: {fileID: 0}
 --- !u!95 &997867938
 Animator:
   serializedVersion: 3

@@ -37,9 +37,10 @@ public class Boss3 : MonoBehaviour
     private GameObject player;
     private bool firstJumpPhase = true;
 
+    private Animator anim;
     private void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         enemy = GetComponent<Enemy>();
         boss1 = GetComponent<Boss1>();
         barkAttack = GetComponentInChildren<Bark>();
@@ -48,8 +49,21 @@ public class Boss3 : MonoBehaviour
         barkGO = barkAttack.gameObject.transform.parent.gameObject;
         barkAttack.barkGO = barkGO;
         barkGO.SetActive(false);
+        anim = GetComponent<Animator>();
         currentPhase = Boss3Phases.Jump;
         Phase1();
+    }
+
+    public void Dead()
+    {
+        StartCoroutine(Dying(enemy.playerManager));
+    }
+
+    IEnumerator Dying(PlayerManager playerManager)
+    {
+        playerManager.level3Finished = true;
+        yield return new WaitForSeconds(1);
+        playerManager.StartLevel("WinningScreen");
     }
 
     public void Stunned()
@@ -79,9 +93,10 @@ public class Boss3 : MonoBehaviour
 
         if (currentStunTime == 0) return;
         stunned = true;
+        anim.SetBool("Cooldown",true);
         StartCoroutine(Timer(currentStunTime));
         stunned = false;
-
+        anim.SetBool("Cooldown", false);
     }
 
     void Phase1()
@@ -129,9 +144,8 @@ public class Boss3 : MonoBehaviour
 
     public void Shoot(Transform playerTransform)
     {
-        Debug.Log("Throwing");
+        anim.SetBool("Hit", true);
         var projectile = Instantiate(bossProjectilePrefab, shootPosition.transform.position, Quaternion.Euler(0,0,0));
-        Debug.Log(projectile.name);
         projectile.GetComponent<EnemyProjectile>().damage = enemy.damage;
         projectile.GetComponent<Rigidbody2D>().AddForce(Vector2.MoveTowards(shootPosition.transform.position, playerTransform.position, 3) * 1);
         StartCoroutine(ResetCooldown());
@@ -139,6 +153,7 @@ public class Boss3 : MonoBehaviour
     IEnumerator ResetCooldown()
     {
         yield return new WaitForSeconds(halfThrowPhaseDuration / 3);
+        anim.SetBool("Hit", false);
         if (currentPhase == Boss3Phases.Throw1 || currentPhase == Boss3Phases.Throw2)
             Shoot(player.transform);
     }

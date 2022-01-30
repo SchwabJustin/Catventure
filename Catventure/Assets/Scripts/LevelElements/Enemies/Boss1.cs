@@ -8,6 +8,7 @@ public class Boss1 : MonoBehaviour
     public int stunDuration = 1;
     public bool jumpAround = true;
     Enemy enemy;
+    
     // Start is called before the first frame update
     public void Start()
     {
@@ -15,7 +16,7 @@ public class Boss1 : MonoBehaviour
         StartCoroutine(JumpTimer());
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (enemy.currentHealth <= 0 && GetComponent<Boss3>() == null)
         {
@@ -82,8 +83,16 @@ public class Boss1 : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            StartCoroutine(HitAnimation(enemy.anim));
             col.gameObject.GetComponent<PlayerManager>().GotDamaged(enemy.damage);
         }
+    }
+
+    IEnumerator HitAnimation(Animator anim)
+    {
+        anim.SetBool("Hit",true);
+        yield return new WaitForSeconds(1);
+        anim.SetBool("Hit", false);
     }
 
     public void StopJumping()

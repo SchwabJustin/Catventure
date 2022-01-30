@@ -16,7 +16,7 @@ public class Bark : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         barkGO.transform.Rotate(Vector3.forward, barkRotationPerSecond * Time.deltaTime);
 

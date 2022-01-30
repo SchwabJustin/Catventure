@@ -19,7 +19,7 @@ public class PlayerAttack : MonoBehaviour
         attackCollider.enabled = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (attackReady && Input.GetMouseButtonDown(0))
         {

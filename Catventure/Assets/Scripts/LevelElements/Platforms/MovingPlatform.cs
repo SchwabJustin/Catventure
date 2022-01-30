@@ -11,7 +11,7 @@ public class MovingPlatform : MonoBehaviour
     [Tooltip("Speed of the Platform")]
     public float speed = 1.0f;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.position = Vector3.Lerp(pos1.position, pos2.position, (Mathf.Sin(speed * Time.time) + 1.0f) / 2.0f);
     }

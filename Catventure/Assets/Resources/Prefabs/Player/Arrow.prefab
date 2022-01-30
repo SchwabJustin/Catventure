@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1603904507
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -2946013703170709569, guid: db7ef8975cda87e4e877e5df178f016a,
     type: 3}
@@ -121,6 +121,8 @@ MonoBehaviour:
   player: {fileID: 0}
   doubleShotArrow: 0
   poisonShot: 0
+  burnShot: 0
+  paralyzeShot: 0
 --- !u!61 &5682570797981301368
 BoxCollider2D:
   m_ObjectHideFlags: 0

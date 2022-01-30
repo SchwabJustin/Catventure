@@ -10,6 +10,7 @@ TagManager:
   - Checkpoint
   - Deathzone
   - Trader
+  - MainCanvas
   layers:
   - Default
   - TransparentFX

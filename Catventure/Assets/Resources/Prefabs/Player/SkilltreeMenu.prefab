@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 5201039846598764107}
   - component: {fileID: 5201039846598764108}
   m_Layer: 5
-  m_Name: SkilltreeMenu
+  m_Name: SkilltreeMenuOld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

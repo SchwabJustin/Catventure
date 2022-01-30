@@ -9,7 +9,7 @@ public class WalkingEnemy : MonoBehaviour
     [Tooltip("Second Position the Enemy moves to.")]
     public Transform pos2;
 
-
+    private Animator anim;
     Enemy enemy;
 
     public Transform newPos;
@@ -18,18 +18,30 @@ public class WalkingEnemy : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
         newPos = pos2;
+        anim = GetComponentInChildren<Animator>();
     }
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, newPos.position, Time.deltaTime * enemy.speed);
+        if (!anim.GetBool("Dead") && !anim.GetBool("Hit"))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, newPos.position, Time.deltaTime * enemy.speed);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            StartCoroutine(HitAnimation());
             col.gameObject.GetComponent<PlayerManager>().GotDamaged(enemy.damage);
         }
+    }
+
+    IEnumerator HitAnimation()
+    {
+        anim.SetBool("Hit", true);
+        yield return new WaitForSeconds(1);
+        anim.SetBool("Hit", false);
     }
 
     void OnTriggerEnter2D(Collider2D col)

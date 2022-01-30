@@ -39,7 +39,7 @@ public class ShootingEnemy : MonoBehaviour
         velocity = new Vector3(speed, 0, 0);
         _transform.Translate(velocity.x * Time.deltaTime, 0, 0);
     }
-    void Update()
+    void FixedUpdate()
     {
         distFromStart = transform.position.x - _originalPosition.x;
 

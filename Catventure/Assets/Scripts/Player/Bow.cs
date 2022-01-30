@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Bow : MonoBehaviour
 {
@@ -11,14 +12,13 @@ public class Bow : MonoBehaviour
     public float launchForce;
     public float maxLaunchForce;
     public float launchForceAddUp;
-    public float cooldown;
     public Transform shotPoint;
 
     public GameObject markerPoint;
     private GameObject[] points;
     public int numberOfPoints;
     public float spaceBetweenPoints;
-    private Vector2 direction;
+    public Vector2 direction;
     private bool shot;
     private bool doubleShot;
     private bool poisonShot;
@@ -39,10 +39,16 @@ public class Bow : MonoBehaviour
     public int burnShotCooldown = 25;
     public int paralyzeShotCooldown = 30;
 
+
+    private Image shotImg;
+    private Image doubleShotImg;
+    private Image poisonShotImg;
+    private Image burnShotImg;
+    private Image paralyzeShotImg;
+    private Image arrowRainImg;
     private void Start()
     {
-        parentPoint = new GameObject();
-        parentPoint.name = "ParentPoint";
+        parentPoint = GameObject.Find("ParentPoint");
         playerMovement = transform.parent.gameObject.GetComponent<PlayerMovement>();
         playerManager = transform.parent.gameObject.GetComponent<PlayerManager>();
         points = new GameObject[numberOfPoints];
@@ -55,9 +61,16 @@ public class Bow : MonoBehaviour
         {
             point.GetComponent<SpriteRenderer>().forceRenderingOff = true;
         }
+
+        shotImg = GameObject.Find("Präziser Schuss").GetComponent<Image>();
+        poisonShotImg = GameObject.Find("Vergiften").GetComponent<Image>();
+        doubleShotImg = GameObject.Find("Doppelter Treffer").GetComponent<Image>();
+        burnShotImg = GameObject.Find("Verbrennen").GetComponent<Image>();
+        arrowRainImg = GameObject.Find("Pfeilregen").GetComponent<Image>();
+        paralyzeShotImg = GameObject.Find("Paralyse").GetComponent<Image>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector2 bowPosition = transform.position;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -95,15 +108,19 @@ public class Bow : MonoBehaviour
                 point.GetComponent<SpriteRenderer>().forceRenderingOff = true;
             }
         }
-        for (int i = 0; i < numberOfPoints; i++)
+        if (points.Length > 0)
         {
-            points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+            for (int i = 0; i < numberOfPoints; i++)
+            {
+                points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+            }
         }
 
         if (Input.GetMouseButtonDown(1) && !poisonShot)
         {
             if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Vergiften") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Vergiften"))
             {
+                poisonShot = true;
                 StartCoroutine(PoisonShot());
             }
 
@@ -122,6 +139,7 @@ public class Bow : MonoBehaviour
         {
             if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Verbrennen") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Verbrennen"))
             {
+                burnShot = true;
                 StartCoroutine(BurnShot());
             }
 
@@ -150,24 +168,31 @@ public class Bow : MonoBehaviour
 
     IEnumerator PoisonShot()
     {
+
         GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
         newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
         newArrow.GetComponent<Arrow>().poisonShot = true;
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
 
+        CoolDownSprite(poisonShotCooldown, poisonShotImg);
         yield return new WaitForSeconds(poisonShotCooldown);
         poisonShot = false;
+
     }
 
     IEnumerator BurnShot()
     {
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
-        newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
-        newArrow.GetComponent<Arrow>().burnShot = true;
-        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+        Debug.Log("BurnShot");
 
-        yield return new WaitForSeconds(burnShotCooldown);
-        burnShot = false;
+            GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+            newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+            newArrow.GetComponent<Arrow>().burnShot = true;
+            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+
+            CoolDownSprite(burnShotCooldown, burnShotImg);
+            yield return new WaitForSeconds(burnShotCooldown);
+            burnShot = false;
+        
     }
     IEnumerator ArrowRain()
     {
@@ -175,25 +200,31 @@ public class Bow : MonoBehaviour
         {
             var spawnPos = shotPoint.position + new Vector3(0, 2, 0);
             GameObject newArrowRain = Instantiate(arrowRainGo, spawnPos, quaternion.Euler(Vector3.zero));
+
+            CoolDownSprite(arrowRainCooldown, arrowRainImg);
+            yield return new WaitForSeconds(arrowRainCooldown);
+            arrowRain = false;
         }
-        yield return new WaitForSeconds(arrowRainCooldown);
-        arrowRain = false;
     }
 
     IEnumerator ParalyzeShot()
     {
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
-        newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
-        newArrow.GetComponent<Arrow>().paralyzeShot = true;
-        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
 
-        yield return new WaitForSeconds(paralyzeShotCooldown);
-        paralyzeShot = false;
+            GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+            newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+            newArrow.GetComponent<Arrow>().paralyzeShot = true;
+            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+
+            CoolDownSprite(paralyzeShotCooldown, paralyzeShotImg);
+            yield return new WaitForSeconds(paralyzeShotCooldown);
+            paralyzeShot = false;
+        
     }
 
     IEnumerator DoubleShot()
     {
-        if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Doppelter Treffer") || playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Doppelter Treffer"))
+        if (playerManager.learnedSkills.FirstOrDefault(x => x.name == "Doppelter Treffer") ||
+            playerManager.multiSkillableSkills.FirstOrDefault(x => x.name == "Doppelter Treffer"))
         {
             GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
             newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
@@ -205,9 +236,11 @@ public class Bow : MonoBehaviour
             newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
 
 
+
+            CoolDownSprite(doubleShotCooldown, doubleShotImg);
+            yield return new WaitForSeconds(doubleShotCooldown);
+            doubleShot = false;
         }
-        yield return new WaitForSeconds(doubleShotCooldown);
-        doubleShot = false;
     }
 
     private IEnumerator IncreaseLaunchForce()
@@ -236,9 +269,26 @@ public class Bow : MonoBehaviour
 
     private IEnumerator ShotCooldown()
     {
+        CoolDownSprite(shotCooldown, shotImg);
         yield return new WaitForSeconds(shotCooldown);
         shot = false;
         shooting = false;
+    }
+
+    void CoolDownSprite(int cooldownTime, Image img)
+    {
+        StartCoroutine(ChangeSomeValue(cooldownTime, img));
+    }
+
+    public IEnumerator ChangeSomeValue(float duration, Image img)
+    {
+
+        for (float t = 0f; t < duration; t += Time.deltaTime)
+        {
+            img.fillAmount = Mathf.Lerp(1, 0, t / duration);
+            yield return null;
+        }
+        img.fillAmount = 0;
     }
 
     Vector2 PointPosition(float t)

@@ -19,10 +19,13 @@ public class Enemy : MonoBehaviour
     public GameObject cookiePrefab;
     public int cookieAmount;
     public PlayerManager playerManager;
+    public Animator anim;
 
     public void Start()
     {
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        anim = GetComponentInChildren<Animator>();
+
     }
     public void GotDamaged(int damage)
     {
@@ -34,13 +37,9 @@ public class Enemy : MonoBehaviour
         {
             playerManager.GetExp(expAmount);
             Vector3 currentPosition = transform.position;
-            if (GetComponent<Boss1>() == null || GetComponent<Boss2>() == null || GetComponent<Boss3>() == null)
-            {
-                GameObject cookie = Instantiate(cookiePrefab);
-                cookie.GetComponent<Cookie>().cookieAmount = cookieAmount;
-                cookie.transform.position = transform.position;
-                Destroy(this.gameObject);
-            }
+
+            StartCoroutine(Dying());
+
 
             if (TryGetComponent(out Boss3 boss3))
             {
@@ -53,6 +52,25 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    public IEnumerator Dying()
+    {
+        anim.SetBool("Dead", true);
+        yield return new WaitForSeconds(1);
+        if (GetComponent<Boss1>() == null || GetComponent<Boss2>() == null || GetComponent<Boss3>() == null)
+        {
+            GameObject cookie = Instantiate(cookiePrefab);
+            cookie.GetComponent<Cookie>().cookieAmount = cookieAmount;
+            cookie.transform.position = transform.position;
+            Destroy(this.gameObject);
+        }
+
+        if (TryGetComponent(out Boss3 boss3))
+        {
+            boss3.Dead();
+        }
+    }
+
     public IEnumerator DamageDealt(int damage)
     {
         damage -= armor;

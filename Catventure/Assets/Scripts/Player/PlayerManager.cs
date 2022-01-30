@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Homebrew;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,10 +15,13 @@ public class PlayerManager : MonoBehaviour
     [Foldout("Fight", true)]
     [Tooltip("Current Health of the Player")]
     public int currentPlayerHealth = 3;
+    private TMP_Text healthText;
     [Tooltip("Maximal Health of the Player")]
     public int maxPlayerHealth = 3;
     [Tooltip("Damage the Player deals with Attacks")]
     public int currentExp;
+    private Image expImage;
+
     public int currentLvl = 1;
     public int armor = 0;
     public int playerAttackDmg = 7;
@@ -37,6 +41,7 @@ public class PlayerManager : MonoBehaviour
     [Foldout("SkillTree", true)]
     [Tooltip("Current Skill Points the player has")]
     public int currentSkillPoints;
+    private TMP_Text currentSkillPointsText;
     [Tooltip("Current Skills the Player has learned")]
     public List<SkillSO> learnedSkills = new List<SkillSO>();
     public List<SkillSO> multiSkillableSkills = new List<SkillSO>();
@@ -48,8 +53,8 @@ public class PlayerManager : MonoBehaviour
     private SpriteRenderer headSpriteRenderer;
     private SpriteRenderer bodySpriteRenderer;
     private SpriteRenderer weaponSpriteRenderer;
-    private List<SpriteRenderer> armsSpriteRenderer = new List<SpriteRenderer>();
-    private List<SpriteRenderer> legsSpriteRenderer = new List<SpriteRenderer>();
+    public List<SpriteRenderer> armsSpriteRenderer = new List<SpriteRenderer>();
+    public List<SpriteRenderer> legsSpriteRenderer = new List<SpriteRenderer>();
     public string currentHeadName = "StandardHead";
     public string currentBodyName = "StandardBody";
     public string currentWeaponName = "StandardWeapon";
@@ -66,31 +71,47 @@ public class PlayerManager : MonoBehaviour
     private GameObject shopContent;
 
     [Foldout("Other", true)]
-
+    public bool shouldLoad;
     public bool level1Finished;
     public bool level2Finished;
+    public bool level3Finished;
     public string currentScene;
     public Vector3 Lvl1StartPosition;
     public Vector3 Lvl2StartPosition;
     public Vector3 Lvl3StartPosition;
 
 
-    void Awake()
+    void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         notEnoughCookiesBanner = GameObject.Find("NotEnoughCookiesBanner");
         notEnoughCookiesBanner.SetActive(false);
         shopContent = GameObject.Find("ShopContent");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
-        cookieCounter.text = "Cookies: " + currentCookies;
+        cookieCounter.text = currentCookies.ToString();
+        expImage = GameObject.Find("ExpContainer").GetComponent<Image>();
+        expImage.fillAmount = currentExp / (currentLvl * 100);
+        currentSkillPointsText = GameObject.Find("SkillpointsTxt").GetComponent<TMP_Text>();
+        currentSkillPointsText.text = currentSkillPoints.ToString();
+        healthText = GameObject.Find("HealthTxt").GetComponent<TMP_Text>();
+        healthText.text = currentPlayerHealth.ToString();
 
         headSpriteRenderer = GameObject.Find("Head").GetComponent<SpriteRenderer>();
         bodySpriteRenderer = GetComponent<SpriteRenderer>();
         weaponSpriteRenderer = GameObject.Find("BowSprite").GetComponent<SpriteRenderer>();
         armsSpriteRenderer.Add(GameObject.Find("LeftArm").GetComponent<SpriteRenderer>());
         armsSpriteRenderer.Add(GameObject.Find("RightArm").GetComponent<SpriteRenderer>());
-        armsSpriteRenderer.Add(GameObject.Find("LeftFoot").GetComponent<SpriteRenderer>());
-        armsSpriteRenderer.Add(GameObject.Find("RightFoot").GetComponent<SpriteRenderer>());
+        legsSpriteRenderer.Add(GameObject.Find("LeftFoot").GetComponent<SpriteRenderer>());
+        legsSpriteRenderer.Add(GameObject.Find("RightFoot").GetComponent<SpriteRenderer>());
+
+        if (shouldLoad)
+        {
+            LoadGame();
+        }
+        else
+        {
+            StartLevel("Level 1");
+        }
     }
 
     public void GetExp(int expAmount)
@@ -102,6 +123,9 @@ public class PlayerManager : MonoBehaviour
             currentLvl += 1;
             currentSkillPoints += 1;
         }
+
+        expImage.fillAmount = (float) currentExp / (currentLvl * 100);
+        currentSkillPointsText.text = currentSkillPoints.ToString();
     }
 
     public void GotDamaged(int damage)
@@ -122,6 +146,7 @@ public class PlayerManager : MonoBehaviour
         anim.SetBool("Dead", false);
 
         currentPlayerHealth = maxPlayerHealth;
+        healthText.text = currentPlayerHealth.ToString();
     }
 
     private IEnumerator DamageDealt(int damage)
@@ -133,6 +158,7 @@ public class PlayerManager : MonoBehaviour
             {
                 currentPlayerHealth -= damage;
                 invulnerable = true;
+                healthText.text = currentPlayerHealth.ToString();
             }
         }
         yield return new WaitForSeconds(invulnerableTime);
@@ -148,7 +174,7 @@ public class PlayerManager : MonoBehaviour
         {
             currentCookies += col.gameObject.GetComponent<Cookie>().cookieAmount;
             Destroy(col.gameObject);
-            cookieCounter.text = "Cookies: " + currentCookies;
+            cookieCounter.text = currentCookies.ToString();
         }
 
         if (col.gameObject.CompareTag("Checkpoint"))
@@ -165,6 +191,18 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    private string SkillsToString(List<SkillSO> list)
+    {
+        string result = "";
+
+        foreach (var skill in list)
+        {
+            result += skill.name;
+        }
+
+        return result;
+    }
+
     public void LearnSkill(SkillSO skillToLearn, Button skillBtn)
     {
         Debug.Log("Trying to learn Skill " + skillToLearn.name);
@@ -175,7 +213,7 @@ public class PlayerManager : MonoBehaviour
 
         else if (skillToLearn.skillsNeeded.Count > 0 && !ListValueInList(skillToLearn.skillsNeeded, learnedSkills))
         {
-            Debug.Log("You need to learn " + skillToLearn.skillsNeeded + " to learn this skill.");
+            Debug.Log("You need to learn " + SkillsToString(skillToLearn.skillsNeeded) + " to learn this skill.");
         }
 
         else if (skillToLearn.skillPointsNeeded > currentSkillPoints)
@@ -185,6 +223,8 @@ public class PlayerManager : MonoBehaviour
         else
         {
             currentSkillPoints -= skillToLearn.skillPointsNeeded;
+            currentSkillPointsText.text = currentSkillPoints.ToString();
+            GameObject.Find(skillToLearn.name).GetComponent<Image>().fillAmount = 0;
             if (!skillToLearn.doubleSkillable)
             {
                 Debug.Log("Learned Skill");
@@ -262,14 +302,15 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    private bool ListValueInList(List<SkillSO> ListA, List<SkillSO> ListB)
+    private bool ListValueInList(List<SkillSO> skillNeeded, List<SkillSO> skillList)
     {
-        for (int i = 0; i < ListA.Count; i++)
+        var result = true;
+        foreach (var skill in skillNeeded)
         {
-            if (ListA.Contains(ListB[i]))
-                return true;
+            if (!skillList.Contains(skill))
+                result = false;
         }
-        return false;
+        return result;
     }
     public void buyHead(EquipmentSO equipmentToBuy)
     {
@@ -301,7 +342,7 @@ public class PlayerManager : MonoBehaviour
             currentHeadName = equipmentToBuy.name;
             headSpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
             shopContent.transform.Find(currentHeadName).GetComponent<Image>().color = Color.green;
-            cookieCounter.text = "Cookies: " + currentCookies;
+            cookieCounter.text = currentCookies.ToString();
         }
     }
     public void buyBody(EquipmentSO equipmentToBuy)
@@ -333,7 +374,7 @@ public class PlayerManager : MonoBehaviour
             currentBodyName = equipmentToBuy.name;
             bodySpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
             shopContent.transform.Find(currentBodyName).GetComponent<Image>().color = Color.green;
-            cookieCounter.text = "Cookies: " + currentCookies;
+            cookieCounter.text = currentCookies.ToString();
         }
     }
     public void buyWeapon(EquipmentSO equipmentToBuy)
@@ -365,7 +406,7 @@ public class PlayerManager : MonoBehaviour
             currentWeaponName = equipmentToBuy.name;
             weaponSpriteRenderer.sprite = equipmentToBuy.equipmentSprite;
             shopContent.transform.Find(currentWeaponName).GetComponent<Image>().color = Color.green;
-            cookieCounter.text = "Cookies: " + currentCookies;
+            cookieCounter.text = currentCookies.ToString();
         }
     }
 
@@ -400,7 +441,7 @@ public class PlayerManager : MonoBehaviour
             armsSpriteRenderer[0].sprite = equipmentToBuy.equipmentSprite;
             armsSpriteRenderer[1].sprite = equipmentToBuy.equipmentSpriteRightArmOrLeg;
             shopContent.transform.Find(currentArmsName).GetComponent<Image>().color = Color.green;
-            cookieCounter.text = "Cookies: " + currentCookies;
+            cookieCounter.text = currentCookies.ToString();
         }
     }
     public void buyLegs(EquipmentSO equipmentToBuy)
@@ -434,7 +475,7 @@ public class PlayerManager : MonoBehaviour
             legsSpriteRenderer[0].sprite = equipmentToBuy.equipmentSprite;
             legsSpriteRenderer[1].sprite = equipmentToBuy.equipmentSpriteRightArmOrLeg;
             shopContent.transform.Find(currentLegsName).GetComponent<Image>().color = Color.green;
-            cookieCounter.text = "Cookies: " + currentCookies;
+            cookieCounter.text = currentCookies.ToString();
         }
     }
 
@@ -452,15 +493,18 @@ public class PlayerManager : MonoBehaviour
         {
             case "Level 1":
                 transform.position = Lvl1StartPosition;
+                GetComponent<Rigidbody2D>().simulated = true;
                 break;
             case "Level 2":
                 transform.position = Lvl2StartPosition;
+                GetComponent<Rigidbody2D>().simulated = true;
                 break;
             case "Level 3":
                 transform.position = Lvl3StartPosition;
+                GetComponent<Rigidbody2D>().simulated = true;
                 break;
             default:
-                Debug.LogError("Wrong Level Name");
+                GetComponent<Rigidbody2D>().simulated = false;
                 break;
         }
     }
@@ -493,6 +537,7 @@ public class PlayerManager : MonoBehaviour
         this.learnedSkills = pm.learnedSkills;
         this.level1Finished = pm.level1Finished;
         this.level2Finished = pm.level2Finished;
+        this.level3Finished = pm.level3Finished;
         this.maxPlayerHealth = pm.maxPlayerHealth;
         this.multiSkillableSkills = pm.multiSkillableSkills;
         this.paralyzeDmg = pm.paralyzeDmg;
@@ -560,4 +605,5 @@ public class SaveData
 
     public bool level1Finished;
     public bool level2Finished;
+    public bool level3Finished;
 }

@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
 

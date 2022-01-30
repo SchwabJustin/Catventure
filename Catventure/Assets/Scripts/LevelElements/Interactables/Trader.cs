@@ -21,7 +21,7 @@ public class Trader : MonoBehaviour
         allEquipmentsSO = Resources.LoadAll<EquipmentSO>("Prefabs/ScriptableObjects/Equipment").ToList();
         shopParentObject = GameObject.Find("Shop");
         shopContent = GameObject.Find("ShopContent");
-        playerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
+        playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
         allEquipmentsSO.Sort((x, y) => x.name.CompareTo(y.name));
         if (shopContent.transform.childCount != 0)
         {
@@ -76,6 +76,8 @@ public class Trader : MonoBehaviour
             allEquipmentsGO.Find(go => go.name == equipment.name).SetActive(true);
         }
     }
+
+
     public void GetAllShopGameObjects()
     {
 

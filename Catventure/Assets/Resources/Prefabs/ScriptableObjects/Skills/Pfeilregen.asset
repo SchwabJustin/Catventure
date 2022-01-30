@@ -15,8 +15,7 @@ MonoBehaviour:
   skilltreeType: 2
   skillImg: {fileID: 542953929149233628, guid: cfef51c1497ad68408dd2cb0a2ee2e9e, type: 3}
   level: 5
-  skillsNeeded:
-  - {fileID: 11400000}
+  skillsNeeded: []
   skillPointsNeeded: 1
   doubleSkillable: 0
   attackBonus: 0
