@@ -17,7 +17,6 @@ MonoBehaviour:
     type: 3}
   level: 3
   skillsNeeded:
-  - {fileID: 11400000, guid: edf54ecd3f7cb2047bba6fcde2a3c809, type: 2}
   - {fileID: 11400000, guid: 87973be105ef8914d885df59954d6462, type: 2}
   skillPointsNeeded: 1
   doubleSkillable: 1

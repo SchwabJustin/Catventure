@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 56
+  controlID: 174
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,7 +128,7 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 57
+  controlID: 92
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 58
+  controlID: 93
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,20 +368,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs/LevelElements/Enemies
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs/LevelElements/Enemies
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\User\Desktop\Catventure\Catventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 134}
-    m_SelectedIDs: 647c0000
-    m_LastClickedID: 31844
-    m_ExpandedIDs: 00000000c0520000767b0000787b00007a7b00007c7b00007e7b0000807b0000927b000000ca9a3b
+    scrollPos: {x: 0, y: 214}
+    m_SelectedIDs: 467d0000
+    m_LastClickedID: 32070
+    m_ExpandedIDs: 0000000094480000f27c0000f47c0000f67c0000f87c0000fa7c0000fc7c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -409,7 +409,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c0520000767b0000787b00007a7b00007c7b00007e7b0000807b0000
+    m_ExpandedIDs: 0000000094480000f27c0000f47c0000f67c0000f87c0000fa7c0000fc7c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -531,21 +531,21 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 726afaff2a9cfaff96b2faff62d0faffe2e4faffa4fcfaffb67dfbfff4b2fbfffcb2fbff02b3fbff5ebafbff7abafbffdebbfbff4cd1fbff68d4fbffdad6fbff04f6fbff20f6fbff84f7fbff0c21fcffb66cfcffc86cfcff3c74fcff8c77fcff2878fcff2e7bfcff9e82fcff8486fcff5889fcffb2a9fcff86acfcff06c3fcffc2dafcff66f0fcff7c07fdffa813fdffd213fdff8a1cfdff1e31fdff2448fdff0859fdff3259fdffea61fdffc0a0fdffd2a0fdffdea0fdfff2aefdff80cdfdff62f2fdff9a1afeff1878ffffba8cffffa4eeffff569d0a0042a80a00a8da0a0044e40a00d6320b004e660b00d2700b0030a90b009ae90b0016fe0b007c2c0c0084850c0098a70c00dab70c00b2bc0c007e030d003a480d00cc520d0030550d00
+      scrollPos: {x: 0, y: 94}
+      m_SelectedIDs: d2c10000
+      m_LastClickedID: 49618
+      m_ExpandedIDs: c2baffff38c5ffff20e3fffff6faffffb2b800009ac30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: WalkingEnemy 2
-        m_OriginalName: WalkingEnemy 2
+        m_Name: Player
+        m_OriginalName: Player
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -348358
+        m_UserData: -7688
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -594,9 +594,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 825.53394, y: 0.9011412, z: -0.1528223}
+    m_Target: {x: 1293.2816, y: 64.027275, z: 52.28384}
     speed: 2
-    m_Value: {x: 825.5634, y: 0.89945537, z: -0.11722699}
+    m_Value: {x: 1293.1974, y: 63.763184, z: 53.00485}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -646,9 +646,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.445297
+    m_Target: 18.495108
     speed: 2
-    m_Value: 9.890364
+    m_Value: 19.366604
   m_Ortho:
     m_Target: 1
     speed: 2

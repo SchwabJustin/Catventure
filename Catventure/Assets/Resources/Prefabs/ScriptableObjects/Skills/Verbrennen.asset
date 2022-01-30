@@ -18,7 +18,6 @@ MonoBehaviour:
   level: 3
   skillsNeeded:
   - {fileID: 11400000, guid: 87973be105ef8914d885df59954d6462, type: 2}
-  - {fileID: 11400000, guid: d091f31f1aceeed4c9abc1ec3e7e020f, type: 2}
   skillPointsNeeded: 1
   doubleSkillable: 1
   attackBonus: 0
