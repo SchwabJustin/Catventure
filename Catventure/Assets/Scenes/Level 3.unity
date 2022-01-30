@@ -1052,6 +1052,7 @@ GameObject:
   - component: {fileID: 15230122}
   - component: {fileID: 15230123}
   - component: {fileID: 15230124}
+  - component: {fileID: 15230125}
   m_Layer: 0
   m_Name: Fackel 14
   m_TagString: Untagged
@@ -1109,8 +1110,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -1165,6 +1166,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &15230125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15230121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &15692891
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,7 +4567,7 @@ SpriteRenderer:
   m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fcad82daefc158f4f9187535189440e5, type: 3}
-  m_Color: {r: 0.514151, g: 0.8552277, b: 1, a: 0.6039216}
+  m_Color: {r: 0.003693494, g: 0.5504783, b: 0.7830189, a: 0.6039216}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -12176,6 +12195,7 @@ GameObject:
   - component: {fileID: 163759354}
   - component: {fileID: 163759355}
   - component: {fileID: 163759356}
+  - component: {fileID: 163759357}
   m_Layer: 0
   m_Name: Fackel 12
   m_TagString: Untagged
@@ -12233,8 +12253,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -12289,6 +12309,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &163759357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163759353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &164915457
 GameObject:
   m_ObjectHideFlags: 0
@@ -13360,8 +13398,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1032579307
-  m_SortingLayer: 1
+  m_SortingLayerID: 551811905
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2feb79b11dcb5244fa8201fb322d5c06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19498,6 +19536,7 @@ GameObject:
   - component: {fileID: 278918483}
   - component: {fileID: 278918484}
   - component: {fileID: 278918485}
+  - component: {fileID: 278918486}
   m_Layer: 0
   m_Name: Fackel 3
   m_TagString: Untagged
@@ -19555,8 +19594,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -19611,6 +19650,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &278918486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278918482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1001 &280525458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32201,6 +32258,7 @@ GameObject:
   - component: {fileID: 450172747}
   - component: {fileID: 450172748}
   - component: {fileID: 450172749}
+  - component: {fileID: 450172750}
   m_Layer: 0
   m_Name: Fackel 4
   m_TagString: Untagged
@@ -32258,8 +32316,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -32314,6 +32372,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &450172750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450172746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1001 &459001534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33795,9 +33871,9 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.68235296, g: 1, b: 0.9937793, a: 1}
-  m_Intensity: 0.68
+  m_Intensity: 0.96
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 151774c2
+  m_ApplyToSortingLayers: 151774c2c5f9becdfba3995fbdce8c57e5b7b73b6fadf9c5
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -35576,8 +35652,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1032579307
-  m_SortingLayer: 1
+  m_SortingLayerID: 551811905
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2feb79b11dcb5244fa8201fb322d5c06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -49828,6 +49904,7 @@ GameObject:
   - component: {fileID: 714151749}
   - component: {fileID: 714151750}
   - component: {fileID: 714151751}
+  - component: {fileID: 714151752}
   m_Layer: 0
   m_Name: Fackel 5
   m_TagString: Untagged
@@ -49885,8 +49962,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -49941,6 +50018,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &714151752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714151748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &714372065
 GameObject:
   m_ObjectHideFlags: 0
@@ -51121,7 +51216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 4
+  m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.21306516, g: 0.32504654, b: 0.7169812, a: 1}
@@ -51146,10 +51241,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: -61.892883, y: -33.25482, z: 0}
+  - {x: 32.18091, y: -32.53887, z: 0}
+  - {x: 31.822876, y: 31.464945, z: 0}
+  - {x: -61.534973, y: 31.643929, z: 0}
 --- !u!1 &742637660
 GameObject:
   m_ObjectHideFlags: 0
@@ -61247,6 +61342,7 @@ GameObject:
   - component: {fileID: 903345410}
   - component: {fileID: 903345411}
   - component: {fileID: 903345412}
+  - component: {fileID: 903345413}
   m_Layer: 0
   m_Name: Fackel 13
   m_TagString: Untagged
@@ -61304,8 +61400,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -61360,6 +61456,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &903345413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903345409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &903626523
 GameObject:
   m_ObjectHideFlags: 0
@@ -61589,7 +61703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904889162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -873.9, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 632626940}
@@ -61598,7 +61712,6 @@ Transform:
   - {fileID: 65167356}
   - {fileID: 1305591380}
   - {fileID: 482942491}
-  - {fileID: 1741268853}
   m_Father: {fileID: 1885411428}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -66162,6 +66275,7 @@ GameObject:
   - component: {fileID: 991973658}
   - component: {fileID: 991973659}
   - component: {fileID: 991973660}
+  - component: {fileID: 991973661}
   m_Layer: 0
   m_Name: Fackel 8
   m_TagString: Untagged
@@ -66219,8 +66333,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -66275,6 +66389,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &991973661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991973657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &992099242
 GameObject:
   m_ObjectHideFlags: 0
@@ -70528,6 +70660,7 @@ GameObject:
   - component: {fileID: 1046651197}
   - component: {fileID: 1046651198}
   - component: {fileID: 1046651199}
+  - component: {fileID: 1046651200}
   m_Layer: 0
   m_Name: Fackel 2
   m_TagString: Untagged
@@ -70585,8 +70718,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -70641,6 +70774,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1046651200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046651196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1046897289
 GameObject:
   m_ObjectHideFlags: 0
@@ -85772,8 +85923,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1032579307
-  m_SortingLayer: 1
+  m_SortingLayerID: 551811905
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2feb79b11dcb5244fa8201fb322d5c06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -89263,6 +89414,7 @@ GameObject:
   - component: {fileID: 1347737232}
   - component: {fileID: 1347737233}
   - component: {fileID: 1347737234}
+  - component: {fileID: 1347737235}
   m_Layer: 0
   m_Name: Fackel 6
   m_TagString: Untagged
@@ -89320,8 +89472,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -89376,6 +89528,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1347737235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347737231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1349161703
 GameObject:
   m_ObjectHideFlags: 0
@@ -93566,6 +93736,7 @@ GameObject:
   - component: {fileID: 1422949283}
   - component: {fileID: 1422949284}
   - component: {fileID: 1422949285}
+  - component: {fileID: 1422949286}
   m_Layer: 0
   m_Name: Fackel 2
   m_TagString: Untagged
@@ -93623,8 +93794,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -93679,6 +93850,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1422949286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422949282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1425795474
 GameObject:
   m_ObjectHideFlags: 0
@@ -94506,6 +94695,7 @@ GameObject:
   - component: {fileID: 1438148475}
   - component: {fileID: 1438148476}
   - component: {fileID: 1438148477}
+  - component: {fileID: 1438148478}
   m_Layer: 0
   m_Name: Fackel 10
   m_TagString: Untagged
@@ -94563,8 +94753,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -94619,6 +94809,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1438148478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438148474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1440279371
 GameObject:
   m_ObjectHideFlags: 0
@@ -97472,8 +97680,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1032579307
-  m_SortingLayer: 1
+  m_SortingLayerID: 551811905
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2feb79b11dcb5244fa8201fb322d5c06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106646,6 +106854,7 @@ GameObject:
   - component: {fileID: 1640276559}
   - component: {fileID: 1640276560}
   - component: {fileID: 1640276561}
+  - component: {fileID: 1640276562}
   m_Layer: 0
   m_Name: Fackel 11
   m_TagString: Untagged
@@ -106703,8 +106912,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -106759,6 +106968,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1640276562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640276558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1640288383
 GameObject:
   m_ObjectHideFlags: 0
@@ -109896,6 +110123,7 @@ GameObject:
   - component: {fileID: 1707220908}
   - component: {fileID: 1707220909}
   - component: {fileID: 1707220910}
+  - component: {fileID: 1707220911}
   m_Layer: 0
   m_Name: Fackel 1
   m_TagString: Untagged
@@ -109953,8 +110181,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -109982,7 +110210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.445
+  m_FalloffIntensity: 0.351
   m_Color: {r: 0.9339623, g: 0.50361776, b: 0.057271298, a: 1}
   m_Intensity: 1.76
   m_LightVolumeOpacity: 0
@@ -110009,6 +110237,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1707220911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707220907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1707839447
 GameObject:
   m_ObjectHideFlags: 0
@@ -112119,78 +112365,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1741268852
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1741268853}
-  - component: {fileID: 1741268854}
-  m_Layer: 0
-  m_Name: Point Light 2D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1741268853
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741268852}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 904889163}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1741268854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741268852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.476
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 151774c2
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 3.97
-  m_PointLightOuterRadius: 7.16
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &1742982472
 GameObject:
   m_ObjectHideFlags: 0
@@ -119546,6 +119720,7 @@ GameObject:
   - component: {fileID: 1869984204}
   - component: {fileID: 1869984205}
   - component: {fileID: 1869984206}
+  - component: {fileID: 1869984207}
   m_Layer: 0
   m_Name: Fackel 7
   m_TagString: Untagged
@@ -119603,8 +119778,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -119659,6 +119834,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1869984207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869984203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1872118903
 GameObject:
   m_ObjectHideFlags: 0
@@ -123540,6 +123733,7 @@ GameObject:
   - component: {fileID: 1930931689}
   - component: {fileID: 1930931690}
   - component: {fileID: 1930931691}
+  - component: {fileID: 1930931692}
   m_Layer: 0
   m_Name: Fackel 9
   m_TagString: Untagged
@@ -123597,8 +123791,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 551811905
-  m_SortingLayer: 2
+  m_SortingLayerID: 2146776443
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493,
     type: 3}
@@ -123653,6 +123847,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1930931692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930931688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd735c7cba36c2a4bbc8a9295899484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7757304913997566256, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 7985923129272497861, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: -3575920187902926671, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  - {fileID: 5334019587411470255, guid: a441691cc58468d40825f27442bc2493, type: 3}
+  timeBetweenFrames: 0.5
 --- !u!1 &1932175275
 GameObject:
   m_ObjectHideFlags: 0

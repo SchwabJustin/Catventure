@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -56359,8 +56359,8 @@ SpriteShapeRenderer:
   m_Sprites:
   - {fileID: 972499408233143169, guid: 460ff2b3f0e66b7458f89c0b5a736562, type: 3}
   m_LocalAABB:
-    m_Center: {x: 1.2559242, y: -0.046721935, z: -0.00005}
-    m_Extent: {x: 30.641165, y: 3.6015759, z: 0.00005}
+    m_Center: {x: 1.2559242, y: -0.04672146, z: -0.00005}
+    m_Extent: {x: 30.641165, y: 3.6015763, z: 0.00005}
 --- !u!61 &1075364475
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -488,7 +488,9 @@ public class PlayerManager : MonoBehaviour
 
     public void StartLevel(string levelName)
     {
+        currentScene = levelName;
         SceneManager.LoadScene(levelName);
+        GetComponent<Rigidbody2D>().simulated = true;
         switch (levelName)
         {
             case "Level 1":
@@ -502,6 +504,9 @@ public class PlayerManager : MonoBehaviour
             case "Level 3":
                 transform.position = Lvl3StartPosition;
                 GetComponent<Rigidbody2D>().simulated = true;
+                break;
+            case "Menü":
+                Destroy(gameObject);
                 break;
             default:
                 GetComponent<Rigidbody2D>().simulated = false;

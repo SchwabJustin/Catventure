@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -29258,6 +29258,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 722960262}
     m_Modifications:
+    - target: {fileID: 72977247246873674, guid: 91aa3490eb865d24d92399e6d2f7e554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 678417541142614853, guid: 91aa3490eb865d24d92399e6d2f7e554,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29338,6 +29343,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.34
       objectReference: {fileID: 0}
+    - target: {fileID: 1245478317797381399, guid: 91aa3490eb865d24d92399e6d2f7e554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1545462509883340614, guid: 91aa3490eb865d24d92399e6d2f7e554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1559019148181190967, guid: 91aa3490eb865d24d92399e6d2f7e554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 5217197788145649390, guid: 91aa3490eb865d24d92399e6d2f7e554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7007200762670609754, guid: 91aa3490eb865d24d92399e6d2f7e554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7298574840770984029, guid: 91aa3490eb865d24d92399e6d2f7e554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91aa3490eb865d24d92399e6d2f7e554, type: 3}
 --- !u!4 &640867053 stripped
@@ -47890,7 +47925,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.68
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 151774c2
+  m_ApplyToSortingLayers: 00000000151774c241fbe3207b35f57f6fadf9c5e5b7b73bc5f9becdfba3995fbdce8c57
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
