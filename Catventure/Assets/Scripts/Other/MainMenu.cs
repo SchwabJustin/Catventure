@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject canvasPrefab;
+    public Button LoadButton;
+    void Start()
+    {
+        if (!File.Exists(Application.dataPath + "save.txt"))
+        {
+            LoadButton.interactable = false;
+        }
+    }
     public void QuitGame()
     {
         Application.Quit();

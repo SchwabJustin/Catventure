@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9410,6 +9410,7 @@ MonoBehaviour:
     type: 3}
   canvasPrefab: {fileID: 8066830042253708388, guid: c9349c34efda3fa4f823543dc2b71a1f,
     type: 3}
+  LoadButton: {fileID: 715193882}
 --- !u!82 &2080283762
 AudioSource:
   m_ObjectHideFlags: 0
