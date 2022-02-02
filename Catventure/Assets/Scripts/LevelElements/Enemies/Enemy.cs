@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         {
             playerManager.GetExp(expAmount);
             Vector3 currentPosition = transform.position;
-
+            Debug.Log("StartDying");
             StartCoroutine(Dying());
 
 
@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator Dying()
     {
+        Debug.Log("Dying");
         anim.SetBool("Dead", true);
         yield return new WaitForSeconds(1);
         if (GetComponent<Boss1>() == null || GetComponent<Boss2>() == null || GetComponent<Boss3>() == null)

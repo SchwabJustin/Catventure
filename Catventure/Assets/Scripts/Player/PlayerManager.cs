@@ -124,6 +124,7 @@ public class PlayerManager : MonoBehaviour
             currentSkillPoints += 1;
         }
 
+        if (expImage == null) return;
         expImage.fillAmount = (float) currentExp / (currentLvl * 100);
         currentSkillPointsText.text = currentSkillPoints.ToString();
     }

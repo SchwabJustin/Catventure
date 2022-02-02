@@ -70,7 +70,16 @@ public class ShootingEnemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            enemy.speed = 0;
             Shoot(col.gameObject.transform);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            enemy.speed = 1;
         }
     }
 
