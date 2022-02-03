@@ -20,9 +20,9 @@ public class PlayerMovement : MonoBehaviour
 
     private BoxCollider2D boxCollider;
 
-    private Vector2 velocity;
+    public Vector2 velocity;
 
-    private bool grounded;
+    public bool grounded;
 
     public Animator anim;
 
@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
+                Debug.Log("PressedJump");
                 anim.SetTrigger("Jump");
 
                 velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
