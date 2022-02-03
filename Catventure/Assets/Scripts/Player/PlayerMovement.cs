@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = 0;
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("PressedJump");
                 anim.SetTrigger("Jump");
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
                 velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
             }
 
-            if (Input.GetButtonUp("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 anim.ResetTrigger("Jump");
             }
