@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
         if (moveInput != 0)
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = 0;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Jump"))
             {
                 Debug.Log("PressedJump");
                 anim.SetTrigger("Jump");
