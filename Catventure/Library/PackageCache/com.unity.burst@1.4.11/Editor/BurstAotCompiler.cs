@@ -202,7 +202,7 @@ extern ""C""
             var assemblyFolders = new List<string> { stagingFolder };
             if (buildTarget == BuildTarget.WSAPlayer
                 || buildTarget == BuildTarget.XboxOne
-#if UNITY_2019_5_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
                 || buildTarget == BuildTarget.GameCoreXboxOne || buildTarget == BuildTarget.GameCoreXboxSeries
 #endif
                 )
@@ -820,7 +820,7 @@ extern ""C""
                 case BuildTarget.XboxOne:
                     targetCpus = new TargetCpus(TargetCpu.X64_SSE4);
                     return TargetPlatform.XboxOne;
-#if UNITY_2019_5_OR_NEWER
+#if UNITY_2019_4_OR_NEWER
                 case BuildTarget.GameCoreXboxOne:
                     targetCpus = new TargetCpus(TargetCpu.AVX);
                     return TargetPlatform.GameCoreXboxOne;
@@ -846,7 +846,7 @@ extern ""C""
                 case BuildTarget.Switch:
                     targetCpus = new TargetCpus(TargetCpu.ARMV8A_AARCH64);
                     return TargetPlatform.Switch;
-#if UNITY_2019_5_OR_NEWER
+#if UNITY_2019_3_OR_NEWER
                 case BuildTarget.Stadia:
                     targetCpus = new TargetCpus(TargetCpu.AVX2);
                     return TargetPlatform.Stadia;
