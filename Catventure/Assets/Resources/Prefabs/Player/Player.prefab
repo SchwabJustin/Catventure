@@ -109,6 +109,12 @@ MonoBehaviour:
   numberOfPoints: 30
   spaceBetweenPoints: 0.025
   direction: {x: 0, y: 0}
+  poisonSprite: {fileID: 5401627625342276405, guid: db7ef8975cda87e4e877e5df178f016a,
+    type: 3}
+  burnSprite: {fileID: -374018597963467253, guid: db7ef8975cda87e4e877e5df178f016a,
+    type: 3}
+  paralyzeSprite: {fileID: -7844218030395486967, guid: db7ef8975cda87e4e877e5df178f016a,
+    type: 3}
   mousePosition: {x: 0, y: 0}
   arrowRainGo: {fileID: 6000065039254617532, guid: 4d11a63482e15af4ca1bce27a3916c87,
     type: 3}

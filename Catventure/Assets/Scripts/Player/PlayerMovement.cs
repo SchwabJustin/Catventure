@@ -49,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-                Debug.Log("PressedJump");
                 anim.SetTrigger("Jump");
 
                 velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));

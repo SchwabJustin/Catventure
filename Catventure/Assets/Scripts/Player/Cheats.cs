@@ -16,6 +16,7 @@ public class Cheats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         playerManager = GetComponent<PlayerManager>();
         playerMovement = GetComponent<PlayerMovement>();
         pauseMenu = GameObject.Find("PauseMenu");
@@ -56,6 +57,7 @@ public class Cheats : MonoBehaviour
         {
             playerManager.level1Finished = true;
             playerManager.level2Finished = true;
+            DontDestroyOnLoad(gameObject);
             SceneManager.LoadScene("Map");
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))

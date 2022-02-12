@@ -26,6 +26,11 @@ public class Bow : MonoBehaviour
     private bool paralyzeShot;
     private bool shooting;
     private bool arrowRain;
+
+    public Sprite poisonSprite;
+    public Sprite burnSprite;
+    public Sprite paralyzeSprite;
+
     private PlayerMovement playerMovement;
     private PlayerManager playerManager;
     private GameObject parentPoint;
@@ -62,15 +67,15 @@ public class Bow : MonoBehaviour
             point.GetComponent<SpriteRenderer>().forceRenderingOff = true;
         }
 
-        shotImg = GameObject.Find("Präziser Schuss").GetComponent<Image>();
-        poisonShotImg = GameObject.Find("Vergiften").GetComponent<Image>();
-        doubleShotImg = GameObject.Find("Doppelter Treffer").GetComponent<Image>();
-        burnShotImg = GameObject.Find("Verbrennen").GetComponent<Image>();
-        arrowRainImg = GameObject.Find("Pfeilregen").GetComponent<Image>();
-        paralyzeShotImg = GameObject.Find("Paralyse").GetComponent<Image>();
+        shotImg = GameObject.Find("Präziser Schuss Cooldown").GetComponent<Image>();
+        poisonShotImg = GameObject.Find("Vergiften Cooldown").GetComponent<Image>();
+        doubleShotImg = GameObject.Find("Doppelter Treffer Cooldown").GetComponent<Image>();
+        burnShotImg = GameObject.Find("Verbrennen Cooldown").GetComponent<Image>();
+        arrowRainImg = GameObject.Find("Pfeilregen Cooldown").GetComponent<Image>();
+        paralyzeShotImg = GameObject.Find("Paralyse Cooldown").GetComponent<Image>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector2 bowPosition = transform.position;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -170,6 +175,7 @@ public class Bow : MonoBehaviour
     {
 
         GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        newArrow.GetComponent<SpriteRenderer>().sprite = poisonSprite;
         newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
         newArrow.GetComponent<Arrow>().poisonShot = true;
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
@@ -185,6 +191,7 @@ public class Bow : MonoBehaviour
         Debug.Log("BurnShot");
 
             GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+            newArrow.GetComponent<SpriteRenderer>().sprite = burnSprite;
             newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
             newArrow.GetComponent<Arrow>().burnShot = true;
             newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
@@ -211,6 +218,7 @@ public class Bow : MonoBehaviour
     {
 
             GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+            newArrow.GetComponent<SpriteRenderer>().sprite = paralyzeSprite;
             newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
             newArrow.GetComponent<Arrow>().paralyzeShot = true;
             newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
@@ -275,12 +283,12 @@ public class Bow : MonoBehaviour
         shooting = false;
     }
 
-    void CoolDownSprite(int cooldownTime, Image img)
+    public void CoolDownSprite(int cooldownTime, Image img)
     {
-        StartCoroutine(ChangeSomeValue(cooldownTime, img));
+        StartCoroutine(SpriteFillAmount(cooldownTime, img));
     }
 
-    public IEnumerator ChangeSomeValue(float duration, Image img)
+    public IEnumerator SpriteFillAmount(float duration, Image img)
     {
 
         for (float t = 0f; t < duration; t += Time.deltaTime)

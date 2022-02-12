@@ -31,6 +31,10 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Got Hit with " + damage);
         StartCoroutine(DamageDealt(damage));
+        if (TryGetComponent(out Boss1 boss1))
+        {
+            boss1.Stunned();
+        }
 
         //Death
         if (currentHealth <= 0)
@@ -46,10 +50,7 @@ public class Enemy : MonoBehaviour
                 boss3.Stunned();
             }
 
-            if (TryGetComponent(out Boss1 boss1))
-            {
-                boss1.Stunned();
-            }
+
         }
     }
 

@@ -83,7 +83,6 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         notEnoughCookiesBanner = GameObject.Find("NotEnoughCookiesBanner");
         notEnoughCookiesBanner.SetActive(false);
         shopContent = GameObject.Find("ShopContent");
@@ -103,6 +102,7 @@ public class PlayerManager : MonoBehaviour
         armsSpriteRenderer.Add(GameObject.Find("RightArm").GetComponent<SpriteRenderer>());
         legsSpriteRenderer.Add(GameObject.Find("LeftFoot").GetComponent<SpriteRenderer>());
         legsSpriteRenderer.Add(GameObject.Find("RightFoot").GetComponent<SpriteRenderer>());
+        DontDestroyOnLoad(gameObject);
 
         if (shouldLoad)
         {
@@ -182,6 +182,8 @@ public class PlayerManager : MonoBehaviour
         {
             currentScene = SceneManager.GetActiveScene().name;
             lastCheckpointPosition = transform.position;
+            currentPlayerHealth = maxPlayerHealth;
+            healthText.text = currentPlayerHealth.ToString();
             SaveGame();
         }
 
@@ -225,7 +227,13 @@ public class PlayerManager : MonoBehaviour
         {
             currentSkillPoints -= skillToLearn.skillPointsNeeded;
             currentSkillPointsText.text = currentSkillPoints.ToString();
-            GameObject.Find(skillToLearn.name).GetComponent<Image>().fillAmount = 0;
+            
+            var skillFillImg = GameObject.Find(skillToLearn.name + " Cooldown");
+            if (skillFillImg != null)
+            {
+                skillFillImg.GetComponent<Image>().fillAmount = 0;
+            }
+
             if (!skillToLearn.doubleSkillable)
             {
                 Debug.Log("Learned Skill");
@@ -239,6 +247,7 @@ public class PlayerManager : MonoBehaviour
             {
                 Debug.Log("Learned Skill");
                 learnedSkills.Add(skillToLearn);
+                GameObject.Find("MultiSkill" + skillToLearn.name).GetComponent<TMP_Text>().text = "2/2";
                 if (skillBtn)
                 {
                     skillBtn.interactable = false;
@@ -247,6 +256,7 @@ public class PlayerManager : MonoBehaviour
             else
             {
                 multiSkillableSkills.Add(skillToLearn);
+                GameObject.Find("MultiSkill" + skillToLearn.name).GetComponent<TMP_Text>().text = "1/2";
                 Debug.Log("Added Skill to multilearnSkills");
             }
             Debug.Log("Learned Skill " + skillToLearn.name);
@@ -490,6 +500,7 @@ public class PlayerManager : MonoBehaviour
     public void StartLevel(string levelName)
     {
         currentScene = levelName;
+        DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene(levelName);
         GetComponent<Rigidbody2D>().simulated = true;
         switch (levelName)
@@ -519,7 +530,7 @@ public class PlayerManager : MonoBehaviour
     {
         string json = File.ReadAllText(Application.dataPath + "save.txt");
         SaveData pm = JsonUtility.FromJson<SaveData>(json);
-
+        DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene(pm.currentScene);
         transform.position = pm.lastCheckpointPosition;
 

@@ -32,6 +32,6 @@ public class MapManager : MonoBehaviour
     // Update is called once per frame
     public void LoadLevel(string levelName)
     {
-        SceneManager.LoadScene(levelName);
+        playerManager.StartLevel(levelName);
     }
 }

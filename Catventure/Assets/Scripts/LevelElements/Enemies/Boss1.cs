@@ -8,7 +8,8 @@ public class Boss1 : MonoBehaviour
     public int stunDuration = 1;
     public bool jumpAround = true;
     Enemy enemy;
-    
+    private int currentStep;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -28,11 +29,24 @@ public class Boss1 : MonoBehaviour
 
     public void Stunned()
     {
+        Debug.Log("Boss1Stunned");
         StartCoroutine(BossStunned());
     }
 
-    public static IEnumerator AnimateJump(GameObject go, float distance, float height, float time = 1.0f)
-    { 
+    public static IEnumerator AnimateJump(GameObject go, int step, float height, float time = 1.0f)
+    {
+        float distance = 0;
+
+        if (step == 0 || step == 3)
+        {
+            distance = -10;
+        }
+
+        else
+        {
+            distance = +10;
+        }
+
         Vector3 basePos = go.transform.position;
         float x1 = 0;
         float x2 = distance;
@@ -56,10 +70,10 @@ public class Boss1 : MonoBehaviour
 
     IEnumerator BossStunned()
     {
-        var oldValue = waitTimeUntilNextJump;
-        waitTimeUntilNextJump = stunDuration;
-        yield return new WaitForSeconds(waitTimeUntilNextJump);
-        waitTimeUntilNextJump = oldValue;
+        jumpAround = false;
+        yield return new WaitForSeconds(stunDuration);
+        jumpAround = true;
+        StartCoroutine(JumpTimer());
     }
 
     IEnumerator JumpTimer()
@@ -67,13 +81,21 @@ public class Boss1 : MonoBehaviour
         while (jumpAround)
         {
             yield return new WaitForSeconds(waitTimeUntilNextJump);
-            StartCoroutine(AnimateJump(gameObject, -10, 5));
-            yield return new WaitForSeconds(waitTimeUntilNextJump);
-            StartCoroutine(AnimateJump(gameObject, +10, 5));
-            yield return new WaitForSeconds(waitTimeUntilNextJump);
-            StartCoroutine(AnimateJump(gameObject, +10, 5));
-            yield return new WaitForSeconds(waitTimeUntilNextJump);
-            StartCoroutine(AnimateJump(gameObject, -10, 5));
+            StartCoroutine(AnimateJump(gameObject, currentStep, 5));
+            if (currentStep != 3)
+            {
+                currentStep++;
+            }
+            else
+            {
+                currentStep = 0;
+            }
+            //yield return new WaitForSeconds(waitTimeUntilNextJump);
+            //StartCoroutine(AnimateJump(gameObject, +10, 5));
+            //yield return new WaitForSeconds(waitTimeUntilNextJump);
+            //StartCoroutine(AnimateJump(gameObject, +10, 5));
+            //yield return new WaitForSeconds(waitTimeUntilNextJump);
+            //StartCoroutine(AnimateJump(gameObject, -10, 5));
         }
 
         yield break;
