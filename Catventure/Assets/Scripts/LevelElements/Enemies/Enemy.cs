@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -81,11 +82,24 @@ public class Enemy : MonoBehaviour
             currentHealth -= damage;
             _invulnerable = true;
         }
-        GetComponent<SpriteRenderer>().color = new Color(1, 0.4F, 0.4F, 1);
-        GetComponentInChildren<SpriteRenderer>().color = new Color(1, 0.4F, 0.4F, 1);
+
+        var spriteRenderers = GetComponentsInChildren<SpriteRenderer>().ToList();
+        if (TryGetComponent(out SpriteRenderer spriteRenderer))
+        {
+            spriteRenderers.Add(spriteRenderer);
+        }
+
+        foreach (var sr in spriteRenderers)
+        {
+            sr.color = new Color(1, 0.4F, 0.4F, 1);
+        }
         yield return new WaitForSeconds(invulnerableTime);
-        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-        GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+
+        foreach (var sr in spriteRenderers)
+        {
+            sr.color = Color.white;
+        }
+
         if (_invulnerable)
         {
             _invulnerable = false;
