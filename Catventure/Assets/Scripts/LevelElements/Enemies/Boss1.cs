@@ -7,6 +7,9 @@ public class Boss1 : MonoBehaviour
     public int waitTimeUntilNextJump = 5;
     public int stunDuration = 1;
     public bool jumpAround = true;
+    public float jumpHeight = 5;
+    public float jumpDistance = 10;
+    public float jumpTime = 1;
     Enemy enemy;
     private int currentStep;
 
@@ -33,18 +36,11 @@ public class Boss1 : MonoBehaviour
         StartCoroutine(BossStunned());
     }
 
-    public static IEnumerator AnimateJump(GameObject go, int step, float height, float time = 1.0f)
+    public static IEnumerator AnimateJump(GameObject go, int step, float height, float distance, float time)
     {
-        float distance = 0;
-
         if (step == 0 || step == 3)
         {
-            distance = -10;
-        }
-
-        else
-        {
-            distance = +10;
+            distance = -1* distance;
         }
 
         Vector3 basePos = go.transform.position;
@@ -63,7 +59,6 @@ public class Boss1 : MonoBehaviour
             float y = a * (x - x1) * (x - x2);
             go.transform.position = Change.X(go.transform.position, basePos.x + x);
             go.transform.position = Change.Y(go.transform.position, basePos.y + y);
-
             yield return 0;
         }
     }
@@ -81,7 +76,7 @@ public class Boss1 : MonoBehaviour
         while (jumpAround)
         {
             yield return new WaitForSeconds(waitTimeUntilNextJump);
-            StartCoroutine(AnimateJump(gameObject, currentStep, 5));
+            StartCoroutine(AnimateJump(gameObject, currentStep, jumpHeight, jumpDistance, jumpTime));
             if (currentStep != 3)
             {
                 currentStep++;
@@ -90,12 +85,6 @@ public class Boss1 : MonoBehaviour
             {
                 currentStep = 0;
             }
-            //yield return new WaitForSeconds(waitTimeUntilNextJump);
-            //StartCoroutine(AnimateJump(gameObject, +10, 5));
-            //yield return new WaitForSeconds(waitTimeUntilNextJump);
-            //StartCoroutine(AnimateJump(gameObject, +10, 5));
-            //yield return new WaitForSeconds(waitTimeUntilNextJump);
-            //StartCoroutine(AnimateJump(gameObject, -10, 5));
         }
 
         yield break;
@@ -112,7 +101,7 @@ public class Boss1 : MonoBehaviour
 
     IEnumerator HitAnimation(Animator anim)
     {
-        anim.SetBool("Hit",true);
+        anim.SetBool("Hit", true);
         yield return new WaitForSeconds(1);
         anim.SetBool("Hit", false);
     }

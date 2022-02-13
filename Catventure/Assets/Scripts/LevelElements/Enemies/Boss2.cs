@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +12,6 @@ public class Boss2 : MonoBehaviour
     void Start()
     {
         enemy = transform.parent.GetComponent<Enemy>();
-
     }
 
     void FixedUpdate()
@@ -29,20 +29,9 @@ public class Boss2 : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             var pm = col.gameObject.GetComponent<PlayerManager>();
+            pm.PlayerStun(stunDuration, stunColor);
             pm.GotDamaged(enemy.damage);
-            StartCoroutine(PlayerStun(pm));
         }
     }
 
-    IEnumerator PlayerStun(PlayerManager pm)
-    {
-        var sr = pm.gameObject.GetComponent<SpriteRenderer>();
-        var movement = pm.gameObject.GetComponent<PlayerMovement>();
-        movement.enabled = false;
-        var oldColor = sr.color;
-        sr.color = stunColor;
-        yield return new WaitForSeconds(stunDuration);
-        movement.enabled = true;
-        sr.color = oldColor;
-    }
 }

@@ -37,10 +37,12 @@ public class Boss3 : MonoBehaviour
     private GameObject player;
     private bool firstJumpPhase = true;
 
+    private Vector3 scale;
     private Animator anim;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        scale = transform.localScale;
         enemy = GetComponent<Enemy>();
         boss1 = GetComponent<Boss1>();
         barkAttack = GetComponentInChildren<Bark>();
@@ -101,7 +103,7 @@ public class Boss3 : MonoBehaviour
 
     void Phase1()
     {
-        transform.localScale = new Vector3(0.3F, 0.3F, 1);
+        transform.localScale = new Vector3(scale.x, scale.y, scale.z);
         if (!firstJumpPhase)
         {
             StartCoroutine(Teleportation(jumpPhaseStartPosition));
@@ -138,7 +140,7 @@ public class Boss3 : MonoBehaviour
     {
         StartCoroutine(Teleportation(throwPhaseStartPosition2));
         currentPhase = Boss3Phases.Throw2;
-        transform.localScale = new Vector3(-0.3F, 0.3F, 1);
+        transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
         StartCoroutine(Timer(halfThrowPhaseDuration));
     }
 
@@ -147,7 +149,7 @@ public class Boss3 : MonoBehaviour
         anim.SetBool("Hit", true);
         var projectile = Instantiate(bossProjectilePrefab, shootPosition.transform.position, Quaternion.Euler(0,0,0));
         projectile.GetComponent<EnemyProjectile>().damage = enemy.damage;
-        projectile.GetComponent<Rigidbody2D>().AddForce(Vector2.MoveTowards(shootPosition.transform.position, playerTransform.position, 3) * 1);
+        projectile.GetComponent<Rigidbody2D>().AddForce(Vector2.MoveTowards(shootPosition.transform.position, playerTransform.position, 3) * transform.localScale.x);
         StartCoroutine(ResetCooldown());
     }
     IEnumerator ResetCooldown()
@@ -185,5 +187,6 @@ public class Boss3 : MonoBehaviour
         transform.position = newPos;
         Destroy(currentParticleSystem);
         yield return new WaitForSeconds(currentParticleSystem.GetComponent<ParticleSystem>().main.duration / 2);
+        yield return new WaitForSeconds(0.5f);
     }
 }

@@ -17,11 +17,17 @@ public class MovingPlatform : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collider)
     {
-        collider.gameObject.transform.SetParent(transform);
+        if (collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("Player"))
+        {
+            collider.gameObject.transform.SetParent(transform);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        collider.gameObject.transform.SetParent(null);
+        if (collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("Player"))
+        {
+            collider.gameObject.transform.SetParent(null);
+        }
     }
 }

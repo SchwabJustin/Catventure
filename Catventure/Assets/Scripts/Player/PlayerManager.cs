@@ -80,6 +80,7 @@ public class PlayerManager : MonoBehaviour
     public Vector3 Lvl2StartPosition;
     public Vector3 Lvl3StartPosition;
 
+    private PlayerMovement playerMovement;
 
     void Start()
     {
@@ -94,6 +95,7 @@ public class PlayerManager : MonoBehaviour
         currentSkillPointsText.text = currentSkillPoints.ToString();
         healthText = GameObject.Find("HealthTxt").GetComponent<TMP_Text>();
         healthText.text = currentPlayerHealth.ToString();
+        playerMovement = GetComponent<PlayerMovement>();
 
         headSpriteRenderer = GameObject.Find("Head").GetComponent<SpriteRenderer>();
         bodySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -125,7 +127,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         if (expImage == null) return;
-        expImage.fillAmount = (float) currentExp / (currentLvl * 100);
+        expImage.fillAmount = (float)currentExp / (currentLvl * 100);
         currentSkillPointsText.text = currentSkillPoints.ToString();
     }
 
@@ -159,13 +161,42 @@ public class PlayerManager : MonoBehaviour
             {
                 currentPlayerHealth -= damage;
                 invulnerable = true;
-                healthText.text = currentPlayerHealth.ToString();
+                if (healthText)
+                    healthText.text = currentPlayerHealth.ToString();
             }
         }
         yield return new WaitForSeconds(invulnerableTime);
         if (invulnerable)
         {
             invulnerable = false;
+        }
+    }
+
+    public void PlayerStun(float stunDuration, Color stunColor)
+    {
+        if (playerMovement == null)
+        {
+            playerMovement = GetComponent<PlayerMovement>();
+        }
+        StartCoroutine(PlayerStunCoroutine(stunDuration, stunColor));
+    }
+
+    IEnumerator PlayerStunCoroutine(float stunDuration, Color stunColor)
+    {
+        var spriteRenderers = GetComponentsInChildren<SpriteRenderer>().ToList();
+        spriteRenderers.Add(GetComponent<SpriteRenderer>());
+        spriteRenderers = spriteRenderers.Distinct().ToList();
+        var oldSpeed = playerMovement.speed;
+        playerMovement.speed = 0;
+        foreach (var sr in spriteRenderers)
+        {
+            sr.color = stunColor;
+        }
+        yield return new WaitForSeconds(stunDuration);
+        playerMovement.speed = oldSpeed;
+        foreach (var sr in spriteRenderers)
+        {
+            sr.color = Color.white;
         }
     }
 
@@ -227,7 +258,7 @@ public class PlayerManager : MonoBehaviour
         {
             currentSkillPoints -= skillToLearn.skillPointsNeeded;
             currentSkillPointsText.text = currentSkillPoints.ToString();
-            
+
             var skillFillImg = GameObject.Find(skillToLearn.name + " Cooldown");
             if (skillFillImg != null)
             {
