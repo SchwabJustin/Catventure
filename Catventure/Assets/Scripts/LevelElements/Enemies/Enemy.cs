@@ -30,7 +30,6 @@ public class Enemy : MonoBehaviour
     }
     public void GotDamaged(int damage)
     {
-        Debug.Log("Got Hit with " + damage);
         StartCoroutine(DamageDealt(damage));
         if (TryGetComponent(out Boss1 boss1))
         {
