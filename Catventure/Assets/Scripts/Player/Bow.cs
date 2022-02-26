@@ -188,18 +188,16 @@ public class Bow : MonoBehaviour
 
     IEnumerator BurnShot()
     {
-        Debug.Log("BurnShot");
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        newArrow.GetComponent<SpriteRenderer>().sprite = burnSprite;
+        newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+        newArrow.GetComponent<Arrow>().burnShot = true;
+        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
 
-            GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
-            newArrow.GetComponent<SpriteRenderer>().sprite = burnSprite;
-            newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
-            newArrow.GetComponent<Arrow>().burnShot = true;
-            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+        CoolDownSprite(burnShotCooldown, burnShotImg);
+        yield return new WaitForSeconds(burnShotCooldown);
+        burnShot = false;
 
-            CoolDownSprite(burnShotCooldown, burnShotImg);
-            yield return new WaitForSeconds(burnShotCooldown);
-            burnShot = false;
-        
     }
     IEnumerator ArrowRain()
     {
@@ -207,6 +205,11 @@ public class Bow : MonoBehaviour
         {
             var spawnPos = shotPoint.position + new Vector3(0, 2, 0);
             GameObject newArrowRain = Instantiate(arrowRainGo, spawnPos, quaternion.Euler(Vector3.zero));
+            if (mousePosition.x < transform.position.x)
+            {
+                newArrowRain.transform.localScale = new Vector3(newArrowRain.transform.localScale.x * -1,
+                    newArrowRain.transform.localScale.y, newArrowRain.transform.localScale.z);
+            }
 
             CoolDownSprite(arrowRainCooldown, arrowRainImg);
             yield return new WaitForSeconds(arrowRainCooldown);
@@ -217,16 +220,16 @@ public class Bow : MonoBehaviour
     IEnumerator ParalyzeShot()
     {
 
-            GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
-            newArrow.GetComponent<SpriteRenderer>().sprite = paralyzeSprite;
-            newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
-            newArrow.GetComponent<Arrow>().paralyzeShot = true;
-            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        newArrow.GetComponent<SpriteRenderer>().sprite = paralyzeSprite;
+        newArrow.GetComponent<Arrow>().player = playerMovement.gameObject;
+        newArrow.GetComponent<Arrow>().paralyzeShot = true;
+        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * maxLaunchForce;
 
-            CoolDownSprite(paralyzeShotCooldown, paralyzeShotImg);
-            yield return new WaitForSeconds(paralyzeShotCooldown);
-            paralyzeShot = false;
-        
+        CoolDownSprite(paralyzeShotCooldown, paralyzeShotImg);
+        yield return new WaitForSeconds(paralyzeShotCooldown);
+        paralyzeShot = false;
+
     }
 
     IEnumerator DoubleShot()

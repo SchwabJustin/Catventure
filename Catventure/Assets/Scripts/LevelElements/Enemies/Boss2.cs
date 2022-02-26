@@ -20,7 +20,7 @@ public class Boss2 : MonoBehaviour
         {
             enemy.playerManager.currentCookies += enemy.cookieAmount;
             enemy.playerManager.level2Finished = true;
-            SceneManager.LoadScene("Map");
+            enemy.playerManager.StartLevel("Map");
         }
     }
 

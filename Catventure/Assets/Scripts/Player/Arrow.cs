@@ -27,7 +27,6 @@ public class Arrow : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log(col.gameObject.name + poisonShot + doubleShotArrow);
         if (col.gameObject.CompareTag("Enemy"))
         {
             if (doubleShotArrow)

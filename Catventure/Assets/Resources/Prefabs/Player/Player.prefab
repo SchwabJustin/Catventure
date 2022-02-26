@@ -848,6 +848,8 @@ MonoBehaviour:
   Lvl1StartPosition: {x: -23, y: 0, z: 0}
   Lvl2StartPosition: {x: 19, y: 1, z: 0}
   Lvl3StartPosition: {x: 2, y: 4, z: 0}
+  playerFollowerPrefab: {fileID: 2960510884602397279, guid: 73ea07537acaa1541ba2818d503edc40,
+    type: 3}
 --- !u!50 &477751451061903246
 Rigidbody2D:
   serializedVersion: 4

@@ -35,14 +35,15 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
-        if (moveInput != 0)
+        if (moveInput != 0 && !anim.GetBool("Walk"))
         {
-            anim.SetTrigger("Walk");
+            anim.SetBool("Walk", true);
         }
-        else
+        else if(moveInput == 0)
         {
-            anim.ResetTrigger("Walk");
+            anim.SetBool("Walk", false);
         }
+
         if (grounded)
         {
             velocity.y = 0;

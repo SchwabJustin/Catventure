@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Cheats : MonoBehaviour
@@ -34,11 +31,11 @@ public class Cheats : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            playerManager.currentSkillPoints++;
+            playerManager.GetExp(playerManager.currentLvl * 100);
         }
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            playerManager.currentPlayerHealth += 99999999;
+            playerManager.armor += 99999999;
         }
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
@@ -58,7 +55,7 @@ public class Cheats : MonoBehaviour
             playerManager.level1Finished = true;
             playerManager.level2Finished = true;
             DontDestroyOnLoad(gameObject);
-            SceneManager.LoadScene("Map");
+            playerManager.StartLevel("Map");
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {

@@ -31,11 +31,13 @@ public class Boss1Switch : MonoBehaviour
     IEnumerator RockAttack()
     {
         rockReady = false;
+        GetComponent<SpriteRenderer>().color = Color.grey;
         GameObject currentRock = Instantiate(rockPrefab, cageGO.transform.position, rockPrefab.transform.rotation);
         spriteRenderer.sprite = cageWithoutRock;
         yield return new WaitForSeconds(rockCooldown);
         Destroy(currentRock);
         spriteRenderer.sprite = cageWithRock;
         rockReady = true;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

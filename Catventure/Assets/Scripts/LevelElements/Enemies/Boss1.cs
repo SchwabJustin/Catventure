@@ -11,7 +11,7 @@ public class Boss1 : MonoBehaviour
     public float jumpDistance = 10;
     public float jumpTime = 1;
     Enemy enemy;
-    private int currentStep;
+    public int currentStep;
 
     // Start is called before the first frame update
     public void Start()
@@ -26,13 +26,12 @@ public class Boss1 : MonoBehaviour
         {
             enemy.playerManager.currentCookies += enemy.cookieAmount;
             enemy.playerManager.level1Finished = true;
-            SceneManager.LoadScene("Map");
+            enemy.playerManager.StartLevel("Map");
         }
     }
 
     public void Stunned()
     {
-        Debug.Log("Boss1Stunned");
         StartCoroutine(BossStunned());
     }
 
@@ -40,7 +39,7 @@ public class Boss1 : MonoBehaviour
     {
         if (step == 0 || step == 3)
         {
-            distance = -1* distance;
+            distance = -1 * distance;
         }
 
         Vector3 basePos = go.transform.position;
@@ -65,10 +64,14 @@ public class Boss1 : MonoBehaviour
 
     IEnumerator BossStunned()
     {
-        jumpAround = false;
-        yield return new WaitForSeconds(stunDuration);
-        jumpAround = true;
-        StartCoroutine(JumpTimer());
+        if (jumpAround)
+        {
+            jumpAround = false;
+            StopCoroutine(JumpTimer());
+            yield return new WaitForSeconds(stunDuration);
+            jumpAround = true;
+            StartCoroutine(JumpTimer());
+        }
     }
 
     IEnumerator JumpTimer()

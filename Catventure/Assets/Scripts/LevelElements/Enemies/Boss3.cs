@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEditorInternal;
 using UnityEngine;
 
 public enum Boss3Phases
@@ -39,6 +40,8 @@ public class Boss3 : MonoBehaviour
 
     private Vector3 scale;
     private Animator anim;
+
+    private bool dead;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -56,8 +59,17 @@ public class Boss3 : MonoBehaviour
         Phase1();
     }
 
+    void FixedUpdate()
+    {
+        if (!dead)
+        {
+            transform.rotation = Quaternion.Euler(Vector3.zero);
+        }
+    }
+
     public void Dead()
     {
+        dead = true;
         StartCoroutine(Dying(enemy.playerManager));
     }
 

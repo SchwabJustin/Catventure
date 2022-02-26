@@ -532,28 +532,74 @@ public class PlayerManager : MonoBehaviour
     {
         currentScene = levelName;
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene(levelName);
-        GetComponent<Rigidbody2D>().simulated = true;
+
         switch (levelName)
         {
             case "Level 1":
+                GetComponent<Rigidbody2D>().simulated = false;
+                playerMovement.enabled = false;
                 transform.position = Lvl1StartPosition;
+                SceneManager.LoadScene(levelName);
                 GetComponent<Rigidbody2D>().simulated = true;
+                playerMovement.enabled = true;
                 break;
             case "Level 2":
+                GetComponent<Rigidbody2D>().simulated = false;
+                playerMovement.enabled = false;
                 transform.position = Lvl2StartPosition;
+                SceneManager.LoadScene(levelName);
                 GetComponent<Rigidbody2D>().simulated = true;
+                playerMovement.enabled = true;
                 break;
             case "Level 3":
+                GetComponent<Rigidbody2D>().simulated = false;
+                playerMovement.enabled = false;
                 transform.position = Lvl3StartPosition;
+                SceneManager.LoadScene(levelName);
                 GetComponent<Rigidbody2D>().simulated = true;
+                playerMovement.enabled = true;
                 break;
             case "Menü":
                 Destroy(gameObject);
                 break;
             default:
                 GetComponent<Rigidbody2D>().simulated = false;
+                playerMovement.enabled = false;
+                SceneManager.LoadScene(levelName);
                 break;
+        }
+
+    }
+
+    public IEnumerator UpdateUI()
+    {
+        yield return new WaitForSeconds(0.5f);
+        cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
+        cookieCounter.text = currentCookies.ToString();
+        expImage = GameObject.Find("ExpContainer").GetComponent<Image>();
+        expImage.fillAmount = currentExp / (currentLvl * 100);
+        currentSkillPointsText = GameObject.Find("SkillpointsTxt").GetComponent<TMP_Text>();
+        currentSkillPointsText.text = currentSkillPoints.ToString();
+        healthText = GameObject.Find("HealthTxt").GetComponent<TMP_Text>();
+        healthText.text = currentPlayerHealth.ToString();
+        playerMovement = GetComponent<PlayerMovement>();
+        
+        foreach (var skill in multiSkillableSkills)
+        {
+            if (skill.doubleSkillable)
+            {
+                Debug.Log(skill.name);
+                GameObject.Find("MultiSkill" + skill.name).GetComponent<TMP_Text>().text = "1/2";
+            }
+            GameObject.Find(skill.name).GetComponent<Button>().interactable = false;
+        }
+        foreach (var skill in learnedSkills)
+        {
+            if (skill.doubleSkillable)
+            {
+                GameObject.Find("MultiSkill" + skill.name).GetComponent<TMP_Text>().text = "2/2";
+            }
+            GameObject.Find(skill.name).GetComponent<Button>().interactable = false;
         }
     }
 
@@ -562,8 +608,6 @@ public class PlayerManager : MonoBehaviour
         string json = File.ReadAllText(Application.dataPath + "save.txt");
         SaveData pm = JsonUtility.FromJson<SaveData>(json);
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene(pm.currentScene);
-        transform.position = pm.lastCheckpointPosition;
 
         this.armor = pm.armor;
         this.burnDmg = pm.burnDmg;
@@ -598,6 +642,11 @@ public class PlayerManager : MonoBehaviour
         this.unlockedHeads = pm.unlockedHeads;
         this.unlockedLegs = pm.unlockedLegs;
         this.unlockedWeapons = pm.unlockedWeapons;
+
+        StartCoroutine(UpdateUI());
+        SceneManager.LoadScene(pm.currentScene);
+        transform.position = pm.lastCheckpointPosition;
+
     }
 }
 

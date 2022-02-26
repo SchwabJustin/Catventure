@@ -38,8 +38,6 @@ public class MainMenu : MonoBehaviour
     public void LoadGame()
     {
         StartCoroutine(LoadGameCoroutine());
-
-
     }
     IEnumerator LoadGameCoroutine()
     {

@@ -69,7 +69,6 @@ public class Trader : MonoBehaviour
     {
         if (col.tag != "Player" || !Input.GetKeyDown(openShopKey)) return;
         playerManager.gameObject.GetComponent<PlayerMovement>().enabled = false;
-        Debug.Log("OpenShop");
         shopParentObject.SetActive(true);
         foreach (EquipmentSO equipment in equipmentsOnSale)
         {
