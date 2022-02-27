@@ -50,6 +50,7 @@ public class PlayerManager : MonoBehaviour
 
     public TMP_Text cookieCounter;
 
+    public GameObject shopParentObject;
     private SpriteRenderer headSpriteRenderer;
     private SpriteRenderer bodySpriteRenderer;
     private SpriteRenderer weaponSpriteRenderer;
@@ -68,7 +69,7 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Current number of Cookies the Player has collected")]
     public int currentCookies;
     public GameObject notEnoughCookiesBanner;
-    private GameObject shopContent;
+    public GameObject shopContent;
 
     [Foldout("Other", true)]
     public bool shouldLoad;
@@ -79,13 +80,14 @@ public class PlayerManager : MonoBehaviour
     public Vector3 Lvl1StartPosition;
     public Vector3 Lvl2StartPosition;
     public Vector3 Lvl3StartPosition;
-
+    
     private PlayerMovement playerMovement;
 
     void Start()
     {
         notEnoughCookiesBanner = GameObject.Find("NotEnoughCookiesBanner");
         notEnoughCookiesBanner.SetActive(false);
+        shopParentObject = GameObject.Find("Shop");
         shopContent = GameObject.Find("ShopContent");
         cookieCounter = GameObject.Find("CookieCounter").GetComponent<TMP_Text>();
         cookieCounter.text = currentCookies.ToString();

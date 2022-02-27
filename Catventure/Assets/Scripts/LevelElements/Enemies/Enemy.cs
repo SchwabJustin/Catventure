@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
         }
 
         var spriteRenderers = GetComponentsInChildren<SpriteRenderer>().ToList();
-        if (TryGetComponent(out SpriteRenderer spriteRenderer))
+        if (TryGetComponent(out SpriteRenderer spriteRenderer) && spriteRenderer.gameObject.name != "Sichtkegel")
         {
             spriteRenderers.Add(spriteRenderer);
         }

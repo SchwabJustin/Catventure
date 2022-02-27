@@ -22,6 +22,12 @@ public class Trader : MonoBehaviour
         shopParentObject = GameObject.Find("Shop");
         shopContent = GameObject.Find("ShopContent");
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        if (shopParentObject == null || shopContent == null)
+        {
+            shopParentObject = playerManager.shopParentObject;
+            shopContent = playerManager.shopContent;
+        }
+
         allEquipmentsSO.Sort((x, y) => x.name.CompareTo(y.name));
         if (shopContent.transform.childCount != 0)
         {
@@ -68,6 +74,7 @@ public class Trader : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         if (col.tag != "Player" || !Input.GetKeyDown(openShopKey)) return;
+
         playerManager.gameObject.GetComponent<PlayerMovement>().enabled = false;
         shopParentObject.SetActive(true);
         foreach (EquipmentSO equipment in equipmentsOnSale)
