@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using UnityEditorInternal;
 using UnityEngine;
 
 public enum Boss3Phases
