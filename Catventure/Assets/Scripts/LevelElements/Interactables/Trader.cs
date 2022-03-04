@@ -45,18 +45,61 @@ public class Trader : MonoBehaviour
                 {
                     case EquipmentType.Head:
                         currentEquipment.GetComponent<Button>().onClick.AddListener(delegate { playerManager.buyHead(equipment); });
+                        if (playerManager.unlockedHeads.Contains(equipment.name))
+                        {
+                            currentEquipment.transform.Find("CookiePrice").gameObject.SetActive(false);
+                        }
+
+                        if (equipment.name == playerManager.currentHeadName)
+                        {
+                            playerManager.headSpriteRenderer.sprite = equipment.equipmentSprite;
+                        }
                         break;
                     case EquipmentType.Body:
                         currentEquipment.GetComponent<Button>().onClick.AddListener(delegate { playerManager.buyBody(equipment); });
+                        if (playerManager.unlockedBodies.Contains(equipment.name))
+                        {
+                            currentEquipment.transform.Find("CookiePrice").gameObject.SetActive(false);
+                        }
+                        if (equipment.name == playerManager.currentBodyName)
+                        {
+                            playerManager.bodySpriteRenderer.sprite = equipment.equipmentSprite;
+                        }
                         break;
                     case EquipmentType.Weapon:
                         currentEquipment.GetComponent<Button>().onClick.AddListener(delegate { playerManager.buyWeapon(equipment); });
+                        if (playerManager.unlockedWeapons.Contains(equipment.name))
+                        {
+                            currentEquipment.transform.Find("CookiePrice").gameObject.SetActive(false);
+                        }
+                        if (equipment.name == playerManager.currentWeaponName)
+                        {
+                            playerManager.weaponSpriteRenderer.sprite = equipment.equipmentSprite;
+                        }
                         break;
                     case EquipmentType.Arms:
                         currentEquipment.GetComponent<Button>().onClick.AddListener(delegate { playerManager.buyArms(equipment); });
+                        if (playerManager.unlockedArms.Contains(equipment.name))
+                        {
+                            currentEquipment.transform.Find("CookiePrice").gameObject.SetActive(false);
+                        }
+                        if (equipment.name == playerManager.currentArmsName)
+                        {
+                            playerManager.armsSpriteRenderer[0].sprite = equipment.equipmentSprite;
+                            playerManager.armsSpriteRenderer[1].sprite = equipment.equipmentSpriteRightArmOrLeg;
+                        }
                         break;
                     case EquipmentType.Legs:
                         currentEquipment.GetComponent<Button>().onClick.AddListener(delegate { playerManager.buyLegs(equipment); });
+                        if (playerManager.unlockedLegs.Contains(equipment.name))
+                        {
+                            currentEquipment.transform.Find("CookiePrice").gameObject.SetActive(false);
+                        }
+                        if (equipment.name == playerManager.currentLegsName)
+                        {
+                            playerManager.legsSpriteRenderer[0].sprite = equipment.equipmentSprite;
+                            playerManager.legsSpriteRenderer[1].sprite = equipment.equipmentSpriteRightArmOrLeg;
+                        }
                         break;
                     default:
                         break;

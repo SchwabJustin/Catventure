@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using System.Linq;
@@ -73,6 +74,39 @@ public class Bow : MonoBehaviour
         burnShotImg = GameObject.Find("Verbrennen Cooldown").GetComponent<Image>();
         arrowRainImg = GameObject.Find("Pfeilregen Cooldown").GetComponent<Image>();
         paralyzeShotImg = GameObject.Find("Paralyse Cooldown").GetComponent<Image>();
+
+        var skills = new List<SkillSO>();
+        skills.AddRange(playerManager.learnedSkills);
+        skills.AddRange(playerManager.multiSkillableSkills);
+        skills = skills.Distinct().ToList();
+
+        foreach (var skill in skills)
+        {
+            if (skill.name == "Präziser Schuss")
+            {
+                shotImg.fillAmount = 0;
+            }
+            if (skill.name == "Vergiften")
+            {
+                poisonShotImg.fillAmount = 0;
+            }
+            if (skill.name == "Doppelter Treffer")
+            {
+                doubleShotImg.fillAmount = 0;
+            }
+            if (skill.name == "Verbrennen")
+            {
+                burnShotImg.fillAmount = 0;
+            }
+            if (skill.name == "Pfeilregen")
+            {
+                arrowRainImg.fillAmount = 0;
+            }
+            if (skill.name == "Paralyse")
+            {
+                paralyzeShotImg.fillAmount = 0;
+            }
+        }
     }
 
     private void Update()

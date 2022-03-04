@@ -10,6 +10,8 @@ public class Cheats : MonoBehaviour
     public Vector3 bossRoom1Pos;
     public Vector3 bossRoom2Pos;
     public Vector3 bossRoom3Pos;
+
+    private Button skillTreeMenuButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class Cheats : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         pauseMenu = GameObject.Find("PauseMenu");
         GameObject.Find("BackToMainMenu").GetComponent<Button>().onClick.AddListener(delegate { playerManager.StartLevel("Menü"); });
+        skillTreeMenuButton = GameObject.Find("OpenSkillMenu").GetComponent<Button>();
 
         pauseMenu.SetActive(false);
     }
@@ -25,6 +28,10 @@ public class Cheats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            skillTreeMenuButton.onClick.Invoke();
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(true);

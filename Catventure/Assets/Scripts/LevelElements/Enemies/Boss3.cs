@@ -69,14 +69,8 @@ public class Boss3 : MonoBehaviour
     public void Dead()
     {
         dead = true;
-        StartCoroutine(Dying(enemy.playerManager));
-    }
-
-    IEnumerator Dying(PlayerManager playerManager)
-    {
-        playerManager.level3Finished = true;
-        yield return new WaitForSeconds(1);
-        playerManager.StartLevel("WinningScreen");
+        enemy.playerManager.level3Finished = true;
+        enemy.playerManager.StartLevel("WinningScreen");
     }
 
     public void Stunned()

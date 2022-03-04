@@ -19,4 +19,9 @@ public class ShopCloseButton : MonoBehaviour
     {
         playerManager.gameObject.GetComponent<PlayerMovement>().enabled = true;
     }
+
+    public void BackToMainMenu()
+    {
+        playerManager.StartLevel("Menü");
+    }
 }

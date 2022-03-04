@@ -35,6 +35,7 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Time the Player stays invulnerable after taking a hit")]
     public float invulnerableTime = 0.5F;
     private bool invulnerable;
+    private float playerSpeed;
 
     public Vector3 lastCheckpointPosition;
 
@@ -51,9 +52,9 @@ public class PlayerManager : MonoBehaviour
     public TMP_Text cookieCounter;
 
     public GameObject shopParentObject;
-    private SpriteRenderer headSpriteRenderer;
-    private SpriteRenderer bodySpriteRenderer;
-    private SpriteRenderer weaponSpriteRenderer;
+    public SpriteRenderer headSpriteRenderer;
+    public SpriteRenderer bodySpriteRenderer;
+    public SpriteRenderer weaponSpriteRenderer;
     public List<SpriteRenderer> armsSpriteRenderer = new List<SpriteRenderer>();
     public List<SpriteRenderer> legsSpriteRenderer = new List<SpriteRenderer>();
     public string currentHeadName = "StandardHead";
@@ -80,7 +81,7 @@ public class PlayerManager : MonoBehaviour
     public Vector3 Lvl1StartPosition;
     public Vector3 Lvl2StartPosition;
     public Vector3 Lvl3StartPosition;
-    
+
     private PlayerMovement playerMovement;
 
     void Start()
@@ -98,7 +99,7 @@ public class PlayerManager : MonoBehaviour
         healthText = GameObject.Find("HealthTxt").GetComponent<TMP_Text>();
         healthText.text = currentPlayerHealth.ToString();
         playerMovement = GetComponent<PlayerMovement>();
-
+        playerSpeed = playerMovement.speed;
         headSpriteRenderer = GameObject.Find("Head").GetComponent<SpriteRenderer>();
         bodySpriteRenderer = GetComponent<SpriteRenderer>();
         weaponSpriteRenderer = GameObject.Find("BowSprite").GetComponent<SpriteRenderer>();
@@ -152,6 +153,13 @@ public class PlayerManager : MonoBehaviour
 
         currentPlayerHealth = maxPlayerHealth;
         healthText.text = currentPlayerHealth.ToString();
+        playerMovement.speed = playerSpeed;
+        var spriteRenderers = GetComponentsInChildren<SpriteRenderer>().ToList();
+        spriteRenderers.Add(GetComponent<SpriteRenderer>());
+        foreach (var sr in spriteRenderers)
+        {
+            sr.color = Color.white;
+        }
     }
 
     private IEnumerator DamageDealt(int damage)
@@ -188,14 +196,13 @@ public class PlayerManager : MonoBehaviour
         var spriteRenderers = GetComponentsInChildren<SpriteRenderer>().ToList();
         spriteRenderers.Add(GetComponent<SpriteRenderer>());
         spriteRenderers = spriteRenderers.Distinct().ToList();
-        var oldSpeed = playerMovement.speed;
         playerMovement.speed = 0;
         foreach (var sr in spriteRenderers)
         {
             sr.color = stunColor;
         }
         yield return new WaitForSeconds(stunDuration);
-        playerMovement.speed = oldSpeed;
+        playerMovement.speed = playerSpeed;
         foreach (var sr in spriteRenderers)
         {
             sr.color = Color.white;
@@ -534,43 +541,46 @@ public class PlayerManager : MonoBehaviour
     {
         currentScene = levelName;
         DontDestroyOnLoad(gameObject);
-
-        switch (levelName)
+        if (levelName == "WinningScreen")
         {
-            case "Level 1":
-                GetComponent<Rigidbody2D>().simulated = false;
-                playerMovement.enabled = false;
-                transform.position = Lvl1StartPosition;
-                SceneManager.LoadScene(levelName);
-                GetComponent<Rigidbody2D>().simulated = true;
-                playerMovement.enabled = true;
-                break;
-            case "Level 2":
-                GetComponent<Rigidbody2D>().simulated = false;
-                playerMovement.enabled = false;
-                transform.position = Lvl2StartPosition;
-                SceneManager.LoadScene(levelName);
-                GetComponent<Rigidbody2D>().simulated = true;
-                playerMovement.enabled = true;
-                break;
-            case "Level 3":
-                GetComponent<Rigidbody2D>().simulated = false;
-                playerMovement.enabled = false;
-                transform.position = Lvl3StartPosition;
-                SceneManager.LoadScene(levelName);
-                GetComponent<Rigidbody2D>().simulated = true;
-                playerMovement.enabled = true;
-                break;
-            case "Menü":
-                Destroy(gameObject);
-                break;
-            default:
-                GetComponent<Rigidbody2D>().simulated = false;
-                playerMovement.enabled = false;
-                SceneManager.LoadScene(levelName);
-                break;
+            SceneManager.LoadScene("WinningScreen");
         }
+        else
+        {
 
+            switch (levelName)
+            {
+                case "Level 1":
+                    GetComponent<Rigidbody2D>().simulated = false;
+                    playerMovement.enabled = false;
+                    transform.position = Lvl1StartPosition;
+                    SceneManager.LoadScene(levelName);
+                    GetComponent<Rigidbody2D>().simulated = true;
+                    playerMovement.enabled = true;
+                    break;
+                case "Level 2":
+                    GetComponent<Rigidbody2D>().simulated = false;
+                    playerMovement.enabled = false;
+                    transform.position = Lvl2StartPosition;
+                    SceneManager.LoadScene(levelName);
+                    GetComponent<Rigidbody2D>().simulated = true;
+                    playerMovement.enabled = true;
+                    break;
+                case "Level 3":
+                    GetComponent<Rigidbody2D>().simulated = false;
+                    playerMovement.enabled = false;
+                    transform.position = Lvl3StartPosition;
+                    SceneManager.LoadScene(levelName);
+                    GetComponent<Rigidbody2D>().simulated = true;
+                    playerMovement.enabled = true;
+                    break;
+                case "Menü":
+                    SceneManager.LoadScene(levelName);
+                    Destroy(gameObject);
+                    Destroy(GameObject.Find("Canvas(Clone)"));
+                    break;
+            }
+        }
     }
 
     public IEnumerator UpdateUI()
@@ -585,7 +595,7 @@ public class PlayerManager : MonoBehaviour
         healthText = GameObject.Find("HealthTxt").GetComponent<TMP_Text>();
         healthText.text = currentPlayerHealth.ToString();
         playerMovement = GetComponent<PlayerMovement>();
-        
+
         foreach (var skill in multiSkillableSkills)
         {
             if (skill.doubleSkillable)
@@ -593,7 +603,6 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log(skill.name);
                 GameObject.Find("MultiSkill" + skill.name).GetComponent<TMP_Text>().text = "1/2";
             }
-            GameObject.Find(skill.name).GetComponent<Button>().interactable = false;
         }
         foreach (var skill in learnedSkills)
         {
@@ -650,6 +659,7 @@ public class PlayerManager : MonoBehaviour
         transform.position = pm.lastCheckpointPosition;
 
     }
+
 }
 
 
@@ -671,7 +681,6 @@ public class SaveData
     public int burnDuration = 5;
     public int paralyzeDuration = 5;
     public float invulnerableTime = 0.5F;
-    private bool invulnerable;
 
     public Vector3 lastCheckpointPosition;
 
@@ -682,11 +691,7 @@ public class SaveData
 
     public TMP_Text cookieCounter;
 
-    private SpriteRenderer headSpriteRenderer;
-    private SpriteRenderer bodySpriteRenderer;
-    private SpriteRenderer weaponSpriteRenderer;
-    private List<SpriteRenderer> armsSpriteRenderer = new List<SpriteRenderer>();
-    private List<SpriteRenderer> legsSpriteRenderer = new List<SpriteRenderer>();
+
     public string currentHeadName = "StandardHead";
     public string currentBodyName = "StandardBody";
     public string currentWeaponName = "StandardWeapon";
@@ -698,8 +703,7 @@ public class SaveData
     public List<String> unlockedArms = new List<string>();
     public List<String> unlockedLegs = new List<string>();
     public int currentCookies;
-    public GameObject notEnoughCookiesBanner;
-    private GameObject shopContent;
+
 
 
     public bool level1Finished;
