@@ -1,0 +1,2 @@
+C:\Users\justi\Desktop\Projekte\Catventure\Catventure\obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache
+C:\Users\justi\Desktop\Projekte\Catventure\Catventure\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

@@ -20,14 +20,12 @@ public class Boss1 : MonoBehaviour
         StartCoroutine(JumpTimer());
     }
 
-    void FixedUpdate()
+    public void Dead()
     {
-        if (enemy.currentHealth <= 0 && GetComponent<Boss3>() == null)
-        {
-            enemy.playerManager.currentCookies += enemy.cookieAmount;
-            enemy.playerManager.level1Finished = true;
-            enemy.playerManager.StartLevel("Map");
-        }
+        Debug.Log("Boss1 Dead");
+        enemy.playerManager.currentCookies += enemy.cookieAmount;
+        enemy.playerManager.level1Finished = true;
+        enemy.playerManager.StartLevel("Map");
     }
 
     public void Stunned()

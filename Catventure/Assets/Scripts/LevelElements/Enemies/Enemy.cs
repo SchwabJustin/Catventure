@@ -57,12 +57,19 @@ public class Enemy : MonoBehaviour
     {
         anim.SetBool("Dead", true);
         yield return new WaitForSeconds(1);
-        if (GetComponent<Boss1>() == null || GetComponent<Boss2>() == null || GetComponent<Boss3>() == null)
+        Debug.Log("Dead");
+        if (!gameObject.name.Contains("Boss"))
         {
+            Debug.Log("Not Boss");
             GameObject cookie = Instantiate(cookiePrefab);
             cookie.GetComponent<Cookie>().cookieAmount = cookieAmount;
             cookie.transform.position = transform.position;
             Destroy(this.gameObject);
+        }
+
+        if (TryGetComponent(out Boss1 boss1))
+        {
+            boss1.Dead();
         }
 
         if (TryGetComponent(out Boss3 boss3))

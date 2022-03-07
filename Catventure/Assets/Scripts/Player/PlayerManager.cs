@@ -35,7 +35,7 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Time the Player stays invulnerable after taking a hit")]
     public float invulnerableTime = 0.5F;
     private bool invulnerable;
-    private float playerSpeed;
+    private float playerSpeed = 5;
 
     public Vector3 lastCheckpointPosition;
 
@@ -82,7 +82,7 @@ public class PlayerManager : MonoBehaviour
     public Vector3 Lvl2StartPosition;
     public Vector3 Lvl3StartPosition;
 
-    private PlayerMovement playerMovement;
+    public PlayerMovement playerMovement;
 
     void Start()
     {
@@ -150,6 +150,7 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         transform.position = lastCheckpointPosition;
         anim.SetBool("Dead", false);
+        playerMovement = GetComponent<PlayerMovement>();
 
         currentPlayerHealth = maxPlayerHealth;
         healthText.text = currentPlayerHealth.ToString();
@@ -539,6 +540,8 @@ public class PlayerManager : MonoBehaviour
 
     public void StartLevel(string levelName)
     {
+        playerMovement = GetComponent<PlayerMovement>();
+
         currentScene = levelName;
         DontDestroyOnLoad(gameObject);
         if (levelName == "WinningScreen")
@@ -554,7 +557,7 @@ public class PlayerManager : MonoBehaviour
                     GetComponent<Rigidbody2D>().simulated = false;
                     playerMovement.enabled = false;
                     transform.position = Lvl1StartPosition;
-                    SceneManager.LoadScene(levelName);
+                    SceneManager.LoadScene("Level 1");
                     GetComponent<Rigidbody2D>().simulated = true;
                     playerMovement.enabled = true;
                     break;
@@ -562,7 +565,7 @@ public class PlayerManager : MonoBehaviour
                     GetComponent<Rigidbody2D>().simulated = false;
                     playerMovement.enabled = false;
                     transform.position = Lvl2StartPosition;
-                    SceneManager.LoadScene(levelName);
+                    SceneManager.LoadScene("Level 2");
                     GetComponent<Rigidbody2D>().simulated = true;
                     playerMovement.enabled = true;
                     break;
@@ -570,14 +573,19 @@ public class PlayerManager : MonoBehaviour
                     GetComponent<Rigidbody2D>().simulated = false;
                     playerMovement.enabled = false;
                     transform.position = Lvl3StartPosition;
-                    SceneManager.LoadScene(levelName);
+                    SceneManager.LoadScene("Level 3");
                     GetComponent<Rigidbody2D>().simulated = true;
                     playerMovement.enabled = true;
                     break;
                 case "Menü":
-                    SceneManager.LoadScene(levelName);
+                    SceneManager.LoadScene("Menü");
                     Destroy(gameObject);
                     Destroy(GameObject.Find("Canvas(Clone)"));
+                    break;
+                case "Map":
+                    GetComponent<Rigidbody2D>().simulated = false;
+                    playerMovement.enabled = false;
+                    SceneManager.LoadScene("Map");
                     break;
             }
         }
