@@ -102,7 +102,7 @@ MonoBehaviour:
   arrow: {fileID: 1001146631954858087, guid: 8c20ef5c2a7587d4fa3a15ad0539adb8, type: 3}
   launchForce: 1
   maxLaunchForce: 15
-  launchForceAddUp: 0.1
+  launchForceAddUp: 0.2
   shotPoint: {fileID: 1967093970}
   markerPoint: {fileID: 8380439859442538016, guid: 62bfdae065ae177469d13b3d8a3dfd2f,
     type: 3}
@@ -826,6 +826,10 @@ MonoBehaviour:
   learnedSkills: []
   multiSkillableSkills: []
   cookieCounter: {fileID: 0}
+  shopParentObject: {fileID: 0}
+  headSpriteRenderer: {fileID: 0}
+  bodySpriteRenderer: {fileID: 0}
+  weaponSpriteRenderer: {fileID: 0}
   armsSpriteRenderer: []
   legsSpriteRenderer: []
   currentHeadName: StandardHead
@@ -840,6 +844,7 @@ MonoBehaviour:
   unlockedLegs: []
   currentCookies: 0
   notEnoughCookiesBanner: {fileID: 0}
+  shopContent: {fileID: 0}
   shouldLoad: 0
   level1Finished: 0
   level2Finished: 0
@@ -848,8 +853,6 @@ MonoBehaviour:
   Lvl1StartPosition: {x: -23, y: 0, z: 0}
   Lvl2StartPosition: {x: 19, y: 1, z: 0}
   Lvl3StartPosition: {x: 2, y: 4, z: 0}
-  playerFollowerPrefab: {fileID: 2960510884602397279, guid: 73ea07537acaa1541ba2818d503edc40,
-    type: 3}
 --- !u!50 &477751451061903246
 Rigidbody2D:
   serializedVersion: 4
@@ -887,7 +890,7 @@ MonoBehaviour:
   walkAcceleration: 75
   airAcceleration: 30
   groundDeceleration: 70
-  jumpHeight: 3.5
+  jumpHeight: 3.58
   velocity: {x: 0, y: 0}
   grounded: 0
   anim: {fileID: 0}

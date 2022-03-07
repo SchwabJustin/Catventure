@@ -1710,7 +1710,7 @@ ScriptsOnlyBuild:
     className: CinemachinePath
   - hash:
       serializedVersion: 2
-      Hash: a93afd0e75d22bdd3822dc1083327919
+      Hash: 292d689340a91e8fc750c9fc6550e418
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -2592,4 +2592,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 3.unity
   - Assets/Scenes/Map.unity
   - Assets/Scenes/WinningScreen.unity
-  playerPath: C:/Users/User/Desktop/Version 4/Catventure.exe
+  playerPath: C:/Users/User/Desktop/probe/Catventure.exe
